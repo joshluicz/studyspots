@@ -1,0 +1,2 @@
+# studyspots
+Main programming area
