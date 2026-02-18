@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>StudySpots — Find your flow state</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/filters.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-left">
+      <div class="logo">🗺️</div>
+      <h1>StudySpots</h1>
+    </div>
+    
+    <nav class="header-nav">
+      <a href="homepage.html">Browse</a>
+      <a href="about.html">About</a>
+    </nav>
+    
+    <div class="header-actions">
+      <button class="btn-share">+ Share a Spot</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section style="text-align:center;padding:48px 20px;border-bottom:1px solid rgba(0,0,0,0.05)">
+      <h2 style="font-size:2.2rem;margin:0 0 12px;line-height:1.3">Find your flow state.</h2>
+      <p style="color:var(--muted);font-size:1rem;margin:0">Discover curated spaces for productivity, reading, and deep work in your city.</p>
+    </section>
+
+    <section class="filters-section" style="margin:32px 0">
+      <form id="filters-form" class="filters-bar" aria-label="Quick filters">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search spots…"
+          style="flex:1;min-width:200px"
+          aria-label="Search"
+        />
+
+        <label>
+          <select id="filter-category" aria-label="Category">
+            <option value="any">All Categories</option>
+            <option value="mall">Malls</option>
+            <option value="cafe">Cafes</option>
+            <option value="library">Libraries</option>
+          </select>
+        </label>
+
+        <label>
+          <select id="filter-area" aria-label="Area">
+            <option value="any">All Areas</option>
+          </select>
+        </label>
+
+        <label title="Quiet: Silent study | Medium: Coffee shop buzz | Noisy: Lively atmosphere">
+          <select id="filter-noise" aria-label="Noise level">
+            <option value="any">Any Noise</option>
+            <option value="quiet">🔇 Quiet</option>
+            <option value="medium">☕ Medium</option>
+            <option value="noisy">🎉 Noisy</option>
+          </select>
+        </label>
+      </form>
+    </section>
+
+    <section>
+      <div id="loading" class="muted" style="text-align:center;padding:40px">Loading spots…</div>
+      <div id="cards-container" class="cards-grid" role="list"></div>
+      
+      <div style="text-align:center;margin:40px 0;color:var(--muted)" id="page-info"></div>
+      <div id="pagination" style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:20px;"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">&copy; StudySpots — Find your perfect study spot</footer>
+
+  <script type="module" src="js/homepage.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+.card{
+  background:var(--card);
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  transition:transform 0.2s,box-shadow 0.2s;
+  border:1px solid rgba(0,0,0,0.05);
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 12px 28px rgba(0,0,0,0.15);
+}
+
+.card-image{
+  width:100%;
+  height:200px;
+  overflow:hidden;
+  background:linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+  position:relative;
+}
+
+.card-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.card-body{
+  padding:16px 16px;
+  display:flex;
+  flex-direction:column;
+  flex:1;
+}
+
+.card-body h3{
+  margin:0 0 4px;
+  font-size:1.1rem;
+  color:var(--text);
+}
+
+.card-meta{
+  font-size:0.85rem;
+  color:var(--muted);
+  margin-bottom:8px;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.card-meta::before{
+  content:'📍';
+  font-size:0.9rem;
+}
+
+.card-features{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-bottom:12px;
+  align-items:center;
+}
+
+.feature-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  font-size:0.8rem;
+  padding:5px 10px;
+  border-radius:16px;
+  font-weight:500;
+  white-space:nowrap;
+}
+
+.feature-badge.noise-quiet{
+  background:rgba(16,185,129,0.15);
+  color:#0d8659;
+}
+
+.feature-badge.noise-medium{
+  background:rgba(245,158,11,0.15);
+  color:#92400e;
+}
+
+.feature-badge.noise-noisy{
+  background:rgba(239,107,63,0.15);
+  color:#b8360f;
+}
+
+.feature-badge.charging{
+  background:rgba(59,130,246,0.12);
+  color:#1e40af;
+}
+
+.feature-badge.wifi{
+  background:rgba(139,92,246,0.12);
+  color:#5b21b6;
+}
+
+.card-desc{
+  margin:0;
+  color:var(--muted);
+  font-size:0.9rem;
+  margin-top:auto;
+  line-height:1.5;
+}
+
+.card-fav-btn{
+  background:none;
+  border:none;
+  font-size:1.3rem;
+  cursor:pointer;
+  padding:0;
+  margin-top:8px;
+  color:var(--muted);
+  transition:color 0.2s;
+}
+
+.card-fav-btn:hover{
+  color:var(--noisy);
+}

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>StudySpots — Discover Study Locations</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/filters.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-left">
+      <div class="logo">🗺️</div>
+      <h1>StudySpots</h1>
+    </div>
+    
+    <nav class="header-nav">
+      <a href="homepage.html">Browse</a>
+      <a href="about.html">About</a>
+    </nav>
+    
+    <div class="header-actions">
+      <button class="btn-share">+ Share a Spot</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="filters-section">
+      <form id="filters-form" class="filters-bar" aria-label="Filters">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search spots…"
+          aria-label="Search"
+        />
+
+        <label>
+          <select id="filter-category" aria-label="Category">
+            <option value="any">All Categories</option>
+            <option value="mall">Malls</option>
+            <option value="cafe">Cafes</option>
+            <option value="library">Libraries</option>
+          </select>
+        </label>
+
+        <label>
+          <select id="filter-area" aria-label="Area">
+            <option value="any">All Areas</option>
+          </select>
+        </label>
+
+        <label title="Quiet: Silent study | Medium: Coffee shop buzz | Noisy: Lively atmosphere">
+          <select id="filter-noise" aria-label="Noise level">
+            <option value="any">Any Noise Level</option>
+            <option value="quiet">🔇 Quiet</option>
+            <option value="medium">☕ Medium</option>
+            <option value="noisy">🎉 Noisy</option>
+          </select>
+        </label>
+
+        <label title="Charging port availability">
+          <select id="filter-charging" aria-label="Charging ports">
+            <option value="any">Any Charging</option>
+            <option value="none">🔌 None</option>
+            <option value="limited">🔌 Limited</option>
+            <option value="abundant">🔌 Abundant</option>
+          </select>
+        </label>
+
+        <label>
+          <select id="filter-wifi" aria-label="Wi-Fi">
+            <option value="any">Any Wi-Fi</option>
+            <option value="yes">📶 Wi-Fi Available</option>
+            <option value="no">No Wi-Fi</option>
+          </select>
+        </label>
+
+        <div class="filters-actions">
+          <button type="button" id="reset-filters">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <section>
+      <div id="loading" class="muted" style="text-align:center;padding:40px">Loading spots…</div>
+      <div id="no-results" class="muted" style="text-align:center;padding:40px;display:none">No results found. Try adjusting your filters.</div>
+      <div id="cards-container" class="cards-grid" role="list"></div>
+      
+      <div style="text-align:center;margin:40px 0;color:var(--muted)" id="page-info"></div>
+      <div id="pagination" style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:20px;"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">&copy; StudySpots — Find your perfect study spot</footer>
+
+  <script type="module" src="js/malls.js"></script>
+</body>
+</html>

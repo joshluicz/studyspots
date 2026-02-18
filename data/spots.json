@@ -1,0 +1,222 @@
+[
+  {
+    "id": "westgate-1",
+    "name": "Westgate",
+    "category": "mall",
+    "area": "Jurong",
+    "noiseLevel": "medium",
+    "chargingPorts": "abundant",
+    "wifi": "yes",
+    "image": "assets/westgate.jpg",
+    "description": "Lots of open seating and cafes; good natural light."
+  },
+  {
+    "id": "vivocity-1",
+    "name": "VivoCity",
+    "category": "mall",
+    "area": "Harbour",
+    "noiseLevel": "noisy",
+    "chargingPorts": "limited",
+    "wifi": "yes",
+    "image": "assets/vivocity.jpg",
+    "description": "Large food courts and scattered benches; lively on weekends."
+  },
+  {
+    "id": "jurong-library-1",
+    "name": "Jurong Regional Library",
+    "category": "library",
+    "area": "Jurong",
+    "noiseLevel": "quiet",
+    "chargingPorts": "abundant",
+    "wifi": "yes",
+    "image": "assets/jurong-library.jpg",
+    "description": "Quiet study areas with lots of power outlets."
+  },
+  {
+    "id": "coffee-bean-1",
+    "name": "Coffee Bean @ Downtown",
+    "category": "cafe",
+    "area": "Downtown",
+    "noiseLevel": "medium",
+    "chargingPorts": "limited",
+    "wifi": "yes",
+    "image": "assets/coffee-bean.jpg",
+    "description": "Friendly staff and stable Wi-Fi."
+  },
+  {
+    "id": "nex-1",
+    "name": "NEX Shopping Centre",
+    "category": "mall",
+    "area": "Serangoon",
+    "noiseLevel": "noisy",
+    "chargingPorts": "limited",
+    "wifi": "yes",
+    "image": "assets/nex.jpg",
+    "description": "Popular mall with lots of casual seating and cafes."
+  },
+  {
+    "id": "national-library-1",
+    "name": "National Library Board",
+    "category": "library",
+    "area": "Downtown",
+    "noiseLevel": "quiet",
+    "chargingPorts": "abundant",
+    "wifi": "yes",
+    "image": "assets/national-library.jpg",
+    "description": "Modern library with excellent study facilities and Wi-Fi."
+  },
+  {
+    "id": "starbucks-1",
+    "name": "Starbucks Marina Bay",
+    "category": "cafe",
+    "area": "Marina",
+    "noiseLevel": "medium",
+    "chargingPorts": "abundant",
+    "wifi": "yes",
+    "image": "assets/starbucks.jpg",
+    "description": "Scenic waterfront view with ample electrical outlets."
+  },
+  {
+    "id": "tampines-mall-1",
+    "name": "Tampines 1 Mall",
+    "category": "mall",
+    "area": "Tampines",
+    "noiseLevel": "medium",
+    "chargingPorts": "limited",
+    "wifi": "yes",
+    "image": "assets/tampines-1.jpg",
+    "description": "Spacious mall with food court and comfortable seating."
+  },
+  {
+    "id": "tanjong-pagar-library-1",
+    "name": "Tanjong Pagar Public Library",
+    "category": "library",
+    "area": "CBD",
+    "noiseLevel": "quiet",
+    "chargingPorts": "limited",
+    "wifi": "yes",
+    "image": "assets/tanjong-library.jpg",
+    "description": "Cozy reading nooks and study desks. Bring headphones for ambient music."
+  },
+  {
+    "id": "clementi-mall-1",
+    "name": "The Clementi Mall",
+    "category": "mall",
+    "area": "Clementi",
+    "noiseLevel": "medium",
+    "chargingPorts": "abundant",
+    "wifi": "yes",
+    "image": "assets/clementi.jpg",
+    "description": "Modern mall with comfortable lounge areas and charging hubs."
+  },
+  {
+    "id": "tiong-bahru-cafe-1",
+    "name": "Tiong Bahru Bakery & Co",
+    "category": "cafe",
+    "area": "Tiong Bahru",
+    "noiseLevel": "medium",
+    "chargingPorts": "limited",
+    "wifi": "yes",
+    "image": "assets/tiong-bahru.jpg",
+    "description": "Artisanal bakery with vintage vibes. Great for casual study groups."
+  },
+  {
+    "id": "library-at-orchard-1",
+    "name": "Library @ Orchard Central",
+    "category": "library",
+    "area": "Orchard",
+    "noiseLevel": "quiet",
+    "chargingPorts": "abundant",
+    "wifi": "yes",
+    "image": "assets/orchard-library.jpg",
+    "description": "Well-lit study spaces with individual desks and quiet zones."
+  },
+  {
+    "id": "the-central-mall-1",
+    "name": "The Central @ Clarke Quay",
+    "category": "mall",
+    "area": "Clarke Quay",
+    "noiseLevel": "noisy",
+    "chargingPorts": "limited",
+    "wifi": "yes",
+    "image": "assets/central-mall.jpg",
+    "description": "Vibrant mall with dining options and bustling atmosphere for group study."
+  },
+  {
+    "id": "compasspoint-1",
+    "name": "Compass Point Shopping Centre",
+    "category": "mall",
+    "area": "Sengkang",
+    "noiseLevel": "medium",
+    "chargingPorts": "limited",
+    "wifi": "yes",
+    "image": "assets/compass-point.jpg",
+    "description": "Quiet corners at the rooftop garden and indoor seating areas."
+  },
+  {
+    "id": "forest-hill-cafe-1",
+    "name": "Forest Hill Cafe",
+    "category": "cafe",
+    "area": "Bishan",
+    "noiseLevel": "quiet",
+    "chargingPorts": "abundant",
+    "wifi": "yes",
+    "image": "assets/forest-hill.jpg",
+    "description": "Hidden gem with plants, natural light, and zero distractions."
+  },
+  {
+    "id": "east-coast-mall-1",
+    "name": "East Coast Mall – Top Floor Lounge",
+    "category": "mall",
+    "area": "East Coast",
+    "noiseLevel": "quiet",
+    "chargingPorts": "abundant",
+    "wifi": "yes",
+    "image": "assets/east-coast.jpg",
+    "description": "Serene lounge area overlooking the beach. Perfect for focused work."
+  },
+  {
+    "id": "hougang-library-1",
+    "name": "Hougang Public Library",
+    "category": "library",
+    "area": "Hougang",
+    "noiseLevel": "quiet",
+    "chargingPorts": "limited",
+    "wifi": "yes",
+    "image": "assets/hougang-library.jpg",
+    "description": "Community library with study carrels and group discussion rooms."
+  },
+  {
+    "id": "coffee-bean-east-coast-1",
+    "name": "Coffee Bean @ East Coast Park",
+    "category": "cafe",
+    "area": "East Coast",
+    "noiseLevel": "medium",
+    "chargingPorts": "limited",
+    "wifi": "yes",
+    "image": "assets/cbe-east-coast.jpg",
+    "description": "Outdoor seating with park views. Bring a cushion for comfort."
+  },
+  {
+    "id": "kallang-library-1",
+    "name": "Kallang Library",
+    "category": "library",
+    "area": "Kallang",
+    "noiseLevel": "quiet",
+    "chargingPorts": "abundant",
+    "wifi": "yes",
+    "image": "assets/kallang-library.jpg",
+    "description": "Large study areas with modern amenities and quiet reading zones."
+  },
+  {
+    "id": "marina-square-1",
+    "name": "Marina Square – Upper Floors",
+    "category": "mall",
+    "area": "Marina",
+    "noiseLevel": "medium",
+    "chargingPorts": "limited",
+    "wifi": "yes",
+    "image": "assets/marina-square.jpg",
+    "description": "Quieter upper floors with scattered seating areas."
+  }
+]
