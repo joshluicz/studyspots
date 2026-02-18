@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>StudySpots — Contact</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/filters.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-left">
+      <div class="logo" aria-hidden="true">📚</div>
+      <h1>StudySpots</h1>
+    </div>
+    
+    <nav class="header-nav">
+      <a href="index.html">Browse Spots</a>
+      <a href="malls.html">Browse Malls</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    
+    <div class="header-actions">
+      <button class="btn-favorites" title="View your favorite spots" id="favorites-btn">❤️ Favorites</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="content-section">
+      <h2>Contact Us</h2>
+      <p class="content-lead">
+        Have a question, suggestion, or want to share a study spot? We'd love to hear from you.
+      </p>
+
+      <h3>Get in Touch</h3>
+      <p class="content-muted">
+        This page is a placeholder. Contact form and details will be added soon. In the meantime, you can explore our <a href="index.html" class="content-link">Browse Spots</a> page to find your perfect study location.
+      </p>
+
+      <h3>Stay Updated</h3>
+      <p class="content-muted">
+        Follow us for updates on new study spots and features. More ways to connect coming soon.
+      </p>
+
+      <p class="content-footer">
+        Made with 🤍 for focused work and productive vibes.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">&copy; StudySpots — Find your perfect study spot</footer>
+  
+  <script>
+    document.getElementById('favorites-btn')?.addEventListener('click', () => {
+      window.location.href = 'favorites.html';
+    });
+  </script>
+</body>
+</html>
