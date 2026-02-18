@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Favorites — StudySpots</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/filters.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-left">
+      <div class="logo">🗺️</div>
+      <h1>StudySpots</h1>
+    </div>
+    
+    <nav class="header-nav">
+      <a href="homepage.html">Browse Spots</a>
+      <a href="malls.html">Browse Malls</a>
+      <a href="about.html">About</a>
+    </nav>
+    
+    <div class="header-actions">
+      <button class="btn-favorites" title="View your favorite spots">❤️ Favorites</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section style="text-align:center;padding:48px 20px;border-bottom:1px solid rgba(0,0,0,0.05)">
+      <h2 style="font-size:2.2rem;margin:0 0 12px;line-height:1.3">Your Favorite Spots</h2>
+      <p style="color:var(--muted);font-size:1rem;margin:0">Your collection of favorite study spots.</p>
+    </section>
+
+    <section>
+      <div id="loading" class="muted" style="text-align:center;padding:40px">Loading favorites…</div>
+      <div id="empty-message" class="muted" style="text-align:center;padding:40px;display:none">
+        <p>No favorite spots yet. <a href="homepage.html">Browse spots</a> and add them to your favorites!</p>
+      </div>
+      <div id="cards-container" class="cards-grid" role="list"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">&copy; StudySpots — Find your perfect study spot</footer>
+
+  <script type="module" src="js/favorites.js"></script>
+  <script>
+    document.querySelector('.btn-favorites')?.addEventListener('click', () => {
+      window.location.href = 'favorites.html';
+    });
+  </script>
+</body>
+</html>

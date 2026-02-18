@@ -12,6 +12,7 @@ const searchInput = document.getElementById('search-input');
 const categorySelect = document.getElementById('filter-category');
 const areaSelect = document.getElementById('filter-area');
 const noiseSelect = document.getElementById('filter-noise');
+const favoritesBtn = document.getElementById('favorites-btn');
 
 let allSpots = [];
 let paginator = null;
@@ -55,7 +56,7 @@ function updatePaginationUI() {
     prevBtn.disabled = current === 1;
     prevBtn.addEventListener('click', () => {
       paginator.prevPage();
-      renderFiltered();
+      renderFiltered().catch(err => console.error('Render error:', err));
     });
     paginationEl.appendChild(prevBtn);
     
@@ -66,7 +67,7 @@ function updatePaginationUI() {
       pageBtn.className = i === current ? 'active' : '';
       pageBtn.addEventListener('click', () => {
         paginator.goToPage(i);
-        renderFiltered();
+        renderFiltered().catch(err => console.error('Render error:', err));
       });
       paginationEl.appendChild(pageBtn);
     }
@@ -77,34 +78,46 @@ function updatePaginationUI() {
     nextBtn.disabled = current === total;
     nextBtn.addEventListener('click', () => {
       paginator.nextPage();
-      renderFiltered();
+      renderFiltered().catch(err => console.error('Render error:', err));
     });
     paginationEl.appendChild(nextBtn);
   }
 }
 
-function renderFiltered() {
-  const state = getFilterState();
-  let filtered = applyFilters(allSpots, state);
-  
-  paginator = new Paginator(filtered, 30);
-  const pageItems = paginator.getCurrentPageItems();
-  
-  renderCards(pageItems, container);
-  updatePaginationUI();
+async function renderFiltered() {
+  try {
+    const state = getFilterState();
+    let filtered = applyFilters(allSpots, state);
+    
+    paginator = new Paginator(filtered, 30);
+    const pageItems = paginator.getCurrentPageItems();
+    
+    await renderCards(pageItems, container);
+    updatePaginationUI();
+  } catch (err) {
+    console.error('Error in renderFiltered:', err);
+    container.textContent = 'Failed to render spots.';
+    throw err;
+  }
 }
 
 function wireEvents() {
   [searchInput, categorySelect, areaSelect, noiseSelect].forEach((el) => {
     el.addEventListener('change', () => {
       if (paginator) paginator.reset();
-      renderFiltered();
+      renderFiltered().catch(err => console.error('Render error:', err));
     });
     el.addEventListener('input', () => {
       if (paginator) paginator.reset();
-      renderFiltered();
+      renderFiltered().catch(err => console.error('Render error:', err));
     });
   });
+  
+  if (favoritesBtn) {
+    favoritesBtn.addEventListener('click', () => {
+      window.location.href = 'favorites.html';
+    });
+  }
 }
 
 async function init() {
@@ -112,7 +125,7 @@ async function init() {
     loadingEl.style.display = 'block';
     allSpots = await getSpots();
     populateAreaOptions();
-    renderFiltered();
+    await renderFiltered();
     wireEvents();
   } catch (err) {
     container.textContent = 'Failed to load spots.';

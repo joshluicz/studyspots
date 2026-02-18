@@ -17,12 +17,13 @@
     </div>
     
     <nav class="header-nav">
-      <a href="homepage.html">Browse</a>
+      <a href="homepage.html">Browse Spots</a>
+      <a href="malls.html">Browse Malls</a>
       <a href="about.html">About</a>
     </nav>
     
     <div class="header-actions">
-      <button class="btn-share">+ Share a Spot</button>
+      <button class="btn-favorites" title="View your favorite spots" id="favorites-btn">❤️ Favorites</button>
     </div>
   </header>
 
@@ -67,5 +68,11 @@
   </main>
 
   <footer class="site-footer">&copy; StudySpots — Find your perfect study spot</footer>
+  
+  <script>
+    document.getElementById('favorites-btn')?.addEventListener('click', () => {
+      window.location.href = 'favorites.html';
+    });
+  </script>
 </body>
 </html>

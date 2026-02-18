@@ -1,30 +1,26 @@
-import { getSpots } from './dataLoader.js';
-import { renderCards } from './cardRenderer.js';
-import { applyFilters } from './filters.js';
-import { Paginator } from './pagination.js';
+import { renderMallCards } from './cardRenderer.js';
 
 const container = document.getElementById('cards-container');
 const loadingEl = document.getElementById('loading');
-const noResultsEl = document.getElementById('no-results');
-
 const searchInput = document.getElementById('search-input');
-const categorySelect = document.getElementById('filter-category');
 const areaSelect = document.getElementById('filter-area');
-const noiseSelect = document.getElementById('filter-noise');
-const chargingSelect = document.getElementById('filter-charging');
-const wifiSelect = document.getElementById('filter-wifi');
-const resetBtn = document.getElementById('reset-filters');
+const favoritesBtn = document.getElementById('favorites-btn');
 
-const paginationEl = document.getElementById('pagination');
-const pageInfoEl = document.getElementById('page-info');
+let allMalls = [];
 
-let allSpots = [];
-let paginator = null;
-let uniqueAreas = [];
+// Fetch malls JSON
+async function getMalls() {
+  const url = new URL('../data/malls.json', import.meta.url).href;
+  const res = await fetch(url);
+  if (!res.ok) {
+    throw new Error(`Failed to load malls.json: ${res.status}`);
+  }
+  const data = await res.json();
+  return data;
+}
 
 function populateAreaOptions() {
-  const areas = [...new Set(allSpots.map(s => s.area))].sort();
-  uniqueAreas = areas;
+  const areas = [...new Set(allMalls.map(m => m.area))].sort();
   areaSelect.innerHTML = '<option value="any">All Areas</option>';
   areas.forEach(area => {
     const opt = document.createElement('option');
@@ -36,120 +32,68 @@ function populateAreaOptions() {
 
 function getFilterState() {
   return {
-    category: categorySelect.value,
     area: areaSelect.value,
-    noise: noiseSelect.value,
-    charging: chargingSelect.value,
-    wifi: wifiSelect.value,
     search: searchInput.value
   };
 }
 
-function updatePaginationUI() {
-  if (!paginator) return;
-  
-  const total = paginator.getTotalPages();
-  const current = paginator.currentPage;
-  
-  if (pageInfoEl) {
-    pageInfoEl.textContent = `Page ${current} of ${total}`;
-  }
-  
-  if (paginationEl) {
-    paginationEl.innerHTML = '';
-    
-    // Prev button
-    const prevBtn = document.createElement('button');
-    prevBtn.textContent = '← Previous';
-    prevBtn.disabled = current === 1;
-    prevBtn.addEventListener('click', () => {
-      paginator.prevPage();
-      renderFiltered();
-    });
-    paginationEl.appendChild(prevBtn);
-    
-    // Page buttons
-    for (let i = 1; i <= total; i++) {
-      const pageBtn = document.createElement('button');
-      pageBtn.textContent = i;
-      pageBtn.className = i === current ? 'active' : '';
-      pageBtn.addEventListener('click', () => {
-        paginator.goToPage(i);
-        renderFiltered();
-      });
-      paginationEl.appendChild(pageBtn);
+function applyMallFilters(malls, filterState) {
+  return malls.filter((m) => {
+    // area
+    if (filterState.area && filterState.area !== 'any') {
+      if (m.area !== filterState.area) return false;
     }
-    
-    // Next button
-    const nextBtn = document.createElement('button');
-    nextBtn.textContent = 'Next →';
-    nextBtn.disabled = current === total;
-    nextBtn.addEventListener('click', () => {
-      paginator.nextPage();
-      renderFiltered();
-    });
-    paginationEl.appendChild(nextBtn);
-  }
+
+    // search term (case-insensitive, searches name and description)
+    if (filterState.search && filterState.search.trim()) {
+      const query = filterState.search.toLowerCase();
+      const nameMatch = (m.name || '').toLowerCase().includes(query);
+      const descMatch = (m.description || '').toLowerCase().includes(query);
+      if (!nameMatch && !descMatch) return false;
+    }
+
+    return true;
+  });
 }
 
-function renderFiltered() {
+async function renderFiltered() {
   const state = getFilterState();
-  let filtered = applyFilters(allSpots, state);
+  let filtered = applyMallFilters(allMalls, state);
   
-  paginator = new Paginator(filtered, 30);
-  const pageItems = paginator.getCurrentPageItems();
-  
-  if (!pageItems.length) {
-    noResultsEl.style.display = 'block';
-    if (paginationEl) paginationEl.style.display = 'none';
-    if (pageInfoEl) pageInfoEl.style.display = 'none';
-  } else {
-    noResultsEl.style.display = 'none';
-    if (paginationEl) paginationEl.style.display = 'flex';
-    if (pageInfoEl) pageInfoEl.style.display = 'block';
-  }
-  
-  renderCards(pageItems, container);
-  updatePaginationUI();
+  await renderMallCards(filtered, container);
 }
 
 function wireEvents() {
-  [searchInput, categorySelect, areaSelect, noiseSelect, chargingSelect, wifiSelect].forEach((el) => {
+  [searchInput, areaSelect].forEach((el) => {
     el.addEventListener('change', () => {
-      if (paginator) paginator.reset();
-      renderFiltered();
+      renderFiltered().catch(err => console.error('Render error:', err));
     });
     el.addEventListener('input', () => {
-      if (paginator) paginator.reset();
-      renderFiltered();
+      renderFiltered().catch(err => console.error('Render error:', err));
     });
   });
-
-  resetBtn.addEventListener('click', () => {
-    searchInput.value = '';
-    categorySelect.value = 'any';
-    areaSelect.value = 'any';
-    noiseSelect.value = 'any';
-    chargingSelect.value = 'any';
-    wifiSelect.value = 'any';
-    if (paginator) paginator.reset();
-    renderFiltered();
-  });
+  
+  if (favoritesBtn) {
+    favoritesBtn.addEventListener('click', () => {
+      window.location.href = 'favorites.html';
+    });
+  }
 }
 
 async function init() {
   try {
     loadingEl.style.display = 'block';
-    allSpots = await getSpots();
+    allMalls = await getMalls();
     populateAreaOptions();
-    renderFiltered();
+    await renderFiltered();
     wireEvents();
   } catch (err) {
-    container.textContent = 'Failed to load spots.';
+    container.textContent = 'Failed to load malls.';
     console.error(err);
   } finally {
     loadingEl.style.display = 'none';
   }
+}
 }
 
 init();

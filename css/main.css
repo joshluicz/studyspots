@@ -17,6 +17,8 @@
   --radius:12px;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap');
+
 *{box-sizing:border-box}
 
 html,body{height:100%}
@@ -30,7 +32,7 @@ body{
 }
 
 h1,h2,h3,h4,h5,h6{
-  font-family:Georgia,'Times New Roman',serif;
+  font-family:'Playfair Display',serif;
   font-weight:600;
   letter-spacing:-0.5px;
 }

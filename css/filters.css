@@ -36,12 +36,12 @@ button.active{
   box-shadow:0 0 0 2px var(--accent);
 }
 
-.btn-share{
+.btn-favorites{
   background:var(--accent);
   color:white;
   border:none;
   padding:12px 24px;
-  border-radius:24px;
+  border-radius:12px;
   cursor:pointer;
   font-size:0.95rem;
   font-weight:500;
@@ -51,7 +51,7 @@ button.active{
   gap:8px;
 }
 
-.btn-share:hover{
+.btn-favorites:hover{
   background:var(--accent-dark);
 }
 
