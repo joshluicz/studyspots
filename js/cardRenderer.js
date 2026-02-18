@@ -2,7 +2,7 @@
 // Also loads malls data if needed for displaying mall information
 export async function getMallsData() {
   try {
-    const url = new URL('../data/malls.json', import.meta.url).href;
+    const url = './data/malls.json';
     const res = await fetch(url);
     if (!res.ok) return {};
     const malls = await res.json();

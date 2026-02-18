@@ -3,70 +3,70 @@
     "id": "westgate-mall",
     "name": "Westgate",
     "area": "Jurong",
-    "image": "https://via.placeholder.com/400x300?text=Westgate+Mall",
+    "image": "https://picsum.photos/400/300?random=2",
     "description": "Lots of open seating and cafes; good natural light."
   },
   {
     "id": "vivocity-mall",
     "name": "VivoCity",
     "area": "Harbour",
-    "image": "https://via.placeholder.com/400x300?text=VivoCity+Mall",
+    "image": "https://picsum.photos/400/300?random=2",
     "description": "Large food courts and scattered benches; lively on weekends."
   },
   {
     "id": "nex-mall",
     "name": "NEX Shopping Centre",
     "area": "Serangoon",
-    "image": "https://via.placeholder.com/400x300?text=NEX+Mall",
+    "image": "https://picsum.photos/400/300?random=2",
     "description": "Popular mall with lots of casual seating and cafes."
   },
   {
     "id": "tampines-1-mall",
     "name": "Tampines 1 Mall",
     "area": "Tampines",
-    "image": "https://via.placeholder.com/400x300?text=Tampines+1+Mall",
+    "image": "https://picsum.photos/400/300?random=2",
     "description": "Spacious mall with food court and comfortable seating."
   },
   {
     "id": "clementi-mall",
     "name": "The Clementi Mall",
     "area": "Clementi",
-    "image": "https://via.placeholder.com/400x300?text=Clementi+Mall",
+    "image": "https://picsum.photos/400/300?random=2",
     "description": "Modern mall with comfortable lounge areas and charging hubs."
   },
   {
     "id": "central-clarke-quay-mall",
     "name": "The Central @ Clarke Quay",
     "area": "Clarke Quay",
-    "image": "https://via.placeholder.com/400x300?text=Central+Clarke+Quay",
+    "image": "https://picsum.photos/400/300?random=2",
     "description": "Vibrant mall with dining options and bustling atmosphere for group study."
   },
   {
     "id": "compass-point-mall",
     "name": "Compass Point Shopping Centre",
     "area": "Sengkang",
-    "image": "https://via.placeholder.com/400x300?text=Compass+Point+Mall",
+    "image": "https://picsum.photos/400/300?random=2",
     "description": "Quiet corners at the rooftop garden and indoor seating areas."
   },
   {
     "id": "east-coast-mall",
     "name": "East Coast Mall – Top Floor Lounge",
     "area": "East Coast",
-    "image": "https://via.placeholder.com/400x300?text=East+Coast+Mall",
+    "image": "https://picsum.photos/400/300?random=2",
     "description": "Serene lounge area overlooking the beach. Perfect for focused work."
   },
   {
     "id": "marina-square-mall",
     "name": "Marina Square – Upper Floors",
     "area": "Marina",
-    "image": "https://via.placeholder.com/400x300?text=Marina+Square+Mall",
+    "image": "https://picsum.photos/400/300?random=2",
     "description": "Quieter upper floors with scattered seating areas."
   },
   {
     "id": "orchard-central-mall",
     "name": "Orchard Central",
     "area": "Orchard",
-    "image": "https://via.placeholder.com/400x300?text=Orchard+Central",
+    "image": "https://picsum.photos/400/300?random=2",
     "description": "Upscale shopping mall with boutique cafés and study spaces."
   }
 ]

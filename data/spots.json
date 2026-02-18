@@ -7,7 +7,7 @@
     "noiseLevel": "quiet",
     "chargingPorts": "abundant",
     "wifi": "yes",
-    "image": "https://via.placeholder.com/400x300?text=Jurong+Library",
+    "image": "https://picsum.photos/400/300?random=1",
     "description": "Quiet study areas with lots of power outlets.",
     "mallId": null
   },
@@ -19,7 +19,7 @@
     "noiseLevel": "medium",
     "chargingPorts": "limited",
     "wifi": "yes",
-    "image": "https://via.placeholder.com/400x300?text=Coffee+Bean+Downtown",
+    "image": "https://picsum.photos/400/300?random=2",
     "description": "Friendly staff and stable Wi-Fi.",
     "mallId": null
   },
@@ -31,7 +31,7 @@
     "noiseLevel": "quiet",
     "chargingPorts": "abundant",
     "wifi": "yes",
-    "image": "https://via.placeholder.com/400x300?text=National+Library",
+    "image": "https://picsum.photos/400/300?random=3",
     "description": "Modern library with excellent study facilities and Wi-Fi.",
     "mallId": null
   },
@@ -43,7 +43,7 @@
     "noiseLevel": "medium",
     "chargingPorts": "abundant",
     "wifi": "yes",
-    "image": "https://via.placeholder.com/400x300?text=Starbucks+Marina",
+    "image": "https://picsum.photos/400/300?random=4",
     "description": "Scenic waterfront view with ample electrical outlets.",
     "mallId": null
   },
@@ -55,7 +55,7 @@
     "noiseLevel": "quiet",
     "chargingPorts": "limited",
     "wifi": "yes",
-    "image": "https://via.placeholder.com/400x300?text=Tanjong+Pagar+Library",
+    "image": "https://picsum.photos/400/300?random=1",
     "description": "Cozy reading nooks and study desks. Bring headphones for ambient music.",
     "mallId": null
   },
@@ -67,7 +67,7 @@
     "noiseLevel": "medium",
     "chargingPorts": "limited",
     "wifi": "yes",
-    "image": "https://via.placeholder.com/400x300?text=Tiong+Bahru+Bakery",
+    "image": "https://picsum.photos/400/300?random=1",
     "description": "Artisanal bakery with vintage vibes. Great for casual study groups.",
     "mallId": null
   },
@@ -79,7 +79,7 @@
     "noiseLevel": "quiet",
     "chargingPorts": "abundant",
     "wifi": "yes",
-    "image": "https://via.placeholder.com/400x300?text=Orchard+Library",
+    "image": "https://picsum.photos/400/300?random=1",
     "description": "Well-lit study spaces with individual desks and quiet zones.",
     "mallId": "orchard-central-mall"
   },
@@ -91,7 +91,7 @@
     "noiseLevel": "quiet",
     "chargingPorts": "abundant",
     "wifi": "yes",
-    "image": "https://via.placeholder.com/400x300?text=Forest+Hill+Cafe",
+    "image": "https://picsum.photos/400/300?random=1",
     "description": "Hidden gem with plants, natural light, and zero distractions.",
     "mallId": null
   },
@@ -103,7 +103,7 @@
     "noiseLevel": "medium",
     "chargingPorts": "limited",
     "wifi": "yes",
-    "image": "https://via.placeholder.com/400x300?text=CB+East+Coast",
+    "image": "https://picsum.photos/400/300?random=1",
     "description": "Outdoor seating with park views. Bring a cushion for comfort.",
     "mallId": null
   },
@@ -115,7 +115,7 @@
     "noiseLevel": "quiet",
     "chargingPorts": "abundant",
     "wifi": "yes",
-    "image": "https://via.placeholder.com/400x300?text=Kallang+Library",
+    "image": "https://picsum.photos/400/300?random=1",
     "description": "Large study areas with modern amenities and quiet reading zones.",
     "mallId": null
   },
@@ -127,7 +127,7 @@
     "noiseLevel": "medium",
     "chargingPorts": "abundant",
     "wifi": "yes",
-    "image": "https://via.placeholder.com/400x300?text=CB+Westgate",
+    "image": "https://picsum.photos/400/300?random=1",
     "description": "Busy cafe with lots of seating and high traffic.",
     "mallId": "westgate-mall"
   },
@@ -139,7 +139,7 @@
     "noiseLevel": "noisy",
     "chargingPorts": "limited",
     "wifi": "yes",
-    "image": "https://via.placeholder.com/400x300?text=Common+Grounds",
+    "image": "https://picsum.photos/400/300?random=1",
     "description": "Popular cafe with peak hours; good for group studying.",
     "mallId": "vivocity-mall"
   },
@@ -151,7 +151,7 @@
     "noiseLevel": "noisy",
     "chargingPorts": "limited",
     "wifi": "yes",
-    "image": "https://via.placeholder.com/400x300?text=Starbucks+NEX",
+    "image": "https://picsum.photos/400/300?random=1",
     "description": "Bustling cafe with mall energy.",
     "mallId": "nex-mall"
   },
@@ -163,7 +163,7 @@
     "noiseLevel": "medium",
     "chargingPorts": "limited",
     "wifi": "yes",
-    "image": "https://via.placeholder.com/400x300?text=Coffee+Club+Tampines",
+    "image": "https://picsum.photos/400/300?random=1",
     "description": "Comfortable café with moderate noise levels.",
     "mallId": "tampines-1-mall"
   },
@@ -175,7 +175,7 @@
     "noiseLevel": "medium",
     "chargingPorts": "abundant",
     "wifi": "yes",
-    "image": "https://via.placeholder.com/400x300?text=Clementi+Hub",
+    "image": "https://picsum.photos/400/300?random=1",
     "description": "Modern working space with charging hubs and comfortable seating.",
     "mallId": "clementi-mall"
   },
@@ -187,7 +187,7 @@
     "noiseLevel": "noisy",
     "chargingPorts": "limited",
     "wifi": "yes",
-    "image": "https://via.placeholder.com/400x300?text=Clarke+Quay+Space",
+    "image": "https://picsum.photos/400/300?random=1",
     "description": "Vibrant spaces for collaborative work and group study.",
     "mallId": "central-clarke-quay-mall"
   },
@@ -199,7 +199,7 @@
     "noiseLevel": "medium",
     "chargingPorts": "limited",
     "wifi": "yes",
-    "image": "https://via.placeholder.com/400x300?text=Compass+Point+Nook",
+    "image": "https://picsum.photos/400/300?random=1",
     "description": "Quiet corners at the rooftop garden and indoor seating areas.",
     "mallId": "compass-point-mall"
   },
@@ -211,7 +211,7 @@
     "noiseLevel": "quiet",
     "chargingPorts": "abundant",
     "wifi": "yes",
-    "image": "https://via.placeholder.com/400x300?text=East+Coast+Lounge",
+    "image": "https://picsum.photos/400/300?random=1",
     "description": "Serene lounge area overlooking the beach. Perfect for focused work.",
     "mallId": "east-coast-mall"
   },
@@ -223,7 +223,7 @@
     "noiseLevel": "medium",
     "chargingPorts": "limited",
     "wifi": "yes",
-    "image": "https://via.placeholder.com/400x300?text=Marina+Square+Lounge",
+    "image": "https://picsum.photos/400/300?random=1",
     "description": "Quieter upper floors with scattered seating areas.",
     "mallId": "marina-square-mall"
   }

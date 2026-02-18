@@ -10,7 +10,7 @@ let allMalls = [];
 
 // Fetch malls JSON
 async function getMalls() {
-  const url = new URL('../data/malls.json', import.meta.url).href;
+  const url = './data/malls.json';
   const res = await fetch(url);
   if (!res.ok) {
     throw new Error(`Failed to load malls.json: ${res.status}`);

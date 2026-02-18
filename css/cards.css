@@ -1,6 +1,6 @@
 .card{
   background:var(--card);
-  border-radius:12px;
+  border-radius:16px;
   box-shadow:0 4px 12px rgba(0,0,0,0.08);
   overflow:hidden;
   display:flex;
@@ -114,4 +114,16 @@
 
 .card-fav-btn:hover{
   color:var(--noisy);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .card-features {
+    gap: 6px;
+  }
+
+  .feature-badge {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
 }

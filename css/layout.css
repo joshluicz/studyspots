@@ -82,3 +82,29 @@
 .category-list a:hover{
   color:var(--accent);
 }
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+    padding: 0 16px 40px;
+    gap: 16px;
+  }
+
+  .filters-bar {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+    margin: 16px;
+  }
+
+  .filters-bar input[type="text"] {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .category-list {
+    gap: 16px;
+    padding: 16px 0;
+  }
+}
