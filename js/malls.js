@@ -94,6 +94,5 @@ async function init() {
     loadingEl.style.display = 'none';
   }
 }
-}
 
 init();
