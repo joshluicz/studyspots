@@ -15,7 +15,7 @@
   background:var(--cream);
   border-radius:20px;
   margin:24px 20px 0;
-  box-shadow:0 2px 8px rgba(0,0,0,0.05);
+  box-shadow:0 2px 12px rgba(0,0,0,0.04);
 }
 
 .filters-bar label{
@@ -28,32 +28,32 @@
 .filters-bar select,
 .filters-bar input{
   padding:12px 16px;
-  border:1.5px solid #e5dbd3;
+  border:1.5px solid rgba(0,0,0,0.08);
   border-radius:12px;
   background:white;
   color:var(--text);
-  font-family:'Playfair Display',serif;
+  font-family:'Plus Jakarta Sans','Segoe UI',system-ui,sans-serif;
   font-size:0.95rem;
-  transition:border-color 0.2s,box-shadow 0.2s;
+  transition:border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
 .filters-bar select:hover,
 .filters-bar input:hover{
   border-color:var(--accent);
-  background:linear-gradient(135deg, rgba(168,144,128,0.03) 0%, rgba(187,108,87,0.03) 100%);
+  background:rgba(184,160,144,0.04);
 }
 
 .filters-bar select:focus,
 .filters-bar input:focus{
   outline:none;
   border-color:var(--accent);
-  box-shadow:0 0 0 4px rgba(168,144,128,0.15);
-  background:linear-gradient(135deg, rgba(168,144,128,0.05) 0%, rgba(187,108,87,0.05) 100%);
+  box-shadow:0 0 0 3px rgba(184,160,144,0.2);
+  background:rgba(184,160,144,0.06);
 }
 
 .filters-bar select {
   appearance:none;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23a89080' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23b8a090' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
   background-repeat:no-repeat;
   background-position:right 12px center;
   padding-right:32px;

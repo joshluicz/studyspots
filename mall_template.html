@@ -28,17 +28,17 @@
   </header>
 
   <main class="container">
-    <section id="mall-header" style="text-align:center;padding:48px 20px;border-bottom:1px solid rgba(0,0,0,0.05)">
-      <div id="loading" class="muted" style="text-align:center;padding:40px">Loading mall details…</div>
+    <section id="mall-header" class="hero-section">
+      <div id="loading" class="muted section-loading">Loading mall details…</div>
       <div id="mall-content" style="display:none">
-        <h2 id="mall-title" style="font-size:2.2rem;margin:0 0 12px;line-height:1.3"></h2>
-        <p id="mall-description" style="color:var(--muted);font-size:1rem;margin:0"></p>
+        <h2 id="mall-title" class="hero-title"></h2>
+        <p id="mall-description" class="hero-subtitle"></p>
       </div>
     </section>
 
     <section>
       <div id="cards-container" class="cards-grid" role="list"></div>
-      <div id="no-spots" class="muted" style="text-align:center;padding:40px;display:none">
+      <div id="no-spots" class="muted section-loading" style="display:none">
         No study spots found in this mall yet.
       </div>
     </section>
