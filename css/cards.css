@@ -137,12 +137,32 @@
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
+  .card {
+    border-radius: 18px;
+  }
+
+  .card-body {
+    padding: 18px;
+  }
+
+  .card-body h3 {
+    font-size: 1.05rem;
+  }
+
   .card-features {
-    gap: 6px;
+    gap: 8px;
   }
 
   .feature-badge {
-    font-size: 0.75rem;
-    padding: 4px 8px;
+    font-size: 0.78rem;
+    padding: 6px 10px;
+    min-height: 32px;
+    align-items: center;
+  }
+
+  .card-fav-btn {
+    min-height: 44px;
+    margin-top: 4px;
+    padding: 4px 0;
   }
 }

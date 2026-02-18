@@ -12,7 +12,7 @@
 <body>
   <header class="site-header">
     <div class="header-left">
-      <div class="logo">📍</div>
+      <div class="logo" aria-hidden="true">📚</div>
       <h1>StudySpots</h1>
     </div>
     
@@ -67,10 +67,42 @@
             <option value="noisy">🎉 Noisy</option>
           </select>
         </label>
+
+        <div class="filters-more-wrap">
+          <button type="button" class="btn-more-filters" id="toggle-more-filters" aria-expanded="false">
+            <span class="btn-more-filters-text">Show more filters</span>
+            <span class="btn-more-filters-chevron">▼</span>
+          </button>
+          <div class="filters-extra" id="filters-extra" hidden>
+            <label>
+              <select id="filter-wifi" aria-label="Wi‑Fi">
+                <option value="any">Any Wi‑Fi</option>
+                <option value="yes">📶 Wi‑Fi Available</option>
+                <option value="no">📵 No Wi‑Fi</option>
+              </select>
+            </label>
+            <label>
+              <select id="filter-charging" aria-label="Charging ports">
+                <option value="any">Any Charging</option>
+                <option value="abundant">🔌 Abundant</option>
+                <option value="limited">⚡ Limited</option>
+                <option value="none">✕ None</option>
+              </select>
+            </label>
+          </div>
+        </div>
       </form>
     </section>
 
     <section>
+      <div class="view-toolbar" aria-label="View options">
+        <span class="view-toolbar-label">Columns:</span>
+        <div class="view-toolbar-btns" role="group">
+          <button type="button" class="view-col-btn" data-cols="1" aria-pressed="false">1</button>
+          <button type="button" class="view-col-btn" data-cols="2" aria-pressed="false">2</button>
+          <button type="button" class="view-col-btn" data-cols="3" aria-pressed="false">3</button>
+        </div>
+      </div>
       <div id="loading" class="muted section-loading">Loading spots…</div>
       <div id="cards-container" class="cards-grid" role="list"></div>
       

@@ -12,7 +12,7 @@
 <body>
   <header class="site-header">
     <div class="header-left">
-      <div class="logo">📍</div>
+      <div class="logo" aria-hidden="true">📚</div>
       <h1>StudySpots</h1>
     </div>
     
@@ -20,6 +20,7 @@
       <a href="index.html">Browse Spots</a>
       <a href="malls.html">Browse Malls</a>
       <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
     
     <div class="header-actions">
@@ -34,11 +35,21 @@
     </section>
 
     <section>
+      <div class="view-toolbar" id="fav-view-toolbar" style="display:none" aria-label="View options">
+        <span class="view-toolbar-label">Columns:</span>
+        <div class="view-toolbar-btns" role="group">
+          <button type="button" class="view-col-btn" data-cols="1" aria-pressed="false">1</button>
+          <button type="button" class="view-col-btn" data-cols="2" aria-pressed="false">2</button>
+          <button type="button" class="view-col-btn" data-cols="3" aria-pressed="false">3</button>
+        </div>
+      </div>
       <div id="loading" class="muted section-loading">Loading favorites…</div>
       <div id="empty-message" class="muted section-loading" style="display:none">
         <p>No favorite spots yet. <a href="index.html">Browse spots</a> and add them to your favorites!</p>
       </div>
       <div id="cards-container" class="cards-grid" role="list"></div>
+      <div id="page-info" class="section-message"></div>
+      <div id="pagination" class="pagination-wrap"></div>
     </section>
   </main>
 

@@ -59,12 +59,50 @@ button.active{
   transform:scale(0.98);
 }
 
+.btn-more-filters{
+  background:transparent;
+  color:var(--accent);
+  border:1px dashed var(--accent);
+  padding:10px 16px;
+  border-radius:12px;
+  cursor:pointer;
+  font-size:0.9rem;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  transition:all 0.2s ease;
+}
+
+.btn-more-filters:hover{
+  background:rgba(184,160,144,0.08);
+  border-style:solid;
+}
+
+.filters-more-wrap{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:12px;
+}
+
+.filters-extra{
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+  align-items:center;
+}
+
+.filters-extra[hidden]{
+  display:none;
+}
+
 #pagination{
   gap:8px;
 }
 
 #pagination button{
-  padding:8px 12px;
-  min-width:40px;
+  padding:10px 14px;
+  min-width:44px;
+  min-height:44px;
   text-align:center;
 }

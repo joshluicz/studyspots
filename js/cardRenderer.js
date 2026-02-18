@@ -69,12 +69,12 @@ export async function renderCards(spotsArray, containerElement, onFavToggle) {
 
     const charging = document.createElement('span');
     charging.className = 'feature-badge charging';
-    const chargingLabels = { none: '🔌 None', limited: '🔌 Limited', abundant: '🔌 Abundant' };
+    const chargingLabels = { none: '✕ None', limited: '⚡ Limited', abundant: '🔌 Abundant' };
     charging.textContent = chargingLabels[spot.chargingPorts] || spot.chargingPorts;
 
     const wifi = document.createElement('span');
     wifi.className = 'feature-badge wifi';
-    wifi.textContent = spot.wifi === 'yes' ? '📶 Wi-Fi' : '📶 No Wi-Fi';
+    wifi.textContent = spot.wifi === 'yes' ? '📶 Wi-Fi' : '📵 No Wi-Fi';
 
     features.appendChild(noise);
     features.appendChild(charging);
