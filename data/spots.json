@@ -228,16 +228,64 @@
     "mallId": "marina-square-mall"
   },
   {
-    "id": "work-loune",
-    "name": "Work Lounge @ Marina Square",
-    "category": "working-space",
-    "area": "Marina",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
+    "id": "jewel-starbucks-1",
+    "name": "Starbucks @ Jewel",
+    "category": "cafe",
+    "area": "Jewel",
+    "noiseLevel": "noisy",
+    "chargingPorts": "unsure",
     "wifi": "yes",
     "image": "https://picsum.photos/400/300?random=1",
-    "description": "Quieter upper floors with scattered seating areas.",
-    "mallId": "marina-square-mall"
+    "description": "Noisy with limited seats.",
+    "mallId": "jewel-starbucks"
+  },
+  {
+    "id": "jewel-starbucks-1",
+    "name": "Starbucks @ Jewel",
+    "category": "cafe",
+    "area": "Jewel",
+    "noiseLevel": "noisy",
+    "chargingPorts": "unsure",
+    "wifi": "yes",
+    "image": "https://picsum.photos/400/300?random=1",
+    "description": "Noisy with limited seats.",
+    "mallId": "jewel-starbucks"
+  },
+  {
+    "id": "jewel-starbucks-1",
+    "name": "Starbucks @ Jewel",
+    "category": "cafe",
+    "area": "Jewel",
+    "noiseLevel": "noisy",
+    "chargingPorts": "unsure",
+    "wifi": "yes",
+    "image": "https://picsum.photos/400/300?random=1",
+    "description": "Noisy with limited seats.",
+    "mallId": "jewel-starbucks"
+  },
+  {
+    "id": "jewel-starbucks-1",
+    "name": "Starbucks @ Jewel",
+    "category": "cafe",
+    "area": "Jewel",
+    "noiseLevel": "noisy",
+    "chargingPorts": "unsure",
+    "wifi": "yes",
+    "image": "https://picsum.photos/400/300?random=1",
+    "description": "Noisy with limited seats.",
+    "mallId": "jewel-starbucks"
+  },
+  {
+    "id": "jewel-starbucks-1",
+    "name": "Starbucks @ Jewel",
+    "category": "cafe",
+    "area": "Jewel",
+    "noiseLevel": "noisy",
+    "chargingPorts": "unsure",
+    "wifi": "yes",
+    "image": "https://picsum.photos/400/300?random=1",
+    "description": "Noisy with limited seats.",
+    "mallId": "jewel-starbucks"
   }
-
+  
 ]
