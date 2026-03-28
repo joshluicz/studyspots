@@ -4,17 +4,17 @@
   gap:12px;
   padding:16px 20px 0;
   flex-wrap:wrap;
-}
+}/*This creates the spacing between the selection of the code and the main things which are the study spots*/
 
 .view-toolbar-label{
   font-size:0.9rem;
   color:var(--muted);
-}
+}/*Label which shows colums too big and it will make all the other things extremely small*/
 
 .view-toolbar-btns{
   display:flex;
-  gap:4px;
-}
+  gap:3px;
+}/*The gap of the website to make sure it does not over expand*/
 
 .view-col-btn{
   padding:6px 12px;
@@ -30,7 +30,7 @@
 
 .view-col-btn:hover{
   border-color:var(--accent);
-  background:rgba(184,160,144,0.08);
+  background:rgba(32, 1, 8, 0.08);
 }
 
 .view-col-btn[aria-pressed="true"]{
@@ -84,13 +84,13 @@
   gap:8px;
   font-size:0.95rem;
 }
-
+/*this is to change the color of the drop down labels that is present in the top of the website to find out study spots and areas etc-> basically the filters above */
 .filters-bar select,
 .filters-bar input{
   padding:12px 16px;
-  border:1.5px solid rgba(0,0,0,0.08);
+  border:1.5px solid rgba(154, 234, 5, 0.08);
   border-radius:20px;
-  background:white;
+  background:rgb(74, 4, 4);
   color:var(--text);
   font-family:'Plus Jakarta Sans','Segoe UI',system-ui,sans-serif;
   font-size:0.95rem;
@@ -125,7 +125,7 @@
 }
 
 .filters-bar select option{
-  padding:10px 14px;
+  padding:1000000000000000000px 14000000000000000000px;
   background:var(--cream);
 }
 
@@ -136,7 +136,112 @@
 .custom-select-wrap{
   position:relative;
   display:inline-block;
+}/* This CSS snippet:
+
+```css
+.custom-select-wrap {
+  position: relative;
+  display: inline-block;
 }
+```
+
+controls how a **custom dropdown (select box)** behaves and is positioned on the page.
+
+---
+
+## 🧩 What each line does
+
+### 1. `display: inline-block;`
+
+* Makes the element behave like text (inline), but still allows:
+
+  * width / height
+  * padding / margin
+* So it sits **next to other elements horizontally** instead of taking full width
+
+👉 On your site, this is likely used so dropdown filters (like area, noise, etc.) sit side-by-side neatly.
+
+---
+
+### 2. `position: relative;`
+
+* This is the **important one**
+* It sets this element as a **reference point** for anything inside it that uses:
+
+  ```css
+  position: absolute;
+  ```
+
+👉 Meaning:
+
+* Any dropdown menu inside this wrapper can be positioned **relative to this box**, not the whole page
+
+---
+
+## 🧠 How it works together (real use case)
+
+This wrapper is typically used like this:
+
+```html
+<div class="custom-select-wrap">
+  <button>Filter</button>
+  <div class="dropdown">...</div>
+</div>
+```
+
+Then the dropdown might have:
+
+```css
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+```
+
+Because the parent has `position: relative`, the dropdown:
+
+* appears **directly below the button**
+* stays aligned properly
+
+---
+
+## 📍 On studyspots.org specifically
+
+This is likely used for:
+
+* filter dropdowns (area, noise level, wifi, etc.)
+* keeping the dropdown aligned with the button
+* preventing it from floating randomly on the page
+
+---
+
+## ⚡ Simple analogy
+
+Think of `.custom-select-wrap` as:
+👉 a **container anchor**
+
+Without `position: relative`:
+
+* dropdown floats relative to the whole page ❌
+
+With it:
+
+* dropdown sticks to its parent neatly ✅
+
+---
+
+## 🔑 Key takeaway
+
+This code:
+
+* keeps the dropdown inline with other elements
+* ensures anything inside can be positioned precisely relative to it
+
+---
+
+If you want, I can show you exactly **where this class is used in the repo UI** and how it connects to the filter system 👍
+*/
 
 .custom-select-trigger{
   padding:12px 40px 12px 16px;
@@ -147,17 +252,28 @@
   font-family:'Plus Jakarta Sans','Segoe UI',system-ui,sans-serif;
   font-size:0.95rem;
   cursor:pointer;
-  min-width:140px;
+  min-width:14px;
   min-height:44px;
   text-align:left;
   box-shadow:0 1px 2px rgba(0,0,0,0.04);
   transition:border-color 0.2s ease,box-shadow 0.2s ease,background 0.2s ease;
-}
+}/*Changes the size of the entire box(space)(1,2,3) itself and which the color when you touch the box */
 
 .custom-select-trigger:hover{
   border-color:var(--accent);
-  background:rgba(184,160,144,0.04);
-}
+  background:rgba(224, 10, 10, 0.04);
+}/*⚡ Simple summary
+
+This code makes the dropdown button:
+
+👉 highlight softly (border + light red glow) when you hover over it
+
+💡 Why this matters for the site
+
+On studyspots:
+
+Helps users notice filters (area, wifi, noise, etc.)
+Improves UX by showing “this is clickable”Helps with the visuals-> Do not quite understand what exactly does it change need to ask */
 
 .custom-select-dropdown{
   position:absolute;
@@ -169,22 +285,22 @@
   border:1.5px solid rgba(0,0,0,0.08);
   border-radius:16px;
   box-shadow:0 8px 24px rgba(0,0,0,0.12);
-  max-height:280px;
+  max-height:28px;
   overflow-y:auto;
   z-index:200;
-}
+}/*Controls how much white space you can scroll within the website*/
 
 .custom-select-option{
   padding:10px 16px;
   cursor:pointer;
   transition:background 0.15s ease;
   border-radius:0;
-}
+}/*Affects the ability to find specfic spots because it affects the white space and visibility of the all areas portion*/
 
 .custom-select-option:hover,
 .custom-select-option.selected{
   background:rgba(184,160,144,0.12);
-}
+}/*Affects color when hover over area page*/
 
 .custom-select-option:first-child{
   border-radius:14px 14px 0 0;
@@ -197,25 +313,304 @@
 .custom-select-option:only-child{
   border-radius:14px;
 }
+/*These CSS rules control the **rounded corners of dropdown options** (the items inside a custom select menu).
 
+---
+
+## 🧩 The code
+
+```css
+.custom-select-option:first-child {
+  border-radius: 14px 14px 0 0;
+}
+
+.custom-select-option:last-child {
+  border-radius: 0 0 14px 14px;
+}
+
+.custom-select-option:only-child {
+  border-radius: 14px;
+}
+```
+
+---
+
+## 🎯 What each one does
+
+### 1. `:first-child`
+
+```css
+border-radius: 14px 14px 0 0;
+```
+
+* Applies to the **first option in the dropdown**
+* Rounds:
+
+  * top-left ✅
+  * top-right ✅
+* Bottom corners stay square
+
+👉 Result: smooth rounded top of the dropdown
+
+---
+
+### 2. `:last-child`
+
+```css
+border-radius: 0 0 14px 14px;
+```
+
+* Applies to the **last option**
+* Rounds:
+
+  * bottom-left ✅
+  * bottom-right ✅
+
+👉 Result: smooth rounded bottom of the dropdown
+
+---
+
+### 3. `:only-child`
+
+```css
+border-radius: 14px;
+```
+
+* Applies when there is **only one option**
+* Rounds **all corners**
+
+👉 Result: single item looks like a full rounded box
+
+---
+
+## 🧠 What it looks like on the website
+
+### Multiple options:
+
+```
+[ Rounded top ]
+[ middle item ]
+[ Rounded bottom ]
+```
+
+### Single option:
+
+```
+[ Fully rounded box ]
+```
+
+---
+
+## 💡 Why this is used
+
+Without this:
+
+* Dropdown looks like a **hard rectangle**
+* Corners look sharp ❌
+
+With this:
+
+* Smooth, modern UI ✅
+* Matches card-style design (like your study spot cards)
+
+---
+
+## ⚡ Simple summary
+
+👉 This code makes the dropdown menu:
+
+* Rounded at the top
+* Rounded at the bottom
+* Fully rounded if there’s only one item
+
+---
+
+## 🔥 Bonus insight (important)
+
+This is purely **visual polish (UI/UX)**
+It does **not affect functionality**, only appearance.
+
+---
+
+If you want, I can show you how to:
+
+* make the dropdown look like iOS style
+* or match it with your card design (same radius as study cards)
+Good question, this gets more specific.
+
+## 🎯 Which dropdown it affects on studyspots.org
+
+The CSS class:
+
+```css
+.custom-select-option
+```
+
+means it only affects **custom-built dropdowns**, not normal HTML `<select>` elements.
+
+👉 On **studyspots.org**, this is used for the **filter dropdown menus at the top of the page**, such as:
+
+* **Area (e.g. Jurong, Downtown)**
+* **Noise level (Quiet, Medium, etc.)**
+* **Charging / WiFi filters**
+
+These filters are styled as **custom dropdown components**, not default browser selects.
+
+---
+
+## 🧠 How you can confirm it yourself (very useful)
+
+1. Go to 👉 [https://studyspots.org/](https://studyspots.org/)
+2. Click one of the filters (e.g. Area)
+3. Right click one option → **Inspect**
+4. You should see something like:
+
+```html
+<div class="custom-select-option">Jurong</div>
+```
+
+👉 That confirms this CSS applies to that dropdown
+
+---
+
+## 🎨 What exactly changes in that dropdown
+
+When you open a filter dropdown:
+
+* The **first option** (top item) gets rounded top corners
+* The **last option** gets rounded bottom corners
+* If only one option → fully rounded
+
+So visually:
+
+### Before (without CSS)
+
+```
+[ Jurong ]
+[ Downtown ]
+[ Tampines ]
+```
+
+### After (with CSS)
+
+```
+( rounded top )
+[ Jurong ]
+[ Downtown ]
+[ Tampines ]
+( rounded bottom )
+```
+
+---
+
+## ⚠️ Important clarification
+
+This does **NOT affect**:
+
+* The study spot cards
+* The search bar
+* Any native browser dropdowns
+
+👉 Only elements using:
+
+```css
+.custom-select-option
+```
+
+---
+
+## 🔥 Key takeaway
+
+👉 It affects **only the filter dropdown menus at the top of the site**, making them look clean and rounded instead of boxy.
+
+---
+
+If you want, I can trace for you:
+
+* the exact file where this dropdown is built
+* or how to add a new filter (e.g. "Crowd level") into that system 👍
+
+*/
 .category-list{
   list-style:none;
   padding:20px 0;
   display:flex;
   gap:24px;
   flex-wrap:wrap;
-}
+}/*🧠 What you see on the website
+
+Instead of this ❌
+
+• All
+• Libraries
+• Cafes
+
+You get this ✅
+
+All     Libraries     Cafes     Coworking
+
+And on smaller screens:
+
+All     Libraries
+Cafes   Coworking*/
 
 .category-list a{
   text-decoration:none;
   color:var(--text);
   font-size:1.05rem;
   transition:color 0.2s;
-}
+}/*What it does
+Removes underline from links
+Sets normal text color
+Slightly increases font size
+Adds smooth color transition*/
 
 .category-list a:hover{
   color:var(--accent);
 }
+/*What it does
+When you hover over a category:
+👉 text changes to accent color*/
+/*🎯 What specific part of the site this affects
+
+👉 This affects the category filter navigation (top of the page)
+
+Not:
+
+❌ dropdown filters
+❌ study cards
+❌ search bar
+
+Only:
+
+✅ the horizontal list of clickable category links
+⚡ Before vs After (visual behavior)
+Normal:
+All   Libraries   Cafes   Coworking
+(gray text)
+On hover:
+All   Libraries   Cafes   Coworking
+        ↑ turns accent color
+💡 Why this is important
+
+This code:
+
+makes categories look like clean navigation tabs
+improves spacing and responsiveness
+gives interactive feedback on hover
+🔥 Simple summary
+
+👉 This code controls the category menu at the top, making it:
+
+horizontal (flex)
+spaced nicely (gap)
+responsive (wrap)
+interactive (hover color change)
+
+If you want, I can show you how to:
+
+highlight the active category (selected tab)
+or turn this into a button-style filter UI 👍*/
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
