@@ -387,16 +387,17 @@
   },
 
   {
-    "id": "lee-kong-chian-reference-library-1",
-    "name": "Lee Kong Chian Reference Library",
-    "category": "library",
-    "area": "Lee Kong Chian",
-    "noiseLevel": "quiet",
-    "chargingPorts": "abundant",
+     "id": "the-book-cafe-fort-canning-1",
+    "name": "The Book Cafe (Fort Canning)",
+    "category": "cafe",
+    "area": "Fort Canning",
+    "noiseLevel": "medium",
+    "chargingPorts": "moderate",
     "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Quiet library with abundant resources.",
-    "mallId": "lee-kong-chian-reference-library"
+    "image": "https://picsum.photos/400/300?random=14",
+    "description": "Study-friendly cafe in Fort Canning with moderate charging options, with Wi-Fi, and operating hours of 1000-2000.",
+    "mallId": "the-book-cafe-fort-canning"
+
   },
   {
     "id": "lee-kong-chian-reference-library-1",
