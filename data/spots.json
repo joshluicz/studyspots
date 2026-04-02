@@ -373,16 +373,17 @@
 
   },
   {
-    "id": "lee-kong-chian-reference-library-1",
-    "name": "Lee Kong Chian Reference Library",
-    "category": "library",
-    "area": "Lee Kong Chian",
-    "noiseLevel": "quiet",
-    "chargingPorts": "abundant",
+    "id": "onne-outram-park-1",
+    "name": "Onne (Outram Park)",
+    "category": "cafe",
+    "area": "Outram Park",
+    "noiseLevel": "medium",
+    "chargingPorts": "limited",
     "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Quiet library with abundant resources.",
-    "mallId": "lee-kong-chian-reference-library"
+    "image": "https://picsum.photos/400/300?random=13",
+    "description": "Study-friendly cafe in Outram Park with limited charging options, with Wi-Fi, and operating hours of 0900-1800.",
+    "mallId": "onne-outram-park"
+
   },
 
   {
