@@ -400,77 +400,82 @@
 
   },
   {
-    "id": "lee-kong-chian-reference-library-1",
-    "name": "Lee Kong Chian Reference Library",
-    "category": "library",
-    "area": "Lee Kong Chian",
-    "noiseLevel": "quiet",
-    "chargingPorts": "abundant",
+     "id": "tiong-bahru-bakery-at-foothills-1",
+    "name": "Tiong Bahru Bakery @ Foothills",
+    "category": "cafe",
+    "area": "Foothills",
+    "noiseLevel": "medium",
+    "chargingPorts": "limited",
     "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Quiet library with abundant resources.",
-    "mallId": "lee-kong-chian-reference-library"
+    "image": "https://picsum.photos/400/300?random=15",
+    "description": "Study-friendly cafe in Foothills with limited charging options, with Wi-Fi, and operating hours of 0800-1800.",
+    "mallId": "tiong-bahru-bakery-at-foothills"
+
   },
   {
-    "id": "lee-kong-chian-reference-library-1",
-    "name": "Lee Kong Chian Reference Library",
-    "category": "library",
-    "area": "Lee Kong Chian",
-    "noiseLevel": "quiet",
-    "chargingPorts": "abundant",
+     "id": "tiong-bahru-bakery-at-siglap-1",
+    "name": "Tiong Bahru Bakery @ Siglap",
+    "category": "cafe",
+    "area": "Siglap",
+    "noiseLevel": "medium",
+    "chargingPorts": "limited",
     "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Quiet library with abundant resources.",
-    "mallId": "lee-kong-chian-reference-library"
+    "image": "https://picsum.photos/400/300?random=16",
+    "description": "Study-friendly cafe in Siglap with limited charging options, with Wi-Fi, and operating hours of 0800-2100.",
+    "mallId": "tiong-bahru-bakery-at-siglap"
+
   },
   {
-    "id": "lee-kong-chian-reference-library-1",
-    "name": "Lee Kong Chian Reference Library",
-    "category": "library",
-    "area": "Lee Kong Chian",
-    "noiseLevel": "quiet",
-    "chargingPorts": "abundant",
+    "id": "plain-vanilla-at-east-coast-1",
+    "name": "Plain Vanilla @ East Coast",
+    "category": "cafe",
+    "area": "East Coast",
+    "noiseLevel": "medium",
+    "chargingPorts": "limited",
     "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Quiet library with abundant resources.",
-    "mallId": "lee-kong-chian-reference-library"
+    "image": "https://picsum.photos/400/300?random=17",
+    "description": "Study-friendly cafe in East Coast with limited charging options, with Wi-Fi, and operating hours of 0730-1900.",
+    "mallId": "plain-vanilla-at-east-coast"
+
   },
 
   {
-    "id": "lee-kong-chian-reference-library-1",
-    "name": "Lee Kong Chian Reference Library",
-    "category": "library",
-    "area": "Lee Kong Chian",
-    "noiseLevel": "quiet",
-    "chargingPorts": "abundant",
+     "id": "huggs-collective-at-maxwell-1",
+    "name": "Huggs Collective @ Maxwell",
+    "category": "cafe",
+    "area": "Maxwell",
+    "noiseLevel": "medium",
+    "chargingPorts": "moderate",
     "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Quiet library with abundant resources.",
-    "mallId": "lee-kong-chian-reference-library"
+    "image": "https://picsum.photos/400/300?random=18",
+    "description": "Study-friendly cafe in Maxwell with moderate charging options, with Wi-Fi, and operating hours of 0800-1800.",
+    "mallId": "huggs-collective-at-maxwell"
+
   },
   {
-    "id": "lee-kong-chian-reference-library-1",
-    "name": "Lee Kong Chian Reference Library",
-    "category": "library",
-    "area": "Lee Kong Chian",
-    "noiseLevel": "quiet",
-    "chargingPorts": "abundant",
+     "id": "lucid-1",
+    "name": "Lucid",
+    "category": "cafe",
+    "area": "Lucid",
+    "noiseLevel": "medium",
+    "chargingPorts": "moderate",
     "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Quiet library with abundant resources.",
-    "mallId": "lee-kong-chian-reference-library"
+    "image": "https://picsum.photos/400/300?random=19",
+    "description": "Study-friendly cafe in Lucid with moderate charging options, with Wi-Fi, and operating hours of 0900-1800.",
+    "mallId": "lucid"
+
   },
   {
-    "id": "lee-kong-chian-reference-library-1",
-    "name": "Lee Kong Chian Reference Library",
-    "category": "library",
-    "area": "Lee Kong Chian",
-    "noiseLevel": "quiet",
-    "chargingPorts": "abundant",
+    "id": "bloom-coffee-1",
+    "name": "Bloom Coffee",
+    "category": "cafe",
+    "area": "Bloom Coffee",
+    "noiseLevel": "medium",
+    "chargingPorts": "limited",
     "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Quiet library with abundant resources.",
-    "mallId": "lee-kong-chian-reference-library"
+    "image": "https://picsum.photos/400/300?random=20",
+    "description": "Study-friendly cafe in Bloom Coffee with limited charging options, with Wi-Fi, and operating hours of 0800-1700.",
+    "mallId": "bloom-coffee"
   },
 
   {
