@@ -479,51 +479,55 @@
   },
 
   {
-    "id": "lee-kong-chian-reference-library-1",
-    "name": "Lee Kong Chian Reference Library",
-    "category": "library",
-    "area": "Lee Kong Chian",
-    "noiseLevel": "quiet",
-    "chargingPorts": "abundant",
+   "id": "amber-ember-1",
+    "name": "Amber Ember",
+    "category": "cafe",
+    "area": "Amber Ember",
+    "noiseLevel": "medium",
+    "chargingPorts": "limited",
     "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Quiet library with abundant resources.",
-    "mallId": "lee-kong-chian-reference-library"
+    "image": "https://picsum.photos/400/300?random=21",
+    "description": "Study-friendly cafe in Amber Ember with limited charging options, with Wi-Fi, and operating hours of 0900-1800.",
+    "mallId": "amber-ember"
+
   },
   {
-    "id": "lee-kong-chian-reference-library-1",
-    "name": "Lee Kong Chian Reference Library",
-    "category": "library",
-    "area": "Lee Kong Chian",
-    "noiseLevel": "quiet",
-    "chargingPorts": "abundant",
+     "id": "alchemist-at-the-mill-1",
+    "name": "Alchemist @ The Mill",
+    "category": "cafe",
+    "area": "The Mill",
+    "noiseLevel": "medium",
+    "chargingPorts": "limited",
     "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Quiet library with abundant resources.",
-    "mallId": "lee-kong-chian-reference-library"
+    "image": "https://picsum.photos/400/300?random=22",
+    "description": "Study-friendly cafe in The Mill with limited charging options, with Wi-Fi, and operating hours of 0800-1700.",
+    "mallId": "alchemist-at-the-mill"
+
   },
   {
-    "id": "lee-kong-chian-reference-library-1",
-    "name": "Lee Kong Chian Reference Library",
-    "category": "library",
-    "area": "Lee Kong Chian",
-    "noiseLevel": "quiet",
-    "chargingPorts": "abundant",
+     "id": "alchemist-at-khong-guan-building-1",
+    "name": "Alchemist @ Khong Guan Building",
+    "category": "cafe",
+    "area": "Khong Guan Building",
+    "noiseLevel": "medium",
+    "chargingPorts": "limited",
     "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Quiet library with abundant resources.",
-    "mallId": "lee-kong-chian-reference-library"
+    "image": "https://picsum.photos/400/300?random=23",
+    "description": "Study-friendly cafe in Khong Guan Building with limited charging options, with Wi-Fi, and operating hours of 0800-1800.",
+    "mallId": "alchemist-at-khong-guan-building"
+
   },
   {
-    "id": "lee-kong-chian-reference-library-1",
-    "name": "Lee Kong Chian Reference Library",
-    "category": "library",
-    "area": "Lee Kong Chian",
+   "id": "prairie-by-craftsmen-at-cluny-court-1",
+    "name": "PRAIRIE By Craftsmen @ Cluny Court",
+    "category": "cafe",
+    "area": "Cluny Court",
     "noiseLevel": "quiet",
-    "chargingPorts": "abundant",
+    "chargingPorts": "limited",
     "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Quiet library with abundant resources.",
-    "mallId": "lee-kong-chian-reference-library"
-  }
+    "image": "https://picsum.photos/400/300?random=24",
+    "description": "Quiet cafe in Cluny Court with limited charging options, with Wi-Fi, and operating hours of 0800-1800.",
+    "mallId": "prairie-by-craftsmen-at-cluny-court"
+
+  },
 ]
