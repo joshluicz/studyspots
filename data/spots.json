@@ -360,16 +360,17 @@
     "mallId": "main-street-commissary-jalan-besar"
   },
   {
-    "id": "lee-kong-chian-reference-library-1",
-    "name": "Lee Kong Chian Reference Library",
-    "category": "library",
-    "area": "Lee Kong Chian",
-    "noiseLevel": "quiet",
-    "chargingPorts": "abundant",
+    "id": "louisa-coffee-bugis-1",
+    "name": "Louisa Coffee (Bugis)",
+    "category": "cafe",
+    "area": "Bugis",
+    "noiseLevel": "noisy",
+    "chargingPorts": "moderate",
     "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Quiet library with abundant resources.",
-    "mallId": "lee-kong-chian-reference-library"
+    "image": "https://picsum.photos/400/300?random=12",
+    "description": "Lively cafe in Bugis with moderate charging options, with Wi-Fi, and operating hours of 0800-2200.",
+    "mallId": "louisa-coffee-bugis"
+
   },
   {
     "id": "lee-kong-chian-reference-library-1",
