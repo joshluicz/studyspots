@@ -1,0 +1,9 @@
+# Netlify still serves studyspots.org from this repo until the DNS moves to Cloudflare Pages.
+# This keeps the old host building the new static site, so a merge never blanks the domain.
+# The suggestions function is Cloudflare-only; on Netlify the form reports that honestly.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"

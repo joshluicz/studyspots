@@ -87,7 +87,7 @@
         body: JSON.stringify({ spot, text, website: form.elements.website.value }),
       });
       const d = await r.json().catch(() => ({}));
-      if (!r.ok) throw new Error(d.error || `The server answered ${r.status}.`);
+      if (!r.ok) throw new Error(d.error || ((r.status === 404 || r.status === 405) ? 'Suggestions are not switched on at this address yet.' : `The server answered ${r.status}.`));
       list.prepend(item(d.item, true));
       emptyMsg.hidden = true;
       ta.value = ''; ta.dispatchEvent(new Event('input'));
