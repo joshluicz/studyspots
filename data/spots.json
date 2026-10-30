@@ -16,7 +16,7 @@
       "kind": "Public library",
       "address": { "text": "100 Victoria Street", "verified": false },
       "stations": [],
-      "hours": { "status": "unknown", "note": "The operator's page could not be read on 2026-10-30 (nlb.gov.sg returned a bot challenge). Check nlb.gov.sg before you go.", "link": "https://www.nlb.gov.sg" },
+      "hours": { "status": "unknown", "note": "The operator's page could not be read on 2026-10-30 (nlb.gov.sg returned a bot challenge). Check the library's own page before you go.", "link": "https://www.nlb.gov.sg" },
       "facts": {
         "sockets": { "status": "reported", "value": "plenty", "reports": 1, "by": "an earlier StudySpots contributor, March 2026", "source": "https://github.com/joshluicz/studyspots/blob/913e740/data/spots.json" },
         "wifi":    { "status": "reported", "value": "yes", "reports": 1, "by": "an earlier StudySpots contributor, March 2026", "source": "https://github.com/joshluicz/studyspots/blob/913e740/data/spots.json" },
@@ -34,7 +34,7 @@
       "kind": "Public library",
       "address": { "text": "Esplanade Mall, 8 Raffles Avenue, Singapore 039802", "verified": true, "source": "https://www.esplanade.com/visit/visitor-guide/getting-here-and-around" },
       "stations": ["City Hall", "Esplanade"],
-      "hours": { "status": "unknown", "note": "The operator's page could not be read on 2026-10-30 (nlb.gov.sg returned a bot challenge). Check nlb.gov.sg before you go.", "link": "https://www.nlb.gov.sg" },
+      "hours": { "status": "unknown", "note": "The operator's page could not be read on 2026-10-30 (nlb.gov.sg returned a bot challenge). Check the library's own page before you go.", "link": "https://www.nlb.gov.sg" },
       "facts": {
         "sockets": { "status": "unknown" },
         "wifi":    { "status": "unknown" },
