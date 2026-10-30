@@ -1,0 +1,53 @@
+/* studyspots — design tokens. Locked 2026-10-30. Gate: `npm run check` (scripts/check-tokens.mjs).
+   Every --color-* token below has a stated use in design-tokens.manifest.json; nothing exists without one.
+   The STYLE LAYER at the bottom is the only block Joshua's direction pick changes. */
+:root {
+  color-scheme: light;
+
+  /* colour — roles, not moods */
+  --color-paper:   #F6F1EA; /* the ground of every page */
+  --color-ink:     #15130F; /* all type and every number */
+  --color-blue:    #1740B6; /* actions only: buttons, links. Never decoration, never a status */
+  --color-white:   #FFFFFF; /* the card ground in the Neobrutalist baseline; form fields */
+  --color-muted:   #5E584F; /* secondary text: kind lines, notes, footer */
+  --color-ok:      #19733F; /* status: reported by a person */
+  --color-warn:    #9A5200; /* status: partly known, hours vary, closes soon */
+  --color-unknown: #5E584F; /* status: not reported yet (deliberately the same value as muted) */
+  --color-bad:     #A6221A; /* status: closed, wrong, removed; form errors */
+
+  /* type — one face, a real scale (ratio ~1.25) */
+  --font-sans: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --text-13: 13px;
+  --text-15: 15px;
+  --text-17: 17px;
+  --text-21: 21px;
+  --text-26: 26px;
+  --text-32: 32px;
+  --leading-tight: 1.15;
+  --leading-body: 1.5;
+
+  /* space */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --measure: 36rem; /* max line length for prose */
+
+  /* motion */
+  --ease: cubic-bezier(.2,.7,.2,1);
+  --dur: 140ms;
+
+  /* STYLE LAYER — Neobrutalist baseline (working assumption until the pick lands) */
+  --radius: 0;
+  --radius-pill: 0;
+  --border-w: 3px;
+  --border-w-thin: 2px;
+  --card-bg: var(--color-white);
+  --shadow-hard: 5px 5px 0 var(--color-ink);
+  --shadow-hard-sm: 4px 4px 0 var(--color-ink);
+  --label-case: uppercase;
+  --label-tracking: 0.06em;
+}
