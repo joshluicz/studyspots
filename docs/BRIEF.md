@@ -37,7 +37,9 @@ on the spot page).
 - A socket count, a seat count or an opening hour that no source on record states.
 - A rating, a ranking, a "top 10", a "best" of anything.
 - Anything that implies the operator endorses the listing.
-- Photos of identifiable people. Mall or library logos.
+- A photo where a person is the subject or recognisable up close; an operator's own marketing images; a logo other than
+  as it stands on the building in a photo. (Joshua asked for photos of each place on 31 Oct: they are freely licensed,
+  from Wikimedia Commons, credited with author, date and licence where they appear.)
 - A login, a signup, a points balance, an ad.
 
 ## Facts about the reader instead of adjectives

@@ -15,7 +15,19 @@ Wi-Fi, noise and hours, and lets whoever is sitting there now add what they lear
 - Credit: footer "Built by Eitri Brokkr" on every page.
 
 ## What v0 does not do
-Accounts, rewards, ratings, photos, maps, search, more than one area, moderation UI, analytics beyond Cloudflare's own.
+Accounts, rewards, ratings, maps, search, more than one area, moderation UI, analytics beyond Cloudflare's own.
+
+## Places inside places (Joshua, 31 Oct)
+A café inside a mall is not on the area page: *"the cafe should only be there if it's not within a mall"*. It carries
+`"within": "<mall slug>"`, is listed on the mall's page under "Inside <mall>", keeps its own page and suggestions, and its
+page links back through the mall. A mall card says how many cafés are inside.
+
+## Photos (Joshua, 31 Oct: *"add pictures of the mall / place"*)
+One photo per place from Wikimedia Commons under CC BY, CC BY-SA or public domain (never NC or ND), cropped to 3:2,
+resized to 400 and 800 wide, metadata stripped, self-hosted in `src/images/`. Credited with author, date taken and
+licence under the photo on the spot page, in "Where this comes from", and in "Photo credits" on the area page. The
+date is shown because some photos are old (library@esplanade, Bras Basah Complex: 2006). Cafés inside malls have no
+photo: Commons has none of the outlets, and the chain's own images are not ours to use.
 
 ## Data model (`data/spots.json`)
 ```
@@ -31,6 +43,9 @@ Accounts, rewards, ratings, photos, maps, search, more than one area, moderation
         "noise":   { "status": ..., "value": "quiet" | "medium" | "noisy" | null, ... },
         "food":    { "status": ..., "value": "allowed" | "not allowed" | null, ... }
       },
+      "within": "<slug of the mall it is inside>",   // optional
+      "photo": { "file": "<slug>", "alt": "...", "author": "...", "taken": "June 2009", "licence": "CC BY-SA 3.0",
+                 "licenceUrl": "...", "source": "<Commons file page>", "changes": "cropped to 3:2 and resized" },
       "notes": ["verbatim line from the operator's page, with its source"],
       "sources": [ { "url": "...", "checked": "2026-10-30", "says": "..." } ]
   } ]
