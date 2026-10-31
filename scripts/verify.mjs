@@ -85,6 +85,12 @@ const walk = async (name, url) => {
     return out;
   });
   check(low.length === 0, `${name}: every visible text node clears WCAG contrast${low.length ? ' — ' + low.slice(0, 3).join(' | ') : ''}`);
+  // lazy images: scroll the page through so every one is requested, then require each to have loaded
+  await pg.evaluate(async () => { for (let y = 0; y < document.body.scrollHeight; y += 500) { window.scrollTo(0, y); await new Promise((r) => setTimeout(r, 40)); } window.scrollTo(0, 0); });
+  await pg.waitForLoadState('networkidle');
+  const imgs = await pg.evaluate(() => Array.from(document.images).map((i) => ({ src: i.currentSrc || i.src, ok: i.complete && i.naturalWidth > 0, alt: i.hasAttribute('alt') })));
+  const bad = imgs.filter((i) => !i.ok || !i.alt);
+  check(bad.length === 0, `${name}: ${imgs.length} image(s) load and carry an alt attribute${bad.length ? ' — ' + bad.map((b) => b.src).join(', ') : ''}`);
   await pg.screenshot({ path: path.join(OUT, `${name}.png`), fullPage: true });
   return m;
 };
@@ -92,7 +98,13 @@ const walk = async (name, url) => {
 const home = await walk('home', '/');
 check(/Where to sit and study/.test(home.h1), `home: h1 "${home.h1}"`);
 const areaM = await walk('area', `/${area.slug}/`);
-check(areaM.cards === spots.length, `area: ${areaM.cards} cards for ${spots.length} seed spots (Bugis / City Hall filled from the seed)`);
+const top = spots.filter((s) => !s.within);
+const kids = spots.filter((s) => s.within);
+check(areaM.cards === top.length, `area: ${areaM.cards} cards for ${top.length} top-level seed spots (Bugis / City Hall filled from the seed)`);
+const areaHrefs = await pg.evaluate(() => Array.from(document.querySelectorAll('.list .card')).map((a) => a.getAttribute('href')));
+check(kids.every((k) => !areaHrefs.some((h) => h.endsWith(`/${k.slug}/`))), `area: none of the ${kids.length} spots inside a mall is listed on the area page`);
+const credits = await pg.evaluate(() => Array.from(document.querySelectorAll('.sources a')).filter((a) => /commons\.wikimedia\.org/.test(a.href)).length);
+check(credits === top.filter((s) => s.photo).length, `area: ${credits} photo credits link to Commons, one per photo shown`);
 const filtersVisible = await pg.evaluate(() => !document.querySelector('.filters').hidden);
 check(filtersVisible, 'area: filters appear with JS');
 await pg.click('.chip[data-filter="library"]');
@@ -106,6 +118,24 @@ const rows = await pg.evaluate(() => Array.from(document.querySelectorAll('.fact
 check(JSON.stringify(rows) === JSON.stringify(['Sockets', 'Wi-Fi', 'Noise', 'Food', 'Hours']), `spot: fact rows ${rows.join(', ')}`);
 const socketNumbers = await pg.evaluate(() => /\b\d+\s*(sockets?|plugs?|outlets?|power points?)\b/i.test(document.body.innerText));
 check(!socketNumbers, 'spot: no socket count printed anywhere on the page');
+const photoCaption = await pg.evaluate(() => document.querySelector('.hero-ph figcaption')?.textContent || '');
+check(!first.photo || photoCaption.startsWith('Photo: '), `spot: photo credit under the photo ("${photoCaption}")`);
+for (const parent of top.filter((p) => kids.some((k) => k.within === p.slug))) {
+  const mine = kids.filter((k) => k.within === parent.slug);
+  await pg.goto(BASE + `/${area.slug}/${parent.slug}/`, { waitUntil: 'networkidle' });
+  const inside = await pg.evaluate(() => Array.from(document.querySelectorAll('.inside .card')).map((a) => a.getAttribute('href')));
+  check(mine.every((k) => inside.includes(`/${area.slug}/${k.slug}/`)) && inside.length === mine.length, `${parent.slug}: lists the ${mine.length} spot(s) inside it`);
+  for (const k of mine) {
+    await pg.goto(BASE + `/${area.slug}/${k.slug}/`, { waitUntil: 'networkidle' });
+    const crumbs = await pg.evaluate(() => Array.from(document.querySelectorAll('.back a')).map((a) => a.getAttribute('href')));
+    check(crumbs.includes(`/${area.slug}/${parent.slug}/`), `${k.slug}: links back to ${parent.slug}`);
+  }
+}
+const mallWithCafe = top.find((p) => kids.some((k) => k.within === p.slug));
+if (mallWithCafe) {
+  await walk('mall', `/${area.slug}/${mallWithCafe.slug}/`);
+  await walk('cafe-in-mall', `/${area.slug}/${kids.find((k) => k.within === mallWithCafe.slug).slug}/`);
+}
 const nf = await pg.goto(BASE + '/nope/', { waitUntil: 'networkidle' });
 check(nf.status() === 404, `404 page answers ${nf.status()}`);
 

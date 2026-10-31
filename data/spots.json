@@ -1,5 +1,5 @@
 {
-  "$about": "studyspots seed. The only data file. Hand-editable. Every fact says where it came from and when it was checked. Sockets are never counted by us: a socket fact exists only when a person or the operator reported it. 'unknown' is an honest answer and the site shows it.",
+  "$about": "studyspots seed. The only data file. Hand-editable. Every fact says where it came from and when it was checked. Sockets are never counted by us: a socket fact exists only when a person or the operator reported it. 'unknown' is an honest answer and the site shows it. A spot with \"within\" is inside another spot (a café inside a mall) and is listed on that spot's page, not on the area page. Photos are freely licensed, from Wikimedia Commons, credited on the page; files are in src/images as <file>-400.jpg and <file>-800.jpg.",
   "areas": [
     {
       "slug": "bugis-city-hall",
@@ -22,6 +22,17 @@
         "verified": false
       },
       "stations": [],
+      "photo": {
+        "file": "national-library-building",
+        "alt": "The National Library Building, a glass and steel tower with a curved roof canopy, above trees.",
+        "author": "Nlannuzel",
+        "taken": "June 2009",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Singapore_National_Library-2009-06-12.jpg",
+        "changes": "cropped to 3:2 and resized",
+        "takenNote": "date from the file name on Commons"
+      },
       "hours": {
         "status": "unknown",
         "note": "The operator's page could not be read on 2026-10-30 (nlb.gov.sg returned a bot challenge). Check the library's own page before you go.",
@@ -59,6 +70,16 @@
         "City Hall",
         "Esplanade"
       ],
+      "photo": {
+        "file": "library-esplanade",
+        "alt": "The library@esplanade name set into a long timber-patterned wall.",
+        "author": "Terence Ong",
+        "taken": "May 2006",
+        "licence": "CC BY 2.5",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.5",
+        "source": "https://commons.wikimedia.org/wiki/File:Library@esplanade.JPG",
+        "changes": "cropped to 3:2 and resized"
+      },
       "hours": {
         "status": "unknown",
         "note": "The operator's page could not be read on 2026-10-30 (nlb.gov.sg returned a bot challenge). Check the library's own page before you go.",
@@ -103,6 +124,16 @@
         "Bugis",
         "Bras Basah"
       ],
+      "photo": {
+        "file": "bras-basah-complex",
+        "alt": "Bras Basah Complex from the street, its name across the white facade above the shopfronts.",
+        "author": "Terence Ong",
+        "taken": "June 2006",
+        "licence": "CC BY 2.5",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.5",
+        "source": "https://commons.wikimedia.org/wiki/File:Bras_Basah_Complex_2.JPG",
+        "changes": "cropped to 3:2 and resized"
+      },
       "hours": {
         "status": "reported",
         "text": "10.00 AM to 7.00 PM",
@@ -154,6 +185,16 @@
       "stations": [
         "Bugis"
       ],
+      "photo": {
+        "file": "bugis-junction",
+        "alt": "The glass-roofed shopping street inside Bugis Junction, between rows of shophouse fronts.",
+        "author": "Banku",
+        "taken": "March 2009",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Bugis_Junction_Parco_side.JPG",
+        "changes": "cropped to 3:2 and resized"
+      },
       "hours": {
         "status": "reported",
         "text": "10am to 10pm daily",
@@ -205,6 +246,16 @@
       "stations": [
         "Bugis"
       ],
+      "photo": {
+        "file": "bugis-plus",
+        "alt": "Bugis+ from Victoria Street: a white patterned facade behind trees, and the bugis+ sign on a link bridge.",
+        "author": "LN9267",
+        "taken": "May 2024",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Bugis%2B_18-05-2024(1).jpg",
+        "changes": "cropped to 3:2 and resized"
+      },
       "hours": {
         "status": "reported",
         "text": "10am to 10pm daily",
@@ -251,6 +302,16 @@
       "stations": [
         "City Hall"
       ],
+      "photo": {
+        "file": "funan",
+        "alt": "Funan from the street corner, a glass building with a planted, brick-red screen across its middle floors.",
+        "author": "Choo Yut Shing",
+        "taken": "October 2022",
+        "licence": "CC BY 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Funan_shopping_mall.jpg",
+        "changes": "cropped to 3:2 and resized"
+      },
       "hours": {
         "status": "reported",
         "text": "10am to 10pm",
@@ -311,6 +372,15 @@
         "City Hall",
         "Esplanade"
       ],
+      "photo": {
+        "file": "raffles-city",
+        "alt": "The towers of Raffles City against a blue sky.",
+        "author": "Merlion444",
+        "taken": "November 2009",
+        "licence": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Raffles_City.jpg",
+        "changes": "cropped to 3:2 and resized"
+      },
       "hours": {
         "status": "reported",
         "text": "10am to 10pm daily",
@@ -357,6 +427,16 @@
       "stations": [
         "City Hall"
       ],
+      "photo": {
+        "file": "capitol-singapore",
+        "alt": "The white Capitol Theatre with its tall CAPITOL sign, at Capitol Piazza.",
+        "author": "Jacklee",
+        "taken": "September 2015",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Capitol_Theatre,_Capitol_Piazza,_Singapore_-_20150917-01.jpg",
+        "changes": "cropped to 3:2 and resized"
+      },
       "hours": {
         "status": "unknown",
         "note": "Mall hours are not stated on capitolsingapore.com (home, About, Contact and Arcade pages read 2026-10-30).",
@@ -404,6 +484,16 @@
         "City Hall",
         "Esplanade"
       ],
+      "photo": {
+        "file": "esplanade-mall",
+        "alt": "The spiked dome of Esplanade, Theatres on the Bay, the building that holds Esplanade Mall, above trees.",
+        "author": "CEphoto, Uwe Aranas",
+        "taken": "February 2015",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Singapore_Esplanade-Theatres-on-the-Bay-01.jpg",
+        "changes": "cropped to 3:2 and resized"
+      },
       "hours": {
         "status": "partial",
         "text": "Esplanade, the arts centre, is open 8 am to 11:30 pm daily",
@@ -453,6 +543,17 @@
         "Esplanade",
         "Promenade"
       ],
+      "photo": {
+        "file": "marina-square",
+        "alt": "The Marina Square sign along the top of the mall, above steps and planted terraces.",
+        "author": "Irwan Shah Bin Abdullah",
+        "taken": "June 2009",
+        "licence": "CC BY 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Marina_square_singapore.jpg",
+        "changes": "cropped to 3:2 and resized",
+        "authorAsListed": "Irwan Shah Bin Abdullah / https://id.ehalal.io/"
+      },
       "hours": {
         "status": "reported",
         "text": "10am to 10pm daily",
@@ -492,6 +593,16 @@
         "source": "https://designsingapore.org/contact-us/"
       },
       "stations": [],
+      "photo": {
+        "file": "national-design-centre",
+        "alt": "The National Design Centre, a white building with a tall vertical sign, at a road junction.",
+        "author": "Smuconlaw",
+        "taken": "April 2015",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:National_Design_Centre,_Singapore_-_20150411-08.jpg",
+        "changes": "cropped to 3:2 and resized"
+      },
       "hours": {
         "status": "partial",
         "text": "9am to 6.30pm",
@@ -534,6 +645,7 @@
     {
       "slug": "coffee-bean-bugis-junction",
       "area": "bugis-city-hall",
+      "within": "bugis-junction",
       "name": "The Coffee Bean & Tea Leaf, Bugis Junction",
       "kind": "Café",
       "address": {
@@ -580,6 +692,7 @@
     {
       "slug": "coffee-bean-raffles-city",
       "area": "bugis-city-hall",
+      "within": "raffles-city",
       "name": "The Coffee Bean & Tea Leaf, Raffles City",
       "kind": "Café",
       "address": {
@@ -626,6 +739,7 @@
     {
       "slug": "coffee-bean-bugis-plus",
       "area": "bugis-city-hall",
+      "within": "bugis-plus",
       "name": "The Coffee Bean & Tea Leaf, Bugis+",
       "kind": "Café",
       "address": {
@@ -672,6 +786,7 @@
     {
       "slug": "coffee-bean-esplanade-mall",
       "area": "bugis-city-hall",
+      "within": "esplanade-mall",
       "name": "The Coffee Bean & Tea Leaf, Esplanade Mall",
       "kind": "Café",
       "address": {

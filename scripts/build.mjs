@@ -61,6 +61,20 @@ const factValue = (key, f) => {
 // Memphis: one fill per kind of place (tokens.css). Every word on a fill is ink.
 const fillFor = (kind) => (/librar/i.test(kind) ? 'library' : /mall|shopping/i.test(kind) ? 'mall' : /caf/i.test(kind) ? 'cafe' : 'other');
 const shapes = () => `<svg class="shapes" viewBox="0 0 112 40" aria-hidden="true" focusable="false"><circle class="s-teal" cx="18" cy="20" r="15"/><polygon class="s-yellow" points="44,35 60,6 76,35"/><path class="s-pink" d="M84 26 q6 -16 12 0 t12 0"/><path class="s-line" d="M84 26 q6 -16 12 0 t12 0"/></svg>`;
+// Photos: freely licensed, self-hosted at two widths, credited where shown (data/spots.json "photo").
+const img = (p, { eager = false, decorative = false } = {}) => `<img src="/images/${p.file}-800.jpg" srcset="/images/${p.file}-400.jpg 400w, /images/${p.file}-800.jpg 800w" sizes="(max-width: 40rem) calc(100vw - 32px), 38rem" width="800" height="533" alt="${decorative ? '' : esc(p.alt)}" loading="${eager ? 'eager' : 'lazy'}" decoding="async">`;
+const creditText = (p) => `Photo: ${p.author}${p.taken ? ', ' + p.taken : ''}, ${p.licence}`;
+const creditLine = (s) => `${esc(s.photo.author)}${s.photo.taken ? ', ' + esc(s.photo.taken) : ''}, ${s.photo.licenceUrl ? `<a href="${esc(s.photo.licenceUrl)}" rel="noopener license">${esc(s.photo.licence)}</a>` : esc(s.photo.licence)}, <a href="${esc(s.photo.source)}" rel="noopener">via Wikimedia Commons</a>, ${esc(s.photo.changes)}`;
+// Nesting: a spot with "within" (a café inside a mall) is listed on its parent's page, not the area page.
+const childrenOf = (s) => spots.filter((k) => k.within === s.slug);
+const parentOf = (s) => spots.find((p) => p.slug === s.within);
+const insideChip = (s) => {
+  const k = childrenOf(s);
+  if (!k.length) return '';
+  const allCafes = k.every((x) => /caf/i.test(x.kind));
+  const noun = allCafes ? (k.length === 1 ? 'café' : 'cafés') : (k.length === 1 ? 'place' : 'places');
+  return `<span class="fact st-plain"><b class="num">${k.length}</b> ${noun} inside</span>`;
+};
 const reportsLabel = (f) => `<b class="num">${f.reports}</b> ${f.reports === 1 ? 'report' : 'reports'}`;
 
 const hoursChip = (h) => {
@@ -76,22 +90,24 @@ const cardTags = (s) => {
   const t = [];
   if (s.facts.sockets.status === 'reported') t.push('sockets');
   if (/librar/i.test(s.kind)) t.push('library');
-  if (/caf/i.test(s.kind)) t.push('cafe');
+  if (/caf/i.test(s.kind) || childrenOf(s).some((k) => /caf/i.test(k.kind))) t.push('cafe');
   if (/mall|shopping/i.test(s.kind)) t.push('mall');
   if (s.hours.status === 'reported' && /24 hours/i.test(s.hours.text)) t.push('late');
   return t.join(' ');
 };
 
-const card = (area, s) => `
+const card = (area, s, i = 9) => `
 <li data-tags="${esc(cardTags(s))}">
   <a class="card fill-${fillFor(s.kind)}" href="/${area.slug}/${s.slug}/">
+    ${s.photo ? `<span class="ph">${img(s.photo, { eager: i < 2, decorative: true })}</span>` : ''}
     <span class="name">${esc(s.name)}</span>
-    <span class="kind">${esc(s.kind)} · ${esc(street(s.address))}</span>
+    <span class="kind">${esc(s.kind)} · ${esc(s.within ? (s.address.text.split(',').map((x) => x.trim()).find((x) => x.startsWith('#')) || street(s.address)) : street(s.address))}</span>
     <span class="facts">
       ${socketsChip(s.facts.sockets)}
       ${s.facts.noise.status === 'reported' ? `<span class="fact st-plain">${esc(cap(s.facts.noise.value))}</span>` : ''}
       ${s.facts.wifi.status === 'reported' ? (s.facts.wifi.value === 'no' ? `<span class="fact st-no">No Wi-Fi</span>` : `<span class="fact st-plain">Wi-Fi</span>`) : ''}
       ${hoursChip(s.hours)}
+      ${insideChip(s)}
     </span>
   </a>
 </li>`;
@@ -117,7 +133,9 @@ const suggestBlock = ({ key, heading, empty, label, placeholder, button }) => `
 // ---- pages ---------------------------------------------------------------------------------------
 const area = seed.areas[0];
 const spots = seed.spots.filter((s) => s.area === area.slug);
-const n = spots.length;
+const top = spots.filter((s) => !s.within);
+const n = top.length;
+const nested = spots.length - n;
 
 const home = page({
   title: 'studyspots: where to sit and study near the MRT in Singapore',
@@ -142,24 +160,22 @@ const home = page({
 
 const areaPage = page({
   title: `Study spots near Bugis and City Hall MRT: sockets, Wi-Fi, hours`,
-  description: `${n} places to sit and study within a walk of Bugis and City Hall stations. Libraries, mall seating and cafés, with sockets, Wi-Fi, noise and hours as people report them.`,
+  description: `${n} places to sit and study within a walk of Bugis and City Hall stations. Libraries, malls and the cafés inside them, with sockets, Wi-Fi, noise and hours as people report them.`,
   pathname: `/${area.slug}/`,
   body: `
 <section class="hero">
   ${shapes()}
   <h1>${esc(area.name)}</h1>
-  <p class="lede"><b class="num">${n}</b> places to sit and study within a walk of the two stations. Sockets, Wi-Fi and noise as people report them.</p>
+  <p class="lede"><b class="num">${n}</b> places to sit and study within a walk of the two stations. Sockets, Wi-Fi and noise as people report them.${nested ? ' A café inside a mall is on that mall\'s page.' : ''}</p>
 </section>
 <div class="filters" role="group" aria-label="Show only" hidden>
   <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
-  <button class="chip" type="button" data-filter="sockets" aria-pressed="false">Sockets reported</button>
-  <button class="chip" type="button" data-filter="library" aria-pressed="false"><span class="sw fill-library" aria-hidden="true"></span>Libraries</button>
-  <button class="chip" type="button" data-filter="mall" aria-pressed="false"><span class="sw fill-mall" aria-hidden="true"></span>Malls</button>
-  <button class="chip" type="button" data-filter="cafe" aria-pressed="false"><span class="sw fill-cafe" aria-hidden="true"></span>Cafés</button>
-  <button class="chip" type="button" data-filter="late" aria-pressed="false">Open 24 hours</button>
+${[['sockets', 'Sockets reported', ''], ['library', 'Libraries', 'library'], ['mall', 'Malls', 'mall'], ['cafe', 'Cafés', 'cafe'], ['late', 'Open 24 hours', '']]
+  .filter(([tag]) => top.some((s) => cardTags(s).split(' ').includes(tag)))
+  .map(([tag, label, sw]) => `  <button class="chip" type="button" data-filter="${tag}" aria-pressed="false">${sw ? `<span class="sw fill-${sw}" aria-hidden="true"></span>` : ''}${label}</button>`).join('\n')}
 </div>
 <ul class="list">
-${spots.map((s) => card(area, s)).join('\n')}
+${top.map((s, i) => card(area, s, i)).join('\n')}
 </ul>
 <p class="empty-filter" hidden>Nothing matches that filter yet.</p>
 <div class="actions"></div>
@@ -170,7 +186,13 @@ ${suggestBlock({
   label: 'Know a spot near here we missed?',
   placeholder: 'Name it, say where it is, and what you know about sockets and hours.',
   button: 'Suggest a spot',
-})}`,
+})}
+<section class="block">
+  <h2>Photo credits</h2>
+  <ul class="sources">
+    ${top.filter((s) => s.photo).map((s) => `<li>${esc(s.name)}: ${creditLine(s)}.</li>`).join('\n    ')}
+  </ul>
+</section>`,
 });
 
 const row = (label, inner) => `<div class="row"><dt>${label}</dt><dd>${inner}</dd></div>`;
@@ -191,10 +213,11 @@ const spotPage = (s) => page({
   description: `${s.name}, ${s.kind.toLowerCase()} near ${area.name}. What is known about sockets, Wi-Fi, noise and opening hours, with sources, and what people added.`,
   pathname: `/${area.slug}/${s.slug}/`,
   body: `
-<p class="back"><a href="/${area.slug}/">Back to ${esc(area.name)}</a></p>
+<p class="back"><a href="/${area.slug}/">${s.within ? esc(area.name) : `Back to ${esc(area.name)}`}</a>${s.within ? ` <span aria-hidden="true">›</span> <a href="/${area.slug}/${parentOf(s).slug}/">${esc(parentOf(s).name)}</a>` : ''}</p>
 <section class="hero has-fill fill-${fillFor(s.kind)}">
+  ${s.photo ? `<figure class="hero-ph">${img(s.photo, { eager: true })}<figcaption>${esc(creditText(s.photo))}</figcaption></figure>` : ''}
   <h1>${esc(s.name)}</h1>
-  <p class="kind">${esc(s.kind)}<span class="sep">·</span>${esc(s.address.text)}${s.address.verified ? '' : ' (address not yet verified)'}</p>
+  <p class="kind">${esc(s.kind)}${s.within ? ` inside ${esc(parentOf(s).name)}` : ''}<span class="sep">·</span>${esc(s.address.text)}${s.address.verified ? '' : ' (address not yet verified)'}</p>
   ${s.stations?.length ? `<p class="kind">Near ${esc(s.stations.join(', '))} MRT, per the operator's page.</p>` : ''}
 </section>
 <dl class="factlist">
@@ -204,6 +227,7 @@ const spotPage = (s) => page({
   ${factRow('Food', 'food', s.facts.food)}
   ${hoursRow(s.hours)}
 </dl>
+${childrenOf(s).length ? `<section class="block inside"><h2>Inside ${esc(s.name)}</h2><ul class="list">${childrenOf(s).map((k) => card(area, k)).join('')}</ul></section>` : ''}
 ${s.notes?.length ? `<section class="block"><h2>From the operator's page</h2><ul class="sources">${s.notes.map((nt) => `<li><q>${esc(nt.text)}</q> <a href="${esc(nt.source)}" rel="noopener">${esc(host(nt.source))}</a></li>`).join('')}</ul></section>` : ''}
 ${suggestBlock({
   key: s.slug,
@@ -218,6 +242,7 @@ ${suggestBlock({
   <ul class="sources">
     ${s.sources.map((src) => `<li><a href="${esc(src.url)}" rel="noopener">${esc(host(src.url))}</a>, <span class="checked">checked ${esc(src.checked)}</span>: <q>${esc(src.says)}</q></li>`).join('')}
     ${s.unverified ? `<li>${esc(s.unverified)}</li>` : ''}
+    ${s.photo ? `<li>Photo: ${creditLine(s)}.</li>` : ''}
   </ul>
 </section>`,
 });
@@ -246,6 +271,8 @@ write('_headers', `/*
   Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'none'
 /fonts/*
   Cache-Control: public, max-age=31536000, immutable
+/images/*
+  Cache-Control: public, max-age=604800
 /styles/*
   Cache-Control: public, max-age=3600
 /js/*
@@ -256,5 +283,7 @@ write('styles/site.css', fs.readFileSync(path.join(ROOT, 'src/styles/tokens.css'
 write('js/site.js', fs.readFileSync(path.join(ROOT, 'src/js/site.js'), 'utf8'));
 fs.mkdirSync(path.join(DIST, 'fonts'), { recursive: true });
 for (const f of fs.readdirSync(path.join(ROOT, 'src/fonts'))) if (f.endsWith('.woff2')) fs.copyFileSync(path.join(ROOT, 'src/fonts', f), path.join(DIST, 'fonts', f));
+fs.mkdirSync(path.join(DIST, 'images'), { recursive: true });
+for (const f of fs.readdirSync(path.join(ROOT, 'src/images'))) if (f.endsWith('.jpg')) fs.copyFileSync(path.join(ROOT, 'src/images', f), path.join(DIST, 'images', f));
 
-console.log(`built dist/: ${urls.length} pages (${n} spots in ${area.name}), canonical host ${SITE_URL}`);
+console.log(`built dist/: ${urls.length} pages (${n} places in ${area.name}, ${nested} inside them, ${spots.filter((s) => s.photo).length} photos), canonical host ${SITE_URL}`);

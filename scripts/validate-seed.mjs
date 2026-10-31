@@ -60,6 +60,23 @@ for (const s of seed.spots ?? []) {
     if (!src.says) errors.push(`${id}: source ${src.url} needs "says"`);
   }
   if (!(s.sources ?? []).length && !s.unverified) errors.push(`${id}: no sources and no "unverified" reason`);
+  if (s.within !== undefined) {
+    const parent = (seed.spots ?? []).find((p) => p.slug === s.within);
+    if (!parent) errors.push(`${id}: within "${s.within}" is not a spot`);
+    else {
+      if (parent.slug === id) errors.push(`${id}: cannot be within itself`);
+      if (parent.area !== s.area) errors.push(`${id}: within a spot in another area`);
+      if (parent.within) errors.push(`${id}: within "${parent.slug}", which is itself within another spot (one level only)`);
+    }
+  }
+  if (s.photo) {
+    const p = s.photo;
+    for (const k of ['file', 'alt', 'author', 'licence', 'source']) if (!p[k]) errors.push(`${id}: photo needs "${k}"`);
+    if (p.source && !isUrl(p.source)) errors.push(`${id}: photo source must be a URL`);
+    if (p.licence && !/^public domain|^cc0/i.test(p.licence) && !isUrl(p.licenceUrl ?? '')) errors.push(`${id}: photo licence ${p.licence} needs licenceUrl`);
+    if (p.licence && /\bNC\b|\bND\b/.test(p.licence)) errors.push(`${id}: photo licence ${p.licence} is non-commercial or no-derivatives; not allowed`);
+    for (const w of [400, 800]) if (p.file && !fs.existsSync(path.join(path.dirname(file), '..', 'src/images', `${p.file}-${w}.jpg`))) errors.push(`${id}: missing src/images/${p.file}-${w}.jpg`);
+  }
   if (s.unverified) warn.push(`${id}: unverified — ${s.unverified}`);
 }
 
@@ -73,4 +90,4 @@ if (errors.length) {
   for (const e of errors) console.log('  · ' + e);
   process.exit(1);
 }
-console.log('clean — every fact has a source, no socket counts');
+console.log('clean — every fact has a source, no socket counts, every photo is credited and on disk');
