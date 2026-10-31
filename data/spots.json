@@ -1,1098 +1,836 @@
-[
-  {
-    "id": "jurong-library-1",
-    "name": "Jurong Regional Library",
-    "category": "library",
-    "area": "Jurong",
-    "noiseLevel": "quiet",
-    "chargingPorts": "abundant",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Quiet study areas with lots of power outlets.",
-    "mallId": null
-  },
-  {
-    "id": "coffee-bean-1",
-    "name": "Coffee Bean @ Downtown",
-    "category": "cafe",
-    "area": "Downtown",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=2",
-    "description": "Friendly staff and stable Wi-Fi.",
-    "mallId": null
-  },
-  {
-    "id": "national-library-1",
-    "name": "National Library Board",
-    "category": "library",
-    "area": "Downtown",
-    "noiseLevel": "quiet",
-    "chargingPorts": "abundant",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=3",
-    "description": "Modern library with excellent study facilities and Wi-Fi.",
-    "mallId": null
-  },
-  {
-    "id": "starbucks-1",
-    "name": "Starbucks Marina Bay",
-    "category": "cafe",
-    "area": "Marina",
-    "noiseLevel": "medium",
-    "chargingPorts": "abundant",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=4",
-    "description": "Scenic waterfront view with ample electrical outlets.",
-    "mallId": null
-  },
-  {
-    "id": "tanjong-pagar-library-1",
-    "name": "Tanjong Pagar Public Library",
-    "category": "library",
-    "area": "CBD",
-    "noiseLevel": "quiet",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Cozy reading nooks and study desks. Bring headphones for ambient music.",
-    "mallId": null
-  },
-  {
-    "id": "tiong-bahru-cafe-1",
-    "name": "Tiong Bahru Bakery & Co",
-    "category": "cafe",
-    "area": "Tiong Bahru",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Artisanal bakery with vintage vibes. Great for casual study groups.",
-    "mallId": null
-  },
-  {
-    "id": "library-at-orchard-1",
-    "name": "Library @ Orchard Central",
-    "category": "library",
-    "area": "Orchard",
-    "noiseLevel": "quiet",
-    "chargingPorts": "abundant",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Well-lit study spaces with individual desks and quiet zones.",
-    "mallId": "orchard-central-mall"
-  },
-  {
-    "id": "forest-hill-cafe-1",
-    "name": "Forest Hill Cafe",
-    "category": "cafe",
-    "area": "Bishan",
-    "noiseLevel": "quiet",
-    "chargingPorts": "abundant",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Hidden gem with plants, natural light, and zero distractions.",
-    "mallId": null
-  },
-  {
-    "id": "coffee-bean-east-coast-1",
-    "name": "Coffee Bean @ East Coast Park",
-    "category": "cafe",
-    "area": "East Coast",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Outdoor seating with park views. Bring a cushion for comfort.",
-    "mallId": null
-  },
-  {
-    "id": "kallang-library-1",
-    "name": "Kallang Library",
-    "category": "library",
-    "area": "Kallang",
-    "noiseLevel": "quiet",
-    "chargingPorts": "abundant",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Large study areas with modern amenities and quiet reading zones.",
-    "mallId": null
-  },
-  {
-    "id": "coffee-bean-westgate-1",
-    "name": "Coffee Bean @ Westgate",
-    "category": "cafe",
-    "area": "Jurong",
-    "noiseLevel": "medium",
-    "chargingPorts": "abundant",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Busy cafe with lots of seating and high traffic.",
-    "mallId": "westgate-mall"
-  },
-  {
-    "id": "cafe-vivocity-1",
-    "name": "Common Grounds @ VivoCity",
-    "category": "cafe",
-    "area": "Harbour",
-    "noiseLevel": "noisy",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Popular cafe with peak hours; good for group studying.",
-    "mallId": "vivocity-mall"
-  },
-  {
-    "id": "nex-cafe-1",
-    "name": "Starbucks @ NEX",
-    "category": "cafe",
-    "area": "Serangoon",
-    "noiseLevel": "noisy",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Bustling cafe with mall energy.",
-    "mallId": "nex-mall"
-  },
-  {
-    "id": "tampines-cafe-1",
-    "name": "The Coffee Club @ Tampines 1",
-    "category": "cafe",
-    "area": "Tampines",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Comfortable café with moderate noise levels.",
-    "mallId": "tampines-1-mall"
-  },
-  {
-    "id": "clementi-working-space-1",
-    "name": "Co-Working Hub @ Clementi",
-    "category": "working-space",
-    "area": "Clementi",
-    "noiseLevel": "medium",
-    "chargingPorts": "abundant",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Modern working space with charging hubs and comfortable seating.",
-    "mallId": "clementi-mall"
-  },
-  {
-    "id": "clarke-quay-working-1",
-    "name": "Work Space @ Clarke Quay",
-    "category": "working-space",
-    "area": "Clarke Quay",
-    "noiseLevel": "noisy",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Vibrant spaces for collaborative work and group study.",
-    "mallId": "central-clarke-quay-mall"
-  },
-  {
-    "id": "sengkang-quiet-space-1",
-    "name": "Quiet Study Nook @ Compass Point",
-    "category": "working-space",
-    "area": "Sengkang",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Quiet corners at the rooftop garden and indoor seating areas.",
-    "mallId": "compass-point-mall"
-  },
-  {
-    "id": "east-coast-lounge-1",
-    "name": "Study Lounge @ East Coast Mall",
-    "category": "working-space",
-    "area": "East Coast",
-    "noiseLevel": "quiet",
-    "chargingPorts": "abundant",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Serene lounge area overlooking the beach. Perfect for focused work.",
-    "mallId": "east-coast-mall"
-  },
-  {
-    "id": "marina-square-lounge-1",
-    "name": "Work Lounge @ Marina Square",
-    "category": "working-space",
-    "area": "Marina",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Quieter upper floors with scattered seating areas.",
-    "mallId": "marina-square-mall"
-  },
-  {
-    "id": "jewel-starbucks-1",
-    "name": "Starbucks @ Jewel",
-    "category": "cafe",
-    "area": "Jewel",
-    "noiseLevel": "noisy",
-    "chargingPorts": "unsure",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Noisy with limited seats.",
-    "mallId": "jewel-starbucks"
-  },
-  {
-    "id": "united-square-starbucks-1",
-    "name": "Starbucks @ United Square",
-    "category": "cafe",
-    "area": "United Square",
-    "noiseLevel": "medium",
-    "chargingPorts": "abundant",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Chattering with average amount of seats",
-    "mallId": "united-square-starbucks"
-  },
-  {
-    "id": "bishan-coffee-bean-1",
-    "name": "Coffee Bean @ Bishan",
-    "category": "cafe",
-    "area": "Bishan",
-    "noiseLevel": "noisy",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Noisy with limited seats.",
-    "mallId": "bishan-coffee-bean"
-  },
-  {
-    "id": "bishan-library-1",
-    "name": "Bishan Library",
-    "category": "library",
-    "area": "Bishan",
-    "noiseLevel": "quiet",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Quiet space for focused study.",
-    "mallId": "bishan-library"
-  },
-  {
-    "id": "lee-kong-chian-reference-library-1",
-    "name": "Lee Kong Chian Reference Library",
-    "category": "library",
-    "area": "Lee Kong Chian",
-    "noiseLevel": "quiet",
-    "chargingPorts": "abundant",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Quiet library with abundant resources.",
-    "mallId": "lee-kong-chian-reference-library"
-  },
-   {
-    "id": "Tofu-G-1",
-    "name": "TofuG",
-    "category": " cafe",
-    "area": "Tofu G",
-    "noiseLevel": "quiet",
-    "chargingPorts": "none",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=1",
-    "description": "Quiet cafe with a cozy atmosphere.",
-    "mallId": "tofu-g"
-  },
-  {
-    "id": "working-title-rocher-bencoolen-1",
-    "name": "Working Title (Rocher/Bencoolen)",
-    "category": "cafe",
-    "area": "Rocher/Bencoolen",
-    "noiseLevel": "medium",
-    "chargingPorts": "moderate",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=7",
-    "description": "Study-friendly cafe in Rocher/Bencoolen with moderate charging options, with Wi-Fi, and operating hours of 0900-1800.",
-    "mallId": "working-title-rocher-bencoolen"
-  },
-  {
-     "id": "the-coffee-code-maxwell-1",
-    "name": "The Coffee Code (Maxwell)",
-    "category": "cafe",
-    "area": "Maxwell",
-    "noiseLevel": "medium",
-    "chargingPorts": "moderate",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=8",
-    "description": "Study-friendly cafe in Maxwell with moderate charging options, with Wi-Fi, and operating hours of 0900-1700.",
-    "mallId": "the-coffee-code-maxwell"
-  },
-  {
-    "id": "tomo-cafe-maxwell-1",
-    "name": "Tomo Cafe (Maxwell)",
-    "category": "cafe",
-    "area": "Maxwell",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=9",
-    "description": "Study-friendly cafe in Maxwell with limited charging options, with Wi-Fi, and operating hours of 0900-1700.",
-    "mallId": "tomo-cafe-maxwell"
-  },
-  {
-    "id": "estro-coffee-orchard-1",
-    "name": "Estro Coffee (Orchard)",
-    "category": "cafe",
-    "area": "Orchard",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=10",
-    "description": "Study-friendly cafe in Orchard with limited charging options, with Wi-Fi, and operating hours of 1000-1900.",
-    "mallId": "estro-coffee-orchard"
-  },
-  {
-      "id": "main-street-commissary-jalan-besar-1",
-    "name": "Main Street Commissary (Jalan Besar)",
-    "category": "cafe",
-    "area": "Jalan Besar",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=11",
-    "description": "Study-friendly cafe in Jalan Besar with limited charging options, with Wi-Fi, and operating hours of 0800-1700.",
-    "mallId": "main-street-commissary-jalan-besar"
-  },
-  {
-    "id": "louisa-coffee-bugis-1",
-    "name": "Louisa Coffee (Bugis)",
-    "category": "cafe",
-    "area": "Bugis",
-    "noiseLevel": "noisy",
-    "chargingPorts": "moderate",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=12",
-    "description": "Lively cafe in Bugis with moderate charging options, with Wi-Fi, and operating hours of 0800-2200.",
-    "mallId": "louisa-coffee-bugis"
-
-  },
-  {
-    "id": "onne-outram-park-1",
-    "name": "Onne (Outram Park)",
-    "category": "cafe",
-    "area": "Outram Park",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=13",
-    "description": "Study-friendly cafe in Outram Park with limited charging options, with Wi-Fi, and operating hours of 0900-1800.",
-    "mallId": "onne-outram-park"
-
-  },
-
-  {
-     "id": "the-book-cafe-fort-canning-1",
-    "name": "The Book Cafe (Fort Canning)",
-    "category": "cafe",
-    "area": "Fort Canning",
-    "noiseLevel": "medium",
-    "chargingPorts": "moderate",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=14",
-    "description": "Study-friendly cafe in Fort Canning with moderate charging options, with Wi-Fi, and operating hours of 1000-2000.",
-    "mallId": "the-book-cafe-fort-canning"
-
-  },
-  {
-     "id": "tiong-bahru-bakery-at-foothills-1",
-    "name": "Tiong Bahru Bakery @ Foothills",
-    "category": "cafe",
-    "area": "Foothills",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=15",
-    "description": "Study-friendly cafe in Foothills with limited charging options, with Wi-Fi, and operating hours of 0800-1800.",
-    "mallId": "tiong-bahru-bakery-at-foothills"
-
-  },
-  {
-     "id": "tiong-bahru-bakery-at-siglap-1",
-    "name": "Tiong Bahru Bakery @ Siglap",
-    "category": "cafe",
-    "area": "Siglap",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=16",
-    "description": "Study-friendly cafe in Siglap with limited charging options, with Wi-Fi, and operating hours of 0800-2100.",
-    "mallId": "tiong-bahru-bakery-at-siglap"
-
-  },
-  {
-    "id": "plain-vanilla-at-east-coast-1",
-    "name": "Plain Vanilla @ East Coast",
-    "category": "cafe",
-    "area": "East Coast",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=17",
-    "description": "Study-friendly cafe in East Coast with limited charging options, with Wi-Fi, and operating hours of 0730-1900.",
-    "mallId": "plain-vanilla-at-east-coast"
-
-  },
-
-  {
-     "id": "huggs-collective-at-maxwell-1",
-    "name": "Huggs Collective @ Maxwell",
-    "category": "cafe",
-    "area": "Maxwell",
-    "noiseLevel": "medium",
-    "chargingPorts": "moderate",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=18",
-    "description": "Study-friendly cafe in Maxwell with moderate charging options, with Wi-Fi, and operating hours of 0800-1800.",
-    "mallId": "huggs-collective-at-maxwell"
-
-  },
-  {
-     "id": "lucid-1",
-    "name": "Lucid",
-    "category": "cafe",
-    "area": "Lucid",
-    "noiseLevel": "medium",
-    "chargingPorts": "moderate",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=19",
-    "description": "Study-friendly cafe in Lucid with moderate charging options, with Wi-Fi, and operating hours of 0900-1800.",
-    "mallId": "lucid"
-
-  },
-  {
-    "id": "bloom-coffee-1",
-    "name": "Bloom Coffee",
-    "category": "cafe",
-    "area": "Bloom Coffee",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=20",
-    "description": "Study-friendly cafe in Bloom Coffee with limited charging options, with Wi-Fi, and operating hours of 0800-1700.",
-    "mallId": "bloom-coffee"
-  },
-
-  {
-   "id": "amber-ember-1",
-    "name": "Amber Ember",
-    "category": "cafe",
-    "area": "Amber Ember",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=21",
-    "description": "Study-friendly cafe in Amber Ember with limited charging options, with Wi-Fi, and operating hours of 0900-1800.",
-    "mallId": "amber-ember"
-
-  },
-  {
-     "id": "alchemist-at-the-mill-1",
-    "name": "Alchemist @ The Mill",
-    "category": "cafe",
-    "area": "The Mill",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=22",
-    "description": "Study-friendly cafe in The Mill with limited charging options, with Wi-Fi, and operating hours of 0800-1700.",
-    "mallId": "alchemist-at-the-mill"
-
-  },
-  {
-     "id": "alchemist-at-khong-guan-building-1",
-    "name": "Alchemist @ Khong Guan Building",
-    "category": "cafe",
-    "area": "Khong Guan Building",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=23",
-    "description": "Study-friendly cafe in Khong Guan Building with limited charging options, with Wi-Fi, and operating hours of 0800-1800.",
-    "mallId": "alchemist-at-khong-guan-building"
-
-  },
-  {
-   "id": "prairie-by-craftsmen-at-cluny-court-1",
-    "name": "PRAIRIE By Craftsmen @ Cluny Court",
-    "category": "cafe",
-    "area": "Cluny Court",
-    "noiseLevel": "quiet",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=24",
-    "description": "Quiet cafe in Cluny Court with limited charging options, with Wi-Fi, and operating hours of 0800-1800.",
-    "mallId": "prairie-by-craftsmen-at-cluny-court"
-
-  },
-  {
-    "id": "prairie-by-craftsmen-at-river-valley-1",
-    "name": "PRAIRIE By Craftsmen @ River Valley",
-    "category": "cafe",
-    "area": "River Valley",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=25",
-    "description": "Study-friendly cafe in River Valley with limited charging options, with Wi-Fi, and operating hours of 0800-1800.",
-    "mallId": "prairie-by-craftsmen-at-river-valley"
-  },
-  {
-    "id": "brawn-and-brains-at-hamilton-rd-1",
-    "name": "Brawn and Brains @ Hamilton Rd",
-    "category": "cafe",
-    "area": "Hamilton Rd",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=26",
-    "description": "Study-friendly cafe in Hamilton Rd with limited charging options, with Wi-Fi, and operating hours of 0800-1700.",
-    "mallId": "brawn-and-brains-at-hamilton-rd"
-  },
-  {
-    "id": "well-collective-1",
-    "name": "Well Collective",
-    "category": "cafe",
-    "area": "Well Collective",
-    "noiseLevel": "quiet",
-    "chargingPorts": "moderate",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=27",
-    "description": "Quiet cafe in Well Collective with moderate charging options, with Wi-Fi, and operating hours of 0800-1800.",
-    "mallId": "well-collective"
-  },
-  {
-    "id": "mylo-s-1",
-    "name": "Mylo's",
-    "category": "cafe",
-    "area": "Mylo's",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=28",
-    "description": "Study-friendly cafe in Mylo's with limited charging options, with Wi-Fi, and operating hours of 0900-1800.",
-    "mallId": "mylo-s"
-  },
-  {
-    "id": "lazy-day-cafe-1",
-    "name": "Lazy Day Cafe",
-    "category": "cafe",
-    "area": "Lazy Day Cafe",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=29",
-    "description": "Study-friendly cafe in Lazy Day Cafe with limited charging options, with Wi-Fi, and operating hours of 0900-1800.",
-    "mallId": "lazy-day-cafe"
-  },
-  {
-    "id": "rough-guys-coffee-1",
-    "name": "Rough Guys Coffee",
-    "category": "cafe",
-    "area": "Rough Guys Coffee",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=30",
-    "description": "Study-friendly cafe in Rough Guys Coffee with limited charging options, with Wi-Fi, and operating hours of 0900-1800.",
-    "mallId": "rough-guys-coffee"
-  },
-  {
-    "id": "syip-at-luzerne-building-1",
-    "name": "SYIP @ Luzerne Building",
-    "category": "cafe",
-    "area": "Luzerne Building",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=31",
-    "description": "Study-friendly cafe in Luzerne Building with limited charging options, with Wi-Fi, and operating hours of 0900-1800.",
-    "mallId": "syip-at-luzerne-building"
-  },
-  {
-    "id": "glasshouse-at-neil-road-1",
-    "name": "Glasshouse @ Neil Road",
-    "category": "cafe",
-    "area": "Neil Road",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=32",
-    "description": "Study-friendly cafe in Neil Road with limited charging options, with Wi-Fi, and operating hours of 0900-1800.",
-    "mallId": "glasshouse-at-neil-road"
-  },
-  {
-    "id": "seng-house-1",
-    "name": "Seng House",
-    "category": "cafe",
-    "area": "Seng House",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=33",
-    "description": "Study-friendly cafe in Seng House with limited charging options, with Wi-Fi, and operating hours of 0900-1700.",
-    "mallId": "seng-house"
-  },
-  {
-    "id": "alkove-1",
-    "name": "Alkove",
-    "category": "cafe",
-    "area": "Alkove",
-    "noiseLevel": "quiet",
-    "chargingPorts": "moderate",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=34",
-    "description": "Quiet cafe in Alkove with moderate charging options, with Wi-Fi, and operating hours of 0900-1800.",
-    "mallId": "alkove"
-  },
-  {
-    "id": "equate-coffee-at-orchard-central-1",
-    "name": "Equate Coffee @ Orchard Central",
-    "category": "cafe",
-    "area": "Orchard Central",
-    "noiseLevel": "noisy",
-    "chargingPorts": "moderate",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=35",
-    "description": "Lively cafe in Orchard Central with moderate charging options, with Wi-Fi, and operating hours of 1000-2100.",
-    "mallId": "equate-coffee-at-orchard-central"
-  },
-  {
-    "id": "afterwords-1",
-    "name": "Afterwords",
-    "category": "cafe",
-    "area": "Afterwords",
-    "noiseLevel": "quiet",
-    "chargingPorts": "moderate",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=36",
-    "description": "Quiet cafe in Afterwords with moderate charging options, with Wi-Fi, and operating hours of 0900-1800.",
-    "mallId": "afterwords"
-  },
-  {
-    "id": "space-coffee-1",
-    "name": "Space Coffee",
-    "category": "cafe",
-    "area": "Space Coffee",
-    "noiseLevel": "medium",
-    "chargingPorts": "moderate",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=37",
-    "description": "Study-friendly cafe in Space Coffee with moderate charging options, with Wi-Fi, and operating hours of 0800-1800.",
-    "mallId": "space-coffee"
-  },
-  {
-    "id": "fiftyfive-coffee-bar-1",
-    "name": "FiftyFive Coffee Bar",
-    "category": "cafe",
-    "area": "FiftyFive Coffee Bar",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=38",
-    "description": "Study-friendly cafe in FiftyFive Coffee Bar with limited charging options, with Wi-Fi, and operating hours of 0800-1800.",
-    "mallId": "fiftyfive-coffee-bar"
-  },
-  {
-    "id": "kohi-at-shenton-way-1",
-    "name": "KOHI @ Shenton Way",
-    "category": "cafe",
-    "area": "Shenton Way",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=39",
-    "description": "Study-friendly cafe in Shenton Way with limited charging options, with Wi-Fi, and operating hours of 0800-1700.",
-    "mallId": "kohi-at-shenton-way"
-  },
-  {
-    "id": "cafe-brera-1",
-    "name": "Cafe Brera",
-    "category": "cafe",
-    "area": "Cafe Brera",
-    "noiseLevel": "quiet",
-    "chargingPorts": "moderate",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=40",
-    "description": "Quiet cafe in Cafe Brera with moderate charging options, with Wi-Fi, and operating hours of 0900-1800.",
-    "mallId": "cafe-brera"
-  },
-  {
-    "id": "pullman-bakery-at-jel-1",
-    "name": "Pullman bakery at JEL",
-    "category": "cafe",
-    "area": "Pullman bakery at JEL",
-    "noiseLevel": "noisy",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=41",
-    "description": "Lively cafe in Pullman bakery at JEL with limited charging options, with Wi-Fi, and operating hours of 0800-2100.",
-    "mallId": "pullman-bakery-at-jel"
-  },
-  {
-    "id": "the-ritual-1",
-    "name": "the RITUAL",
-    "category": "cafe",
-    "area": "the",
-    "noiseLevel": "medium",
-    "chargingPorts": "moderate",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=42",
-    "description": "Study-friendly cafe in the with moderate charging options, with Wi-Fi, and operating hours of 0800-1800.",
-    "mallId": "the-ritual"
-  },
-  {
-    "id": "better-days-cafe-and-bar-1",
-    "name": "Better Days Cafe and Bar",
-    "category": "cafe",
-    "area": "Better Days Cafe and Bar",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=43",
-    "description": "Study-friendly cafe in Better Days Cafe and Bar with limited charging options, with Wi-Fi, and operating hours of 0900-2200.",
-    "mallId": "better-days-cafe-and-bar"
-  },
-  {
-    "id": "atlas-coffeehouse-1",
-    "name": "Atlas coffeehouse",
-    "category": "cafe",
-    "area": "Atlas coffeehouse",
-    "noiseLevel": "noisy",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=44",
-    "description": "Lively cafe in Atlas coffeehouse with limited charging options, with Wi-Fi, and operating hours of 0800-1900.",
-    "mallId": "atlas-coffeehouse"
-  },
-  {
-    "id": "flagwhite-1",
-    "name": "FlagWhite",
-    "category": "cafe",
-    "area": "FlagWhite",
-    "noiseLevel": "medium",
-    "chargingPorts": "moderate",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=45",
-    "description": "Study-friendly cafe in FlagWhite with moderate charging options, with Wi-Fi, and operating hours of 0800-1800.",
-    "mallId": "flagwhite"
-  },
-  {
-    "id": "shen-and-co-cafe-1",
-    "name": "Shen & Co Cafe",
-    "category": "cafe",
-    "area": "Shen & Co Cafe",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=46",
-    "description": "Study-friendly cafe in Shen & Co Cafe with limited charging options, with Wi-Fi, and operating hours of 0900-1800.",
-    "mallId": "shen-and-co-cafe"
-  },
-  {
-    "id": "hello-arigato-bukit-timah-1",
-    "name": "Hello Arigato Bukit Timah",
-    "category": "cafe",
-    "area": "Hello Arigato Bukit Timah",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=47",
-    "description": "Study-friendly cafe in Hello Arigato Bukit Timah with limited charging options, with Wi-Fi, and operating hours of 0900-1800.",
-    "mallId": "hello-arigato-bukit-timah"
-  },
-  {
-    "id": "the-m-plot-cafe-1",
-    "name": "The M Plot Cafe",
-    "category": "cafe",
-    "area": "The M",
-    "noiseLevel": "quiet",
-    "chargingPorts": "moderate",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=48",
-    "description": "Quiet cafe in The M with moderate charging options, with Wi-Fi, and operating hours of 0800-1800.",
-    "mallId": "the-m-plot-cafe"
-  },
-  {
-    "id": "the-signature-patisserie-1",
-    "name": "The Signature Patisserie",
-    "category": "cafe",
-    "area": "The Signature",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=49",
-    "description": "Study-friendly cafe in The Signature with limited charging options, with Wi-Fi, and operating hours of 0900-1900.",
-    "mallId": "the-signature-patisserie"
-  },
-  {
-    "id": "pocket-by-flip-coffee-roasters-1",
-    "name": "Pocket by Flip Coffee Roasters",
-    "category": "cafe",
-    "area": "Pocket by Flip",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=50",
-    "description": "Study-friendly cafe in Pocket by Flip with limited charging options, with Wi-Fi, and operating hours of 0800-1700.",
-    "mallId": "pocket-by-flip-coffee-roasters"
-  },
-  {
-    "id": "daily-ground-1",
-    "name": "Daily Ground",
-    "category": "cafe",
-    "area": "Daily Ground",
-    "noiseLevel": "medium",
-    "chargingPorts": "moderate",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=51",
-    "description": "Study-friendly cafe in Daily Ground with moderate charging options, with Wi-Fi, and operating hours of 0800-1800.",
-    "mallId": "daily-ground"
-  },
-  {
-    "id": "craftsmen-coffee-greenwood-ave-1",
-    "name": "Craftsmen Coffee (Greenwood Ave)",
-    "category": "cafe",
-    "area": "Greenwood Ave",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=52",
-    "description": "Study-friendly cafe in Greenwood Ave with limited charging options, with Wi-Fi, and operating hours of 0800-1800.",
-    "mallId": "craftsmen-coffee-greenwood-ave"
-  },
-  {
-    "id": "ang-mo-kio-library-1",
-    "name": "Ang Mo Kio Library",
-    "category": "library",
-    "area": "Ang Mo Kio",
-    "noiseLevel": "medium",
-    "chargingPorts": "moderate",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=53",
-    "description": "Study-friendly library in Ang Mo Kio with moderate charging options, with Wi-Fi, and operating hours of 10 00 -21 00.",
-    "mallId": "ang-mo-kio-library"
-  },
-  {
-    "id": "sengkang-library-1",
-    "name": "Sengkang Library",
-    "category": "library",
-    "area": "Sengkang",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=54",
-    "description": "Study-friendly library in Sengkang with limited charging options, with Wi-Fi, and operating hours of 11 00–2100.",
-    "mallId": "sengkang-library"
-  },
-  {
-    "id": "serangoon-library-1",
-    "name": "Serangoon Library",
-    "category": "library",
-    "area": "Serangoon",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "no",
-    "image": "https://picsum.photos/400/300?random=55",
-    "description": "Study-friendly library in Serangoon with limited charging options, without reliable Wi-Fi, and operating hours of 1100-2100.",
-    "mallId": "serangoon-library"
-  },
-  {
-    "id": "central-library-1",
-    "name": "Central Library",
-    "category": "library",
-    "area": "Central",
-    "noiseLevel": "medium",
-    "chargingPorts": "limited",
-    "wifi": "no",
-    "image": "https://picsum.photos/400/300?random=56",
-    "description": "Study-friendly library in Central with limited charging options and without reliable Wi-Fi.",
-    "mallId": "central-library"
-  },
-  {
-    "id": "punggol-library-1",
-    "name": "Punggol Library",
-    "category": "library",
-    "area": "Punggol",
-    "noiseLevel": "noisy",
-    "chargingPorts": "abundant",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=57",
-    "description": "Lively library in Punggol with abundant charging options, with Wi-Fi, and operating hours of 1000 - 2100.",
-    "mallId": "punggol-library"
-  },
-  {
-    "id": "toa-payoh-library-1",
-    "name": "Toa Payoh Library",
-    "category": "library",
-    "area": "Toa Payoh",
-    "noiseLevel": "medium",
-    "chargingPorts": "abundant",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=58",
-    "description": "Study-friendly library in Toa Payoh with abundant charging options, with Wi-Fi, and operating hours of 1000-2100.",
-    "mallId": "toa-payoh-library"
-  },
-  {
-    "id": "tampines-library-1",
-    "name": "Tampines Library",
-    "category": "library",
-    "area": "Tampines",
-    "noiseLevel": "medium",
-    "chargingPorts": "moderate",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=59",
-    "description": "Study-friendly library in Tampines with moderate charging options, with Wi-Fi, and operating hours of 1000-2100.",
-    "mallId": "tampines-library"
-  },
-  {
-    "id": "harbourfront-library-1",
-    "name": "Harbourfront Library",
-    "category": "library",
-    "area": "Harbourfront",
-    "noiseLevel": "medium",
-    "chargingPorts": "moderate",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=60",
-    "description": "Study-friendly library in Harbourfront with moderate charging options, with Wi-Fi, and operating hours of 1100-2100.",
-    "mallId": "harbourfront-library"
-  },
-  {
-    "id": "bedok-library-1",
-    "name": "Bedok Library",
-    "category": "library",
-    "area": "Bedok",
-    "noiseLevel": "medium",
-    "chargingPorts": "moderate",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=61",
-    "description": "Study-friendly library in Bedok with moderate charging options, with Wi-Fi, and operating hours of 1000-2100.",
-    "mallId": "bedok-library"
-  },
-  {
-    "id": "pasir-ris-library-1",
-    "name": "Pasir Ris Library",
-    "category": "library",
-    "area": "Pasir Ris",
-    "noiseLevel": "medium",
-    "chargingPorts": "moderate",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=62",
-    "description": "Study-friendly library in Pasir Ris with moderate charging options, with Wi-Fi, and operating hours of 1000-2100.",
-    "mallId": "pasir-ris-library"
-  },
-  {
-    "id": "woodlands-library-1",
-    "name": "Woodlands Library",
-    "category": "library",
-    "area": "Woodlands",
-    "noiseLevel": "medium",
-    "chargingPorts": "moderate",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=63",
-    "description": "Study-friendly library in Woodlands with moderate charging options, with Wi-Fi, and operating hours of 1000-2100.",
-    "mallId": "woodlands-library"
-  },
-  {
-    "id": "queenstown-library-1",
-    "name": "Queenstown Library",
-    "category": "library",
-    "area": "Queenstown",
-    "noiseLevel": "quiet",
-    "chargingPorts": "moderate",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=64",
-    "description": "Quiet library in Queenstown with moderate charging options, with Wi-Fi, and operating hours of 1000-2100.",
-    "mallId": "queenstown-library"
-  },
-  {
-    "id": "geylang-east-library-1",
-    "name": "Geylang East Library",
-    "category": "library",
-    "area": "Geylang East",
-    "noiseLevel": "medium",
-    "chargingPorts": "moderate",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=65",
-    "description": "Study-friendly library in Geylang East with moderate charging options, with Wi-Fi, and operating hours of 1000-2100.",
-    "mallId": "geylang-east-library"
-  },
-  {
-    "id": "jurong-west-library-1",
-    "name": "Jurong West Library",
-    "category": "library",
-    "area": "Jurong West",
-    "noiseLevel": "medium",
-    "chargingPorts": "moderate",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=66",
-    "description": "Study-friendly library in Jurong West with moderate charging options, with Wi-Fi, and operating hours of 1000-2100.",
-    "mallId": "jurong-west-library"
-  },
-  {
-    "id": "yishun-library-1",
-    "name": "Yishun Library",
-    "category": "library",
-    "area": "Yishun",
-    "noiseLevel": "medium",
-    "chargingPorts": "moderate",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=67",
-    "description": "Study-friendly library in Yishun with moderate charging options, with Wi-Fi, and operating hours of 1000-2100.",
-    "mallId": "yishun-library"
-  },
-  {
-    "id": "jurong-library-1",
-    "name": "Jurong Library",
-    "category": "library",
-    "area": "Jurong",
-    "noiseLevel": "quiet",
-    "chargingPorts": "abundant",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=68",
-    "description": "Quiet library in Jurong with abundant charging options, with Wi-Fi, and operating hours of 1000-2100.",
-    "mallId": "jurong-library"
-  },
-  {
-    "id": "smu-li-ka-shing-library-1",
-    "name": "SMU Li Ka Shing Library",
-    "category": "library",
-    "area": "SMU Li Ka Shing",
-    "noiseLevel": "quiet",
-    "chargingPorts": "abundant",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=69",
-    "description": "Quiet library in SMU Li Ka Shing with abundant charging options, with Wi-Fi, and operating hours of 1000-2100.",
-    "mallId": "smu-li-ka-shing-library"
-  },
-  {
-    "id": "nyp-library-1",
-    "name": "NYP Library",
-    "category": "library",
-    "area": "NYP",
-    "noiseLevel": "medium",
-    "chargingPorts": "moderate",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=70",
-    "description": "Study-friendly library in NYP with moderate charging options, with Wi-Fi, and operating hours of 0830 to 1800.",
-    "mallId": "nyp-library"
-  },
-  {
-    "id": "choa-chu-kang-library-1",
-    "name": "Choa Chu Kang Library",
-    "category": "library",
-    "area": "Choa Chu Kang",
-    "noiseLevel": "quiet",
-    "chargingPorts": "abundant",
-    "wifi": "yes",
-    "image": "https://picsum.photos/400/300?random=71",
-    "description": "Quiet library in Choa Chu Kang with abundant charging options, with Wi-Fi, and operating hours of 1100-2100.",
-    "mallId": "choa-chu-kang-library"
-  }
-
-]
+{
+  "$about": "studyspots seed. The only data file. Hand-editable. Every fact says where it came from and when it was checked. Sockets are never counted by us: a socket fact exists only when a person or the operator reported it. 'unknown' is an honest answer and the site shows it. A spot with \"within\" is inside another spot (a café inside a mall) and is listed on that spot's page, not on the area page. Photos are freely licensed, from Wikimedia Commons, credited on the page; files are in src/images as <file>-400.jpg and <file>-800.jpg.",
+  "areas": [
+    {
+      "slug": "bugis-city-hall",
+      "name": "Bugis / City Hall",
+      "stations": [
+        "Bugis",
+        "City Hall"
+      ],
+      "intro": "Libraries, mall seating and cafés within a walk of the two stations. Sockets, Wi-Fi and noise as people report them."
+    }
+  ],
+  "spots": [
+    {
+      "slug": "national-library-building",
+      "area": "bugis-city-hall",
+      "name": "National Library Building",
+      "kind": "Public library",
+      "address": {
+        "text": "100 Victoria Street",
+        "verified": false
+      },
+      "stations": [],
+      "photo": {
+        "file": "national-library-building",
+        "alt": "The National Library Building, a glass and steel tower with a curved roof canopy, above trees.",
+        "author": "Nlannuzel",
+        "taken": "June 2009",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Singapore_National_Library-2009-06-12.jpg",
+        "changes": "cropped to 3:2 and resized",
+        "takenNote": "date from the file name on Commons"
+      },
+      "hours": {
+        "status": "unknown",
+        "note": "The operator's page could not be read on 2026-10-30 (nlb.gov.sg returned a bot challenge). Check the library's own page before you go.",
+        "link": "https://www.nlb.gov.sg"
+      },
+      "facts": {
+        "sockets": {
+          "status": "unknown"
+        },
+        "wifi": {
+          "status": "unknown"
+        },
+        "noise": {
+          "status": "unknown"
+        },
+        "food": {
+          "status": "unknown"
+        }
+      },
+      "notes": [],
+      "sources": [],
+      "unverified": "nlb.gov.sg answered every request with an HTTP 202 bot challenge on 2026-10-30; address and hours await a person with a browser."
+    },
+    {
+      "slug": "library-esplanade",
+      "area": "bugis-city-hall",
+      "name": "library@esplanade",
+      "kind": "Public library",
+      "address": {
+        "text": "Esplanade Mall, 8 Raffles Avenue, Singapore 039802",
+        "verified": true,
+        "source": "https://www.esplanade.com/visit/visitor-guide/getting-here-and-around"
+      },
+      "stations": [
+        "City Hall",
+        "Esplanade"
+      ],
+      "photo": {
+        "file": "library-esplanade",
+        "alt": "The library@esplanade name set into a long timber-patterned wall.",
+        "author": "Terence Ong",
+        "taken": "May 2006",
+        "licence": "CC BY 2.5",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.5",
+        "source": "https://commons.wikimedia.org/wiki/File:Library@esplanade.JPG",
+        "changes": "cropped to 3:2 and resized"
+      },
+      "hours": {
+        "status": "unknown",
+        "note": "The operator's page could not be read on 2026-10-30 (nlb.gov.sg returned a bot challenge). Check the library's own page before you go.",
+        "link": "https://www.nlb.gov.sg"
+      },
+      "facts": {
+        "sockets": {
+          "status": "unknown"
+        },
+        "wifi": {
+          "status": "unknown"
+        },
+        "noise": {
+          "status": "unknown"
+        },
+        "food": {
+          "status": "unknown"
+        }
+      },
+      "notes": [],
+      "sources": [
+        {
+          "url": "https://www.esplanade.com/visit/visitor-guide/getting-here-and-around",
+          "checked": "2026-10-30",
+          "says": "From City Hall MRT; From Esplanade MRT. Taxi stand: C24 Esplanade Mall, 8 Raffles Avenue, 039802."
+        }
+      ],
+      "unverified": "The library's own page on nlb.gov.sg was blocked on 2026-10-30; the mall address and stations come from esplanade.com."
+    },
+    {
+      "slug": "bras-basah-complex",
+      "area": "bugis-city-hall",
+      "name": "Bras Basah Complex",
+      "kind": "Shopping complex",
+      "address": {
+        "text": "231 Bain Street, Singapore 180231",
+        "verified": true,
+        "source": "https://www.brasbasahcomplex.com/contact/"
+      },
+      "stations": [
+        "City Hall",
+        "Bugis",
+        "Bras Basah"
+      ],
+      "photo": {
+        "file": "bras-basah-complex",
+        "alt": "Bras Basah Complex from the street, its name across the white facade above the shopfronts.",
+        "author": "Terence Ong",
+        "taken": "June 2006",
+        "licence": "CC BY 2.5",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.5",
+        "source": "https://commons.wikimedia.org/wiki/File:Bras_Basah_Complex_2.JPG",
+        "changes": "cropped to 3:2 and resized"
+      },
+      "hours": {
+        "status": "reported",
+        "text": "10.00 AM to 7.00 PM",
+        "source": "https://www.brasbasahcomplex.com/contact/"
+      },
+      "facts": {
+        "sockets": {
+          "status": "unknown"
+        },
+        "wifi": {
+          "status": "unknown"
+        },
+        "noise": {
+          "status": "unknown"
+        },
+        "food": {
+          "status": "unknown"
+        }
+      },
+      "notes": [
+        {
+          "text": "communal retail space",
+          "source": "https://www.brasbasahcomplex.com/about/"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.brasbasahcomplex.com/contact/",
+          "checked": "2026-10-30",
+          "says": "231 Bain Street Singapore 180231. 10.00 AM – 7.00 PM"
+        },
+        {
+          "url": "https://www.brasbasahcomplex.com/about/",
+          "checked": "2026-10-30",
+          "says": "Within walking distance: City Hall MRT station, Bugis MRT station, Bras Basah MRT Station along Circle Line."
+        }
+      ]
+    },
+    {
+      "slug": "bugis-junction",
+      "area": "bugis-city-hall",
+      "name": "Bugis Junction",
+      "kind": "Mall seating",
+      "address": {
+        "text": "200 Victoria Street",
+        "verified": true,
+        "source": "https://www.capitaland.com/sg/malls/bugisjunction/en/concierge.html"
+      },
+      "stations": [
+        "Bugis"
+      ],
+      "photo": {
+        "file": "bugis-junction",
+        "alt": "The glass-roofed shopping street inside Bugis Junction, between rows of shophouse fronts.",
+        "author": "Banku",
+        "taken": "March 2009",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Bugis_Junction_Parco_side.JPG",
+        "changes": "cropped to 3:2 and resized"
+      },
+      "hours": {
+        "status": "reported",
+        "text": "10am to 10pm daily",
+        "detail": "Each store may have different operating hours.",
+        "source": "https://www.capitaland.com/sg/malls/bugisjunction/en/concierge.html"
+      },
+      "facts": {
+        "sockets": {
+          "status": "unknown"
+        },
+        "wifi": {
+          "status": "reported",
+          "value": "yes",
+          "reports": 1,
+          "by": "the operator, CapitaLand",
+          "source": "https://www.capitaland.com/sg/malls/bugisjunction/en/concierge.html"
+        },
+        "noise": {
+          "status": "unknown"
+        },
+        "food": {
+          "status": "unknown"
+        }
+      },
+      "notes": [
+        {
+          "text": "direct connectivity to the Bugis MRT Station from the basement level",
+          "source": "https://www.capitaland.com/sg/malls/bugisjunction/en.html"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.capitaland.com/sg/malls/bugisjunction/en/concierge.html",
+          "checked": "2026-10-30",
+          "says": "Bugis Junction is open from 10am to 10pm daily. Connect to CAPITALAND FREE WIFI to enjoy free wireless internet surfing. Bugis, East-West Line (EW12), Downtown Line (DT14)."
+        }
+      ]
+    },
+    {
+      "slug": "bugis-plus",
+      "area": "bugis-city-hall",
+      "name": "Bugis+",
+      "kind": "Mall seating",
+      "address": {
+        "text": "201 Victoria Street",
+        "verified": true,
+        "source": "https://www.capitaland.com/sg/malls/bugisplus/en/concierge.html"
+      },
+      "stations": [
+        "Bugis"
+      ],
+      "photo": {
+        "file": "bugis-plus",
+        "alt": "Bugis+ from Victoria Street: a white patterned facade behind trees, and the bugis+ sign on a link bridge.",
+        "author": "LN9267",
+        "taken": "May 2024",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Bugis%2B_18-05-2024(1).jpg",
+        "changes": "cropped to 3:2 and resized"
+      },
+      "hours": {
+        "status": "reported",
+        "text": "10am to 10pm daily",
+        "detail": "Each store may have different operating hours.",
+        "source": "https://www.capitaland.com/sg/malls/bugisplus/en/concierge.html"
+      },
+      "facts": {
+        "sockets": {
+          "status": "unknown"
+        },
+        "wifi": {
+          "status": "reported",
+          "value": "yes",
+          "reports": 1,
+          "by": "the operator, CapitaLand",
+          "source": "https://www.capitaland.com/sg/malls/bugisplus/en/concierge.html"
+        },
+        "noise": {
+          "status": "unknown"
+        },
+        "food": {
+          "status": "unknown"
+        }
+      },
+      "notes": [],
+      "sources": [
+        {
+          "url": "https://www.capitaland.com/sg/malls/bugisplus/en/concierge.html",
+          "checked": "2026-10-30",
+          "says": "Bugis+ is open from 10am to 10pm daily. Connect to CAPITALAND FREE WIFI to enjoy free wireless internet surfing. EW12 Bugis Station."
+        }
+      ]
+    },
+    {
+      "slug": "funan",
+      "area": "bugis-city-hall",
+      "name": "Funan",
+      "kind": "Mall seating",
+      "address": {
+        "text": "107 North Bridge Road, Singapore 179105",
+        "verified": true,
+        "source": "https://www.capitaland.com/sg/malls/funan/en/concierge.html"
+      },
+      "stations": [
+        "City Hall"
+      ],
+      "photo": {
+        "file": "funan",
+        "alt": "Funan from the street: glass upper floors over a brick-red middle band with the Funan sign, trees along the pavement.",
+        "author": "Leongyy02",
+        "taken": "January 2026",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Exterior_of_Funan_Singapore,_January_2026.jpg",
+        "changes": "cropped to 3:2 and resized"
+      },
+      "hours": {
+        "status": "reported",
+        "text": "10am to 10pm",
+        "detail": "Each store may have different operating hours.",
+        "source": "https://www.capitaland.com/sg/malls/funan/en/concierge.html"
+      },
+      "facts": {
+        "sockets": {
+          "status": "reported",
+          "value": "at the seating areas on the Level 1 Grand Stairs and at the Tree of Life on levels 2, 3 and 4",
+          "reports": 1,
+          "by": "the operator, CapitaLand",
+          "source": "https://www.capitaland.com/sg/malls/funan/en/concierge.html"
+        },
+        "wifi": {
+          "status": "reported",
+          "value": "no",
+          "reports": 1,
+          "by": "the operator, CapitaLand (shopper Wi-Fi discontinued 1 May 2026)",
+          "source": "https://www.capitaland.com/sg/malls/funan/en/concierge.html"
+        },
+        "noise": {
+          "status": "unknown"
+        },
+        "food": {
+          "status": "unknown"
+        }
+      },
+      "notes": [
+        {
+          "text": "There are charging points located at seating areas on Level 1 Grand Stairs and at the Tree of Life on Level 2, Level 3 and Level 4.",
+          "source": "https://www.capitaland.com/sg/malls/funan/en/concierge.html"
+        },
+        {
+          "text": "a direct underpass linking to City Hall MRT interchange station",
+          "source": "https://www.capitaland.com/sg/malls/funan/en/concierge.html"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.capitaland.com/sg/malls/funan/en/concierge.html",
+          "checked": "2026-10-30",
+          "says": "Funan is opened from 10am to 10pm. Complimentary shopper Wi-Fi at Funan has discontinued with effect from 1 May 2026. There are charging points located at seating areas on Level 1 Grand Stairs and at the Tree of Life on Level 2, Level 3 and Level 4. City Hall MRT Station - East West Line (EW13) or North South Line (NS25)."
+        }
+      ]
+    },
+    {
+      "slug": "raffles-city",
+      "area": "bugis-city-hall",
+      "name": "Raffles City",
+      "kind": "Mall seating",
+      "address": {
+        "text": "252 North Bridge Road",
+        "verified": true,
+        "source": "https://www.capitaland.com/sg/malls/rafflescity/en/concierge.html"
+      },
+      "stations": [
+        "City Hall",
+        "Esplanade"
+      ],
+      "photo": {
+        "file": "raffles-city",
+        "alt": "The towers of Raffles City from below: a tall square tower beside a round tower and a third block.",
+        "author": "Daniel Case",
+        "taken": "August 2020",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Raffles_City,_Singapore,_from_Raffles_Hotel_driveway.jpg",
+        "changes": "cropped to 3:2 and resized"
+      },
+      "hours": {
+        "status": "reported",
+        "text": "10am to 10pm daily",
+        "detail": "Each store may have different operating hours.",
+        "source": "https://www.capitaland.com/sg/malls/rafflescity/en/concierge.html"
+      },
+      "facts": {
+        "sockets": {
+          "status": "unknown"
+        },
+        "wifi": {
+          "status": "reported",
+          "value": "yes",
+          "reports": 1,
+          "by": "the operator, CapitaLand",
+          "source": "https://www.capitaland.com/sg/malls/rafflescity/en/concierge.html"
+        },
+        "noise": {
+          "status": "unknown"
+        },
+        "food": {
+          "status": "unknown"
+        }
+      },
+      "notes": [],
+      "sources": [
+        {
+          "url": "https://www.capitaland.com/sg/malls/rafflescity/en/concierge.html",
+          "checked": "2026-10-30",
+          "says": "Raffles City is open from 10am to 10pm daily. Connect to #CAPITALAND FREE WIFI to enjoy free wireless internet surfing. City Hall MRT Station (EW13/NS25); Esplanade MRT Station (CC3, Exit G)."
+        }
+      ]
+    },
+    {
+      "slug": "capitol-singapore",
+      "area": "bugis-city-hall",
+      "name": "Capitol Singapore",
+      "kind": "Mall seating",
+      "address": {
+        "text": "13 Stamford Road, Singapore 178905",
+        "verified": true,
+        "source": "https://capitolsingapore.com/contact/"
+      },
+      "stations": [
+        "City Hall"
+      ],
+      "photo": {
+        "file": "capitol-singapore",
+        "alt": "The white Capitol Theatre with its tall CAPITOL sign, at Capitol Piazza.",
+        "author": "Jacklee",
+        "taken": "September 2015",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Capitol_Theatre,_Capitol_Piazza,_Singapore_-_20150917-01.jpg",
+        "changes": "cropped to 3:2 and resized"
+      },
+      "hours": {
+        "status": "unknown",
+        "note": "Mall hours are not stated on capitolsingapore.com (home, About, Contact and Arcade pages read 2026-10-30).",
+        "link": "https://capitolsingapore.com/"
+      },
+      "facts": {
+        "sockets": {
+          "status": "unknown"
+        },
+        "wifi": {
+          "status": "unknown"
+        },
+        "noise": {
+          "status": "unknown"
+        },
+        "food": {
+          "status": "unknown"
+        }
+      },
+      "notes": [
+        {
+          "text": "Nearest MRT Station: City Hall MRT, Exit D. Estimated walk time: 1 Min",
+          "source": "https://capitolsingapore.com/contact/"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://capitolsingapore.com/contact/",
+          "checked": "2026-10-30",
+          "says": "13 Stamford Road, Singapore 178905. Nearest MRT Station: City Hall MRT … Exit D - Estimated walk time: 1 Min"
+        }
+      ]
+    },
+    {
+      "slug": "esplanade-mall",
+      "area": "bugis-city-hall",
+      "name": "Esplanade Mall",
+      "kind": "Mall seating",
+      "address": {
+        "text": "8 Raffles Avenue, Singapore 039802",
+        "verified": true,
+        "source": "https://www.esplanade.com/visit/visitor-guide/getting-here-and-around"
+      },
+      "stations": [
+        "City Hall",
+        "Esplanade"
+      ],
+      "photo": {
+        "file": "esplanade-mall",
+        "alt": "The spiked dome of Esplanade, Theatres on the Bay, the building that holds Esplanade Mall, above trees.",
+        "author": "CEphoto, Uwe Aranas",
+        "taken": "February 2015",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Singapore_Esplanade-Theatres-on-the-Bay-01.jpg",
+        "changes": "cropped to 3:2 and resized"
+      },
+      "hours": {
+        "status": "partial",
+        "text": "Esplanade, the arts centre, is open 8 am to 11:30 pm daily",
+        "detail": "The Mall's own shop hours are not stated on esplanade.com; the centre's hours are the building's.",
+        "source": "https://www.esplanade.com/visit/visitor-guide"
+      },
+      "facts": {
+        "sockets": {
+          "status": "unknown"
+        },
+        "wifi": {
+          "status": "unknown"
+        },
+        "noise": {
+          "status": "unknown"
+        },
+        "food": {
+          "status": "unknown"
+        }
+      },
+      "notes": [],
+      "sources": [
+        {
+          "url": "https://www.esplanade.com/visit/visitor-guide",
+          "checked": "2026-10-30",
+          "says": "8 am – 11:30 pm daily (or 30mins after the last performance of the day has ended, whichever is later). 1 Esplanade Drive, Singapore 038981."
+        },
+        {
+          "url": "https://www.esplanade.com/visit/visitor-guide/getting-here-and-around",
+          "checked": "2026-10-30",
+          "says": "From City Hall MRT; From Esplanade MRT. C24 Esplanade Mall, 8 Raffles Avenue, 039802."
+        }
+      ]
+    },
+    {
+      "slug": "marina-square",
+      "area": "bugis-city-hall",
+      "name": "Marina Square",
+      "kind": "Mall seating",
+      "address": {
+        "text": "6 Raffles Boulevard, Singapore 039594",
+        "verified": true,
+        "source": "https://www.marinasquare.com.sg/about"
+      },
+      "stations": [
+        "City Hall",
+        "Esplanade",
+        "Promenade"
+      ],
+      "photo": {
+        "file": "marina-square",
+        "alt": "The Marina Square sign along the top of the mall, above steps and planted terraces.",
+        "author": "Irwan Shah Bin Abdullah",
+        "taken": "June 2009",
+        "licence": "CC BY 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Marina_square_singapore.jpg",
+        "changes": "cropped to 3:2 and resized",
+        "authorAsListed": "Irwan Shah Bin Abdullah / https://id.ehalal.io/"
+      },
+      "hours": {
+        "status": "reported",
+        "text": "10am to 10pm daily",
+        "source": "https://www.marinasquare.com.sg/about"
+      },
+      "facts": {
+        "sockets": {
+          "status": "unknown"
+        },
+        "wifi": {
+          "status": "unknown"
+        },
+        "noise": {
+          "status": "unknown"
+        },
+        "food": {
+          "status": "unknown"
+        }
+      },
+      "notes": [],
+      "sources": [
+        {
+          "url": "https://www.marinasquare.com.sg/about",
+          "checked": "2026-10-30",
+          "says": "6 Raffles Boulevard Singapore 039594. Operating Hours: 10am - 10pm (Daily). Accessible by the City Hall, Esplanade and Promenade MRT stations."
+        }
+      ]
+    },
+    {
+      "slug": "national-design-centre",
+      "area": "bugis-city-hall",
+      "name": "National Design Centre",
+      "kind": "Atrium",
+      "address": {
+        "text": "111 Middle Road, Singapore 188969",
+        "verified": true,
+        "source": "https://designsingapore.org/contact-us/"
+      },
+      "stations": [],
+      "photo": {
+        "file": "national-design-centre",
+        "alt": "The National Design Centre, a white building with a tall vertical sign, at a road junction.",
+        "author": "Smuconlaw",
+        "taken": "April 2015",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:National_Design_Centre,_Singapore_-_20150411-08.jpg",
+        "changes": "cropped to 3:2 and resized"
+      },
+      "hours": {
+        "status": "partial",
+        "text": "9am to 6.30pm",
+        "detail": "These hours sit under the DesignSingapore Council office block on the contact page; whether they are public access hours is not stated.",
+        "source": "https://designsingapore.org/contact-us/"
+      },
+      "facts": {
+        "sockets": {
+          "status": "unknown"
+        },
+        "wifi": {
+          "status": "unknown"
+        },
+        "noise": {
+          "status": "unknown"
+        },
+        "food": {
+          "status": "unknown"
+        }
+      },
+      "notes": [
+        {
+          "text": "the public meet here to exchange ideas, use the amenities and attend design-focused exhibitions and programmes",
+          "source": "https://designsingapore.org/national-design-centre/"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://designsingapore.org/contact-us/",
+          "checked": "2026-10-30",
+          "says": "DesignSingapore Council Office / National Design Centre. 111 Middle Road, #04-01 Singapore 188969. Operating hours 9am to 6.30pm"
+        },
+        {
+          "url": "https://designsingapore.org/national-design-centre/",
+          "checked": "2026-10-30",
+          "says": "the nexus for design … the public meet here to exchange ideas, use the amenities and attend design-focused exhibitions and programmes. Now managed by University of the Arts Singapore."
+        }
+      ]
+    },
+    {
+      "slug": "coffee-bean-bugis-junction",
+      "area": "bugis-city-hall",
+      "within": "bugis-junction",
+      "name": "The Coffee Bean & Tea Leaf, Bugis Junction",
+      "kind": "Café",
+      "address": {
+        "text": "200 Victoria Street, #03-10H, Bugis Junction, Singapore 188021",
+        "verified": true,
+        "source": "https://www.coffeebean.com.sg/amlocator"
+      },
+      "stations": [
+        "Bugis"
+      ],
+      "hours": {
+        "status": "reported",
+        "text": "9am to 10pm daily",
+        "detail": "Operating hours for Public Holidays and Eve of Public Holidays may differ.",
+        "source": "https://www.coffeebean.com.sg/amlocator"
+      },
+      "facts": {
+        "sockets": {
+          "status": "unknown"
+        },
+        "wifi": {
+          "status": "unknown"
+        },
+        "noise": {
+          "status": "unknown"
+        },
+        "food": {
+          "status": "reported",
+          "value": "it is a café",
+          "reports": 1,
+          "by": "the operator",
+          "source": "https://www.coffeebean.com.sg/amlocator"
+        }
+      },
+      "notes": [],
+      "sources": [
+        {
+          "url": "https://www.coffeebean.com.sg/amlocator",
+          "checked": "2026-10-30",
+          "says": "Bugis Junction. 200 Victoria Street, #03-10H, Bugis Junction Singapore 188021. Mon to Sun: 9am to 10pm."
+        }
+      ]
+    },
+    {
+      "slug": "coffee-bean-raffles-city",
+      "area": "bugis-city-hall",
+      "within": "raffles-city",
+      "name": "The Coffee Bean & Tea Leaf, Raffles City",
+      "kind": "Café",
+      "address": {
+        "text": "252 North Bridge Road, #01-45/45A, Raffles City Shopping Centre, Singapore 179103",
+        "verified": true,
+        "source": "https://www.coffeebean.com.sg/amlocator"
+      },
+      "stations": [
+        "City Hall"
+      ],
+      "hours": {
+        "status": "reported",
+        "text": "24 hours, every day",
+        "detail": "Operating hours for Public Holidays and Eve of Public Holidays may differ.",
+        "source": "https://www.coffeebean.com.sg/amlocator"
+      },
+      "facts": {
+        "sockets": {
+          "status": "unknown"
+        },
+        "wifi": {
+          "status": "unknown"
+        },
+        "noise": {
+          "status": "unknown"
+        },
+        "food": {
+          "status": "reported",
+          "value": "it is a café",
+          "reports": 1,
+          "by": "the operator",
+          "source": "https://www.coffeebean.com.sg/amlocator"
+        }
+      },
+      "notes": [],
+      "sources": [
+        {
+          "url": "https://www.coffeebean.com.sg/amlocator",
+          "checked": "2026-10-30",
+          "says": "Raffles City. 252 North Bridge Road, Raffles City Shopping Centre #01-45/45A Singapore 179103. Mon-Sun: 24 Hours."
+        }
+      ]
+    },
+    {
+      "slug": "coffee-bean-bugis-plus",
+      "area": "bugis-city-hall",
+      "within": "bugis-plus",
+      "name": "The Coffee Bean & Tea Leaf, Bugis+",
+      "kind": "Café",
+      "address": {
+        "text": "201 Victoria Street, #01-06, Singapore 188067",
+        "verified": true,
+        "source": "https://www.coffeebean.com.sg/amlocator"
+      },
+      "stations": [
+        "Bugis"
+      ],
+      "hours": {
+        "status": "reported",
+        "text": "24 hours, every day",
+        "detail": "Operating hours for Public Holidays and Eve of Public Holidays may differ.",
+        "source": "https://www.coffeebean.com.sg/amlocator"
+      },
+      "facts": {
+        "sockets": {
+          "status": "unknown"
+        },
+        "wifi": {
+          "status": "unknown"
+        },
+        "noise": {
+          "status": "unknown"
+        },
+        "food": {
+          "status": "reported",
+          "value": "it is a café",
+          "reports": 1,
+          "by": "the operator",
+          "source": "https://www.coffeebean.com.sg/amlocator"
+        }
+      },
+      "notes": [],
+      "sources": [
+        {
+          "url": "https://www.coffeebean.com.sg/amlocator",
+          "checked": "2026-10-30",
+          "says": "Bugis+. 201 Victoria Street #01-06 Singapore 188067. Open 24H daily."
+        }
+      ]
+    },
+    {
+      "slug": "coffee-bean-esplanade-mall",
+      "area": "bugis-city-hall",
+      "within": "esplanade-mall",
+      "name": "The Coffee Bean & Tea Leaf, Esplanade Mall",
+      "kind": "Café",
+      "address": {
+        "text": "8 Raffles Avenue, #01-02/04, Esplanade Mall, Singapore 039802",
+        "verified": true,
+        "source": "https://www.coffeebean.com.sg/amlocator"
+      },
+      "stations": [
+        "City Hall",
+        "Esplanade"
+      ],
+      "hours": {
+        "status": "partial",
+        "text": "8am to 10pm",
+        "detail": "The locator's headline says Sun to Thu 8am to 10pm while its weekly table shows 8am to 10pm on all seven days; the page disagrees with itself.",
+        "source": "https://www.coffeebean.com.sg/amlocator"
+      },
+      "facts": {
+        "sockets": {
+          "status": "unknown"
+        },
+        "wifi": {
+          "status": "unknown"
+        },
+        "noise": {
+          "status": "unknown"
+        },
+        "food": {
+          "status": "reported",
+          "value": "it is a café",
+          "reports": 1,
+          "by": "the operator",
+          "source": "https://www.coffeebean.com.sg/amlocator"
+        }
+      },
+      "notes": [],
+      "sources": [
+        {
+          "url": "https://www.coffeebean.com.sg/amlocator",
+          "checked": "2026-10-30",
+          "says": "Esplanade Mall. 8 Raffles Avenue, #01-02/04 Esplanade Mall Singapore 039802. Sun to Thurs: 8am to 10pm; weekly table 08:00 - 22:00 all days."
+        }
+      ]
+    }
+  ]
+}

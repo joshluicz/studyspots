@@ -1,0 +1,133 @@
+{
+  "tokensFile": "src/styles/tokens.css",
+  "prefix": "--color-",
+  "pairs": [
+    {
+      "fg": "ink",
+      "bg": "paper",
+      "use": "body text, headings and every number on the page ground",
+      "level": "body"
+    },
+    {
+      "fg": "muted",
+      "bg": "paper",
+      "use": "kind lines, notes, footer credit on the page ground",
+      "level": "body"
+    },
+    {
+      "fg": "blue",
+      "bg": "paper",
+      "use": "text links on the page ground",
+      "level": "body"
+    },
+    {
+      "fg": "ok",
+      "bg": "paper",
+      "use": "status: reported, on the page ground",
+      "level": "body"
+    },
+    {
+      "fg": "warn",
+      "bg": "paper",
+      "use": "status: partly known, on the page ground",
+      "level": "body"
+    },
+    {
+      "fg": "unknown",
+      "bg": "paper",
+      "use": "status: not reported yet, on the page ground",
+      "level": "body"
+    },
+    {
+      "fg": "bad",
+      "bg": "paper",
+      "use": "status: closed or wrong; form error text, on the page ground",
+      "level": "body"
+    },
+    {
+      "fg": "white",
+      "bg": "blue",
+      "use": "button label on the blue action",
+      "level": "body"
+    },
+    {
+      "fg": "ink",
+      "bg": "white",
+      "use": "spot name, fact values and numbers on a card",
+      "level": "body"
+    },
+    {
+      "fg": "muted",
+      "bg": "white",
+      "use": "kind line and address on a card",
+      "level": "body"
+    },
+    {
+      "fg": "blue",
+      "bg": "white",
+      "use": "text link inside a card",
+      "level": "body"
+    },
+    {
+      "fg": "ok",
+      "bg": "white",
+      "use": "reported status chip on a card",
+      "level": "body"
+    },
+    {
+      "fg": "warn",
+      "bg": "white",
+      "use": "partly known status chip on a card",
+      "level": "body"
+    },
+    {
+      "fg": "unknown",
+      "bg": "white",
+      "use": "not reported yet status chip on a card",
+      "level": "body"
+    },
+    {
+      "fg": "bad",
+      "bg": "white",
+      "use": "error text inside the suggestion form",
+      "level": "body"
+    },
+    {
+      "fg": "ink",
+      "bg": "paper",
+      "use": "card border and button border against the page ground",
+      "level": "ui"
+    },
+    {
+      "fg": "blue",
+      "bg": "paper",
+      "use": "button fill against the page ground",
+      "level": "ui"
+    },
+    {
+      "fg": "ink",
+      "bg": "white",
+      "use": "form field border against the card ground",
+      "level": "ui"
+    },
+    {
+      "fg": "ink",
+      "bg": "yellow",
+      "use": "name, kind line and every word on a library card and the active filter chip",
+      "level": "body"
+    },
+    {
+      "fg": "ink",
+      "bg": "pink",
+      "use": "name, kind line and every word on a mall card",
+      "level": "body"
+    },
+    {
+      "fg": "ink",
+      "bg": "teal",
+      "use": "name, kind line and every word on a café card",
+      "level": "body"
+    }
+  ],
+  "exempt": {}
+}

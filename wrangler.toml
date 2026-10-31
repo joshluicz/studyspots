@@ -1,0 +1,10 @@
+# studyspots on Cloudflare Pages (free tier). Local: `npm run dev`. Deploy: `npm run deploy`.
+name = "studyspots"
+compatibility_date = "2026-10-01"
+pages_build_output_dir = "dist"
+
+# The suggestions store. After `wrangler kv namespace create SUGGESTIONS`, paste the id here
+# (and the preview id for `wrangler pages dev`, or keep using the --kv flag locally).
+# [[kv_namespaces]]
+# binding = "SUGGESTIONS"
+# id = "REPLACE_WITH_THE_ID_WRANGLER_PRINTS"

@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>studyspots v0 renditions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:#E8E2D9;color:#15130F;font-family:'Public Sans',system-ui,sans-serif;color-scheme:light}
+  .board{padding:28px 28px 40px;width:1700px}
+  .title{display:flex;gap:18px;align-items:baseline;margin-bottom:18px;flex-wrap:wrap}
+  .title h1{font-size:22px;font-weight:700}
+  .title .meta{font-size:13px;color:#5E584F}
+  .cols{display:grid;grid-template-columns:repeat(4,390px);gap:28px;align-items:start}
+  .col{display:grid;gap:14px}
+  .col h2{font-size:15px;font-weight:700;letter-spacing:.02em;text-transform:uppercase}
+  .phone{width:390px;height:780px;overflow:hidden;position:relative;border:1px solid #CFC7BB;background:#F6F1EA}
+  .screen{position:absolute;inset:0;display:flex;flex-direction:column;padding:0 20px;overflow:hidden;color:#15130F;font-size:15px;line-height:1.45}
+  .top{display:flex;justify-content:space-between;align-items:center;height:48px;font-size:13px;flex:none}
+  .wordmark{font-weight:700;letter-spacing:-.01em}
+  .country,.back{color:#5E584F}
+  .hero{padding:16px 0 10px;flex:none}
+  h1{font-size:28px;line-height:1.1;margin-bottom:8px}
+  .lede{font-size:14px;color:#15130F}
+  .num{color:#15130F;font-weight:800}
+  .kind{font-size:13px;color:#5E584F}
+  .filters{display:flex;gap:8px;flex-wrap:wrap;padding:4px 0 12px;flex:none}
+  .chip{display:inline-block;color:#15130F;line-height:1}
+  .list{list-style:none;display:grid;gap:12px;flex:1;min-height:0;overflow:hidden}
+  .card{padding:12px 12px 10px}
+  .card-head{display:grid;gap:2px;margin-bottom:8px}
+  .name{font-size:16px;line-height:1.2}
+  .facts{display:flex;gap:6px;flex-wrap:wrap}
+  .fact{display:inline-block;line-height:1.2}
+  .st-reported{color:#19733F}
+  .st-unknown{color:#5E584F}
+  .st-plain{color:#15130F}
+  .st-source{color:#5E584F}
+  .bar{flex:none;padding:12px 0 8px}
+  .primary{display:block;width:100%;padding:14px 16px;font:inherit;font-size:16px;cursor:pointer}
+  .foot{flex:none;display:flex;justify-content:center;padding:10px 0 12px;font-size:12px;color:#5E584F}
+  /* spot */
+  .factlist{display:grid}
+  .factlist .row{display:grid;grid-template-columns:72px 1fr;gap:10px;align-items:baseline;padding:10px 12px}
+  .factlist dt{font-size:13px;color:#5E584F;font-weight:600}
+  .factlist dd{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+  .val{font-weight:600}
+  .status{display:inline-block;white-space:nowrap}
+  .suggest{flex:1;min-height:0}
+  .suggest h2{font-size:18px;line-height:1.2;margin-bottom:6px}
+  .empty{font-size:13px;color:#5E584F;margin-bottom:12px}
+  .field{display:grid;gap:6px;margin-bottom:12px}
+  .label{font-size:13px;font-weight:600}
+  .input{display:block;min-height:76px;padding:10px 12px;font-size:14px;color:#5E584F;line-height:1.4}
+  .note{font-size:12px;color:#5E584F;margin-top:8px}
+  /* captions */
+  .cap{background:#FFFFFF;border:1px solid #D9D2C7;padding:14px 16px;font-size:12.5px;line-height:1.5;display:grid;gap:8px}
+  .cap p b{font-weight:700}
+  .cap .risk{border-left:4px solid #A6221A;padding-left:10px}
+  .cap table{border-collapse:collapse;width:100%;font-size:11.5px;font-variant-numeric:tabular-nums}
+  .cap td{padding:3px 4px;border-top:1px solid #EEE8DE;vertical-align:top}
+  .cap td.r{text-align:right;white-space:nowrap;font-weight:700}
+  .cap .sw{display:inline-block;width:10px;height:10px;border:1px solid #BBB;vertical-align:-1px;margin-right:4px}
+  .ok{color:#19733F} .fail{color:#A6221A}
+  .shared{margin-top:22px;max-width:1644px;background:#FFFFFF;border:1px solid #D9D2C7;padding:14px 16px;font-size:12.5px;display:grid;gap:8px}
+
+      .neo .screen{background:#F6F1EA}
+      .neo .top{border-bottom:3px solid #15130F}
+      .neo h1{font-weight:800;letter-spacing:-.02em}
+      .neo .chip{border:2px solid #15130F;border-radius:0;background:#F6F1EA;font-weight:700;text-transform:uppercase;font-size:11px;letter-spacing:.06em;padding:6px 10px}
+      .neo .chip.on{background:#15130F;color:#F6F1EA}
+      .neo .card{background:#FFFFFF;border:3px solid #15130F;box-shadow:5px 5px 0 #15130F;border-radius:0}
+      .neo .name{font-weight:800}
+      .neo .fact{border:2px solid #15130F;border-radius:0;padding:3px 7px;font-weight:600;font-size:12px}
+      .neo .primary{background:#1740B6;color:#FFFFFF;border:3px solid #15130F;box-shadow:5px 5px 0 #15130F;border-radius:0;font-weight:800;text-transform:uppercase;letter-spacing:.04em}
+      .neo .factlist .row{border:3px solid #15130F;border-radius:0;background:#FFFFFF;margin-bottom:-3px}
+      .neo .factlist{box-shadow:5px 5px 0 #15130F;margin-bottom:28px}
+      .neo .status{border:2px solid #15130F;border-radius:0;padding:1px 6px;font-size:11px;font-weight:700}
+      .neo .input{border:3px solid #15130F;border-radius:0;background:#FFFFFF;box-shadow:4px 4px 0 #15130F}
+      .neo .foot{border-top:3px solid #15130F}
+    
+
+      .neu .screen{background:#F6F1EA}
+      .neu h1{font-weight:600;letter-spacing:-.01em}
+      .neu .chip{border:0;border-radius:999px;background:#F6F1EA;box-shadow:inset 3px 3px 6px #D8CFC2,inset -3px -3px 6px #FFFFFF;color:#5E584F;font-weight:600;font-size:12px;padding:7px 12px}
+      .neu .chip.on{box-shadow:4px 4px 10px #D8CFC2,-4px -4px 10px #FFFFFF;color:#15130F}
+      .neu .card{background:#F6F1EA;border:0;border-radius:18px;box-shadow:8px 8px 18px #D8CFC2,-8px -8px 18px #FFFFFF}
+      .neu .name{font-weight:700}
+      .neu .fact{border:0;border-radius:999px;background:#EDE6DC;box-shadow:inset 2px 2px 4px #D8CFC2,inset -2px -2px 4px #FFFFFF;padding:4px 9px;font-weight:600;font-size:12px}
+      .neu .primary{background:#1740B6;color:#FFFFFF;border:0;border-radius:999px;box-shadow:6px 6px 14px #D8CFC2,-4px -4px 10px #FFFFFF;font-weight:700}
+      .neu .factlist{background:#F6F1EA;border-radius:18px;box-shadow:8px 8px 18px #D8CFC2,-8px -8px 18px #FFFFFF;padding:6px 16px;margin-bottom:28px}
+      .neu .factlist .row{border:0;padding:12px 0;border-bottom:1px solid #EDE6DC}
+      .neu .factlist .row:last-child{border-bottom:0}
+      .neu .status{border:0;border-radius:999px;background:#EDE6DC;box-shadow:inset 2px 2px 4px #D8CFC2,inset -2px -2px 4px #FFFFFF;padding:2px 8px;font-size:11px;font-weight:600}
+      .neu .input{border:0;border-radius:14px;background:#F6F1EA;box-shadow:inset 4px 4px 8px #D8CFC2,inset -4px -4px 8px #FFFFFF}
+      .neu .top,.neu .foot{border:0}
+    
+
+      .glass .screen{background:#F6F1EA radial-gradient(circle at 15% 12%, #D5DDF4 0, transparent 38%),radial-gradient(circle at 90% 55%, #F3E2CB 0, transparent 40%),radial-gradient(circle at 30% 95%, #D5DDF4 0, transparent 35%)}
+      .glass .screen{background-color:#F6F1EA}
+      .glass h1{font-weight:700;letter-spacing:-.015em}
+      .glass .chip{border:1px solid rgba(255,255,255,.9);border-radius:999px;background:rgba(255,255,255,.45);backdrop-filter:blur(10px);font-weight:600;font-size:12px;padding:7px 12px}
+      .glass .chip.on{background:rgba(255,255,255,.85)}
+      .glass .card{background:rgba(255,255,255,.62);border:1px solid rgba(255,255,255,.95);border-radius:16px;backdrop-filter:blur(14px);box-shadow:0 8px 24px rgba(21,19,15,.06), inset 0 1px 0 rgba(255,255,255,.9)}
+      .glass .name{font-weight:700}
+      .glass .fact{border:1px solid rgba(21,19,15,.12);border-radius:999px;background:rgba(255,255,255,.5);padding:4px 9px;font-weight:600;font-size:12px}
+      .glass .primary{background:#1740B6;color:#FFFFFF;border:1px solid rgba(255,255,255,.6);border-radius:14px;box-shadow:0 8px 24px rgba(23,64,182,.25);font-weight:700}
+      .glass .factlist{background:rgba(255,255,255,.62);border:1px solid rgba(255,255,255,.95);border-radius:16px;backdrop-filter:blur(14px);padding:6px 16px;margin-bottom:28px}
+      .glass .factlist .row{border:0;padding:12px 0;border-bottom:1px solid rgba(21,19,15,.08)}
+      .glass .factlist .row:last-child{border-bottom:0}
+      .glass .status{border:1px solid rgba(21,19,15,.12);border-radius:999px;background:rgba(255,255,255,.55);padding:2px 8px;font-size:11px;font-weight:600}
+      .glass .input{border:1px solid rgba(255,255,255,.95);border-radius:14px;background:rgba(255,255,255,.62);backdrop-filter:blur(14px)}
+      .glass .top,.glass .foot{border:0}
+    
+
+      .mem .screen{background:#F6F1EA;background-image:radial-gradient(#15130F 1.2px, transparent 1.3px);background-size:14px 14px;background-position:0 0}
+      .mem .top{border-bottom:3px solid #15130F;background:#F6F1EA}
+      .mem .hero{background:#F6F1EA;position:relative}
+      .mem .hero::after{content:"";position:absolute;right:16px;top:10px;width:34px;height:34px;border:3px solid #15130F;border-radius:50%;background:#5BC8C2}
+      .mem h1{font-weight:800;letter-spacing:-.02em}
+      .mem .filters{background:#F6F1EA}
+      .mem .chip{border:2px solid #15130F;border-radius:999px;background:#FFFFFF;font-weight:700;font-size:12px;padding:6px 11px}
+      .mem .chip.on{background:#F7C948}
+      .mem .card{border:3px solid #15130F;border-radius:4px;box-shadow:4px 4px 0 #15130F;background:#F28DB2}
+      .mem .card:nth-child(1),.mem .card:nth-child(2){background:#F7C948}
+      .mem .card:nth-child(7){background:#5BC8C2}
+      .mem .name{font-weight:800}
+      .mem .card .kind{color:#15130F}
+      .mem .fact{border:2px solid #15130F;border-radius:999px;background:#FFFFFF;padding:3px 8px;font-weight:600;font-size:12px}
+      .mem .primary{background:#1740B6;color:#FFFFFF;border:3px solid #15130F;border-radius:999px;box-shadow:4px 4px 0 #15130F;font-weight:800}
+      .mem .factlist{border:3px solid #15130F;border-radius:4px;box-shadow:4px 4px 0 #15130F;background:#F7C948;padding:6px 16px;margin-bottom:28px}
+      .mem .factlist .row{border:0;padding:12px 0;border-bottom:2px dashed #15130F}
+      .mem .factlist .row:last-child{border-bottom:0}
+      .mem .status{border:2px solid #15130F;border-radius:999px;background:#FFFFFF;padding:1px 7px;font-size:11px;font-weight:700}
+      .mem .suggest{background:#F6F1EA;border:3px solid #15130F;padding:14px;border-radius:4px}
+      .mem .input{border:3px solid #15130F;border-radius:4px;background:#FFFFFF}
+      .mem .foot{border-top:3px solid #15130F;background:#F6F1EA}
+      .mem .spot .hero,.mem .area .hero{margin:0 -20px;padding:50px 20px 6px}
+      .mem .area .list{background:transparent}
+    </style></head>
+<body><div class="board">
+  <div class="title"><h1>studyspots v0 · four renditions of two screens</h1><span class="meta">area page (Bugis / City Hall) and spot page · 390×780 · Public Sans · same copy and seed names in every column · locked: paper #F6F1EA, ink #15130F, blue #1740B6 for actions only, status #19733F / #9A5200 / #5E584F / #A6221A · generated 2026-10-30</span></div>
+  <div class="cols">
+  <div class="col neo">
+    <h2>Neobrutalist</h2>
+    <div class="phone">
+<div class="screen area">
+  <header class="top">
+    <span class="wordmark">studyspots</span>
+    <span class="country">Singapore</span>
+  </header>
+  <section class="hero">
+    <h1>Bugis / City Hall</h1>
+    <p class="lede"><b class="num">7</b> places to sit and study near the two stations. Sockets, Wi-Fi and noise as students report them.</p>
+  </section>
+  <div class="filters" role="group" aria-label="Filters">
+    <span class="chip on">All</span><span class="chip">Has sockets</span><span class="chip">Quiet</span><span class="chip">Open now</span>
+  </div>
+  <ul class="list">
+    
+    <li class="card">
+      <div class="card-head"><span class="name">National Library Building</span><span class="kind">Public library · 100 Victoria Street</span></div>
+      <div class="facts">
+        <span class="fact st-reported">Sockets reported: plenty</span>
+        <span class="fact st-plain">Quiet</span>
+        <span class="fact st-plain">Open till 21:00</span>
+      </div>
+    </li>
+    <li class="card">
+      <div class="card-head"><span class="name">library@esplanade</span><span class="kind">Public library · Esplanade Mall, level 3</span></div>
+      <div class="facts">
+        <span class="fact st-unknown">Sockets: not reported yet</span>
+        <span class="fact st-plain">Quiet</span>
+        <span class="fact st-plain">Open till 21:00</span>
+      </div>
+    </li>
+    <li class="card">
+      <div class="card-head"><span class="name">Bras Basah Complex</span><span class="kind">Mall seating · 231 Bain Street</span></div>
+      <div class="facts">
+        <span class="fact st-unknown">Sockets: not reported yet</span>
+        <span class="fact st-plain">Medium</span>
+        <span class="fact st-plain">Hours vary by shop</span>
+      </div>
+    </li>
+    <li class="card">
+      <div class="card-head"><span class="name">Funan</span><span class="kind">Mall seating · 107 North Bridge Road</span></div>
+      <div class="facts">
+        <span class="fact st-unknown">Sockets: not reported yet</span>
+        <span class="fact st-plain">Medium</span>
+        <span class="fact st-plain">Open till 22:00</span>
+      </div>
+    </li>
+    <li class="card">
+      <div class="card-head"><span class="name">Bugis Junction</span><span class="kind">Mall seating · 200 Victoria Street</span></div>
+      <div class="facts">
+        <span class="fact st-unknown">Sockets: not reported yet</span>
+        <span class="fact st-plain">Noisy</span>
+        <span class="fact st-plain">Open till 22:00</span>
+      </div>
+    </li>
+    <li class="card">
+      <div class="card-head"><span class="name">Raffles City</span><span class="kind">Mall seating · 252 North Bridge Road</span></div>
+      <div class="facts">
+        <span class="fact st-unknown">Sockets: not reported yet</span>
+        <span class="fact st-plain">Medium</span>
+        <span class="fact st-plain">Open till 22:00</span>
+      </div>
+    </li>
+    <li class="card">
+      <div class="card-head"><span class="name">National Design Centre</span><span class="kind">Atrium · 111 Middle Road</span></div>
+      <div class="facts">
+        <span class="fact st-unknown">Sockets: not reported yet</span>
+        <span class="fact st-plain">Quiet</span>
+        <span class="fact st-plain">Open till 21:00</span>
+      </div>
+    </li>
+  </ul>
+  <div class="bar"><button class="primary" type="button">Suggest a spot</button></div>
+  <footer class="foot"><span>Built by Eitri Brokkr</span></footer>
+</div></div>
+    <div class="phone">
+<div class="screen spot">
+  <header class="top">
+    <span class="back">Back to Bugis / City Hall</span>
+  </header>
+  <section class="hero">
+    <h1>National Library Building</h1>
+    <p class="kind">Public library · 100 Victoria Street</p>
+  </section>
+  <dl class="factlist">
+    <div class="row"><dt>Sockets</dt><dd><span class="val">Plenty</span><span class="status st-reported"><b class="num">1</b> report</span></dd></div>
+    <div class="row"><dt>Wi-Fi</dt><dd><span class="val">Yes</span><span class="status st-reported"><b class="num">1</b> report</span></dd></div>
+    <div class="row"><dt>Noise</dt><dd><span class="val">Quiet</span><span class="status st-reported"><b class="num">1</b> report</span></dd></div>
+    <div class="row"><dt>Hours</dt><dd><span class="val">10:00 to 21:00 daily</span><span class="status st-source">nlb.gov.sg</span></dd></div>
+    <div class="row"><dt>Food</dt><dd><span class="val">Unknown</span><span class="status st-unknown">Not reported yet</span></dd></div>
+  </dl>
+  <section class="suggest">
+    <h2>Know something about this spot?</h2>
+    <p class="empty">No suggestions yet. Add the first.</p>
+    <label class="field"><span class="label">What should the next person know?</span>
+      <span class="input">e.g. which level has sockets, when it gets noisy</span></label>
+    <button class="primary" type="button">Send suggestion</button>
+    <p class="note">No account needed. It appears here once sent.</p>
+  </section>
+  <footer class="foot"><span>Built by Eitri Brokkr</span></footer>
+</div></div>
+    <div class="cap">
+      <p><b>Thesis.</b> Every fact sits in a hard box. Borders and offset shadows do the grouping, so the eye never has to guess what belongs to what.</p>
+      <p><b>Bets on</b> students trust a page that looks hand-built and unpolished over one that looks like an app store listing.</p>
+      <p><b>Costs</b> about 14px of border and shadow per card edge; seven cards burn a third of the screen on chrome.</p>
+      <p><b>Principle.</b> “Build hierarchy with, in order of strength: size → weight → colour/contrast → space → position”</p>
+      <p class="risk"><b>Honest risk.</b> The block shadow is a costume. It is loud for a tool whose whole value is quiet accuracy, and the crowd will have seen it on every Gumroad clone this year.</p>
+      <p><b>Text pairs this style introduces</b> (computed, WCAG 2.1):</p>
+      <table><tr><td><span class="sw" style="background:#15130F"></span>#15130F on <span class="sw" style="background:#FFFFFF"></span>#FFFFFF</td><td>card text on white card</td><td class="r ok">18.55:1 pass (body ≥ 4.5)</td></tr><tr><td><span class="sw" style="background:#5E584F"></span>#5E584F on <span class="sw" style="background:#FFFFFF"></span>#FFFFFF</td><td>kind line on white card</td><td class="r ok">7.04:1 pass (body ≥ 4.5)</td></tr><tr><td><span class="sw" style="background:#19733F"></span>#19733F on <span class="sw" style="background:#FFFFFF"></span>#FFFFFF</td><td>reported status on white card</td><td class="r ok">5.89:1 pass (body ≥ 4.5)</td></tr><tr><td><span class="sw" style="background:#FFFFFF"></span>#FFFFFF on <span class="sw" style="background:#1740B6"></span>#1740B6</td><td>button label</td><td class="r ok">8.59:1 pass (body ≥ 4.5)</td></tr><tr><td><span class="sw" style="background:#15130F"></span>#15130F on <span class="sw" style="background:#F6F1EA"></span>#F6F1EA</td><td>card border against paper</td><td class="r ok">16.51:1 pass (ui ≥ 3)</td></tr></table>
+    </div>
+  </div>
+  <div class="col neu">
+    <h2>Neomorphism</h2>
+    <div class="phone">
+<div class="screen area">
+  <header class="top">
+    <span class="wordmark">studyspots</span>
+    <span class="country">Singapore</span>
+  </header>
+  <section class="hero">
+    <h1>Bugis / City Hall</h1>
+    <p class="lede"><b class="num">7</b> places to sit and study near the two stations. Sockets, Wi-Fi and noise as students report them.</p>
+  </section>
+  <div class="filters" role="group" aria-label="Filters">
+    <span class="chip on">All</span><span class="chip">Has sockets</span><span class="chip">Quiet</span><span class="chip">Open now</span>
+  </div>
+  <ul class="list">
+    
+    <li class="card">
+      <div class="card-head"><span class="name">National Library Building</span><span class="kind">Public library · 100 Victoria Street</span></div>
+      <div class="facts">
+        <span class="fact st-reported">Sockets reported: plenty</span>
+        <span class="fact st-plain">Quiet</span>
+        <span class="fact st-plain">Open till 21:00</span>
+      </div>
+    </li>
+    <li class="card">
+      <div class="card-head"><span class="name">library@esplanade</span><span class="kind">Public library · Esplanade Mall, level 3</span></div>
+      <div class="facts">
+        <span class="fact st-unknown">Sockets: not reported yet</span>
+        <span class="fact st-plain">Quiet</span>
+        <span class="fact st-plain">Open till 21:00</span>
+      </div>
+    </li>
+    <li class="card">
+      <div class="card-head"><span class="name">Bras Basah Complex</span><span class="kind">Mall seating · 231 Bain Street</span></div>
+      <div class="facts">
+        <span class="fact st-unknown">Sockets: not reported yet</span>
+        <span class="fact st-plain">Medium</span>
+        <span class="fact st-plain">Hours vary by shop</span>
+      </div>
+    </li>
+    <li class="card">
+      <div class="card-head"><span class="name">Funan</span><span class="kind">Mall seating · 107 North Bridge Road</span></div>
+      <div class="facts">
+        <span class="fact st-unknown">Sockets: not reported yet</span>
+        <span class="fact st-plain">Medium</span>
+        <span class="fact st-plain">Open till 22:00</span>
+      </div>
+    </li>
+    <li class="card">
+      <div class="card-head"><span class="name">Bugis Junction</span><span class="kind">Mall seating · 200 Victoria Street</span></div>
+      <div class="facts">
+        <span class="fact st-unknown">Sockets: not reported yet</span>
+        <span class="fact st-plain">Noisy</span>
+        <span class="fact st-plain">Open till 22:00</span>
+      </div>
+    </li>
+    <li class="card">
+      <div class="card-head"><span class="name">Raffles City</span><span class="kind">Mall seating · 252 North Bridge Road</span></div>
+      <div class="facts">
+        <span class="fact st-unknown">Sockets: not reported yet</span>
+        <span class="fact st-plain">Medium</span>
+        <span class="fact st-plain">Open till 22:00</span>
+      </div>
+    </li>
+    <li class="card">
+      <div class="card-head"><span class="name">National Design Centre</span><span class="kind">Atrium · 111 Middle Road</span></div>
+      <div class="facts">
+        <span class="fact st-unknown">Sockets: not reported yet</span>
+        <span class="fact st-plain">Quiet</span>
+        <span class="fact st-plain">Open till 21:00</span>
+      </div>
+    </li>
+  </ul>
+  <div class="bar"><button class="primary" type="button">Suggest a spot</button></div>
+  <footer class="foot"><span>Built by Eitri Brokkr</span></footer>
+</div></div>
+    <div class="phone">
+<div class="screen spot">
+  <header class="top">
+    <span class="back">Back to Bugis / City Hall</span>
+  </header>
+  <section class="hero">
+    <h1>National Library Building</h1>
+    <p class="kind">Public library · 100 Victoria Street</p>
+  </section>
+  <dl class="factlist">
+    <div class="row"><dt>Sockets</dt><dd><span class="val">Plenty</span><span class="status st-reported"><b class="num">1</b> report</span></dd></div>
+    <div class="row"><dt>Wi-Fi</dt><dd><span class="val">Yes</span><span class="status st-reported"><b class="num">1</b> report</span></dd></div>
+    <div class="row"><dt>Noise</dt><dd><span class="val">Quiet</span><span class="status st-reported"><b class="num">1</b> report</span></dd></div>
+    <div class="row"><dt>Hours</dt><dd><span class="val">10:00 to 21:00 daily</span><span class="status st-source">nlb.gov.sg</span></dd></div>
+    <div class="row"><dt>Food</dt><dd><span class="val">Unknown</span><span class="status st-unknown">Not reported yet</span></dd></div>
+  </dl>
+  <section class="suggest">
+    <h2>Know something about this spot?</h2>
+    <p class="empty">No suggestions yet. Add the first.</p>
+    <label class="field"><span class="label">What should the next person know?</span>
+      <span class="input">e.g. which level has sockets, when it gets noisy</span></label>
+    <button class="primary" type="button">Send suggestion</button>
+    <p class="note">No account needed. It appears here once sent.</p>
+  </section>
+  <footer class="foot"><span>Built by Eitri Brokkr</span></footer>
+</div></div>
+    <div class="cap">
+      <p><b>Thesis.</b> One material, pressed and raised. Cards are the paper itself lifted by light, so nothing on the page is a different colour from anything else except the one blue action.</p>
+      <p><b>Bets on</b> a calm, single-material surface is what a student wants to look at for the eighth hour of the day.</p>
+      <p><b>Costs</b> hierarchy lives entirely in shadows, so it costs two shadows per element and reads flat in a screenshot.</p>
+      <p><b>Principle.</b> “Gestalt shortcuts: group related items with proximity; separate sections with space, not lines”</p>
+      <p class="risk"><b>Honest risk.</b> A card edge made of shadow has no measurable contrast. WCAG 1.4.11 wants 3:1 for component boundaries and this style cannot deliver it, so on a dim phone or in sunlight the list collapses into one beige field.</p>
+      <p><b>Text pairs this style introduces</b> (computed, WCAG 2.1):</p>
+      <table><tr><td><span class="sw" style="background:#15130F"></span>#15130F on <span class="sw" style="background:#F6F1EA"></span>#F6F1EA</td><td>card text on raised paper</td><td class="r ok">16.51:1 pass (body ≥ 4.5)</td></tr><tr><td><span class="sw" style="background:#5E584F"></span>#5E584F on <span class="sw" style="background:#F6F1EA"></span>#F6F1EA</td><td>kind line on raised paper</td><td class="r ok">6.26:1 pass (body ≥ 4.5)</td></tr><tr><td><span class="sw" style="background:#5E584F"></span>#5E584F on <span class="sw" style="background:#EDE6DC"></span>#EDE6DC</td><td>pressed chip text on shaded paper</td><td class="r ok">5.68:1 pass (body ≥ 4.5)</td></tr><tr><td><span class="sw" style="background:#19733F"></span>#19733F on <span class="sw" style="background:#EDE6DC"></span>#EDE6DC</td><td>reported status on shaded paper</td><td class="r ok">4.75:1 pass (body ≥ 4.5)</td></tr><tr><td><span class="sw" style="background:#9A5200"></span>#9A5200 on <span class="sw" style="background:#EDE6DC"></span>#EDE6DC</td><td>partly known status on shaded paper</td><td class="r ok">4.73:1 pass (body ≥ 4.5)</td></tr><tr><td><span class="sw" style="background:#FFFFFF"></span>#FFFFFF on <span class="sw" style="background:#1740B6"></span>#1740B6</td><td>button label</td><td class="r ok">8.59:1 pass (body ≥ 4.5)</td></tr><tr><td><span class="sw" style="background:#D8CFC2"></span>#D8CFC2 on <span class="sw" style="background:#F6F1EA"></span>#F6F1EA</td><td>card edge (shadow) against paper</td><td class="r fail">1.37:1 FAIL (ui ≥ 3)</td></tr></table>
+    </div>
+  </div>
+  <div class="col glass">
+    <h2>Glassmorphism</h2>
+    <div class="phone">
+<div class="screen area">
+  <header class="top">
+    <span class="wordmark">studyspots</span>
+    <span class="country">Singapore</span>
+  </header>
+  <section class="hero">
+    <h1>Bugis / City Hall</h1>
+    <p class="lede"><b class="num">7</b> places to sit and study near the two stations. Sockets, Wi-Fi and noise as students report them.</p>
+  </section>
+  <div class="filters" role="group" aria-label="Filters">
+    <span class="chip on">All</span><span class="chip">Has sockets</span><span class="chip">Quiet</span><span class="chip">Open now</span>
+  </div>
+  <ul class="list">
+    
+    <li class="card">
+      <div class="card-head"><span class="name">National Library Building</span><span class="kind">Public library · 100 Victoria Street</span></div>
+      <div class="facts">
+        <span class="fact st-reported">Sockets reported: plenty</span>
+        <span class="fact st-plain">Quiet</span>
+        <span class="fact st-plain">Open till 21:00</span>
+      </div>
+    </li>
+    <li class="card">
+      <div class="card-head"><span class="name">library@esplanade</span><span class="kind">Public library · Esplanade Mall, level 3</span></div>
+      <div class="facts">
+        <span class="fact st-unknown">Sockets: not reported yet</span>
+        <span class="fact st-plain">Quiet</span>
+        <span class="fact st-plain">Open till 21:00</span>
+      </div>
+    </li>
+    <li class="card">
+      <div class="card-head"><span class="name">Bras Basah Complex</span><span class="kind">Mall seating · 231 Bain Street</span></div>
+      <div class="facts">
+        <span class="fact st-unknown">Sockets: not reported yet</span>
+        <span class="fact st-plain">Medium</span>
+        <span class="fact st-plain">Hours vary by shop</span>
+      </div>
+    </li>
+    <li class="card">
+      <div class="card-head"><span class="name">Funan</span><span class="kind">Mall seating · 107 North Bridge Road</span></div>
+      <div class="facts">
+        <span class="fact st-unknown">Sockets: not reported yet</span>
+        <span class="fact st-plain">Medium</span>
+        <span class="fact st-plain">Open till 22:00</span>
+      </div>
+    </li>
+    <li class="card">
+      <div class="card-head"><span class="name">Bugis Junction</span><span class="kind">Mall seating · 200 Victoria Street</span></div>
+      <div class="facts">
+        <span class="fact st-unknown">Sockets: not reported yet</span>
+        <span class="fact st-plain">Noisy</span>
+        <span class="fact st-plain">Open till 22:00</span>
+      </div>
+    </li>
+    <li class="card">
+      <div class="card-head"><span class="name">Raffles City</span><span class="kind">Mall seating · 252 North Bridge Road</span></div>
+      <div class="facts">
+        <span class="fact st-unknown">Sockets: not reported yet</span>
+        <span class="fact st-plain">Medium</span>
+        <span class="fact st-plain">Open till 22:00</span>
+      </div>
+    </li>
+    <li class="card">
+      <div class="card-head"><span class="name">National Design Centre</span><span class="kind">Atrium · 111 Middle Road</span></div>
+      <div class="facts">
+        <span class="fact st-unknown">Sockets: not reported yet</span>
+        <span class="fact st-plain">Quiet</span>
+        <span class="fact st-plain">Open till 21:00</span>
+      </div>
+    </li>
+  </ul>
+  <div class="bar"><button class="primary" type="button">Suggest a spot</button></div>
+  <footer class="foot"><span>Built by Eitri Brokkr</span></footer>
+</div></div>
+    <div class="phone">
+<div class="screen spot">
+  <header class="top">
+    <span class="back">Back to Bugis / City Hall</span>
+  </header>
+  <section class="hero">
+    <h1>National Library Building</h1>
+    <p class="kind">Public library · 100 Victoria Street</p>
+  </section>
+  <dl class="factlist">
+    <div class="row"><dt>Sockets</dt><dd><span class="val">Plenty</span><span class="status st-reported"><b class="num">1</b> report</span></dd></div>
+    <div class="row"><dt>Wi-Fi</dt><dd><span class="val">Yes</span><span class="status st-reported"><b class="num">1</b> report</span></dd></div>
+    <div class="row"><dt>Noise</dt><dd><span class="val">Quiet</span><span class="status st-reported"><b class="num">1</b> report</span></dd></div>
+    <div class="row"><dt>Hours</dt><dd><span class="val">10:00 to 21:00 daily</span><span class="status st-source">nlb.gov.sg</span></dd></div>
+    <div class="row"><dt>Food</dt><dd><span class="val">Unknown</span><span class="status st-unknown">Not reported yet</span></dd></div>
+  </dl>
+  <section class="suggest">
+    <h2>Know something about this spot?</h2>
+    <p class="empty">No suggestions yet. Add the first.</p>
+    <label class="field"><span class="label">What should the next person know?</span>
+      <span class="input">e.g. which level has sockets, when it gets noisy</span></label>
+    <button class="primary" type="button">Send suggestion</button>
+    <p class="note">No account needed. It appears here once sent.</p>
+  </section>
+  <footer class="foot"><span>Built by Eitri Brokkr</span></footer>
+</div></div>
+    <div class="cap">
+      <p><b>Thesis.</b> The facts float on frosted panes over a soft, coloured ground. Depth comes from blur and translucency rather than lines or shadows.</p>
+      <p><b>Bets on</b> a student picks the page that feels like their phone's own UI, and most of them are on iOS.</p>
+      <p><b>Costs</b> backdrop-filter on seven cards is the most expensive paint in this set; a mid-range Android will drop frames on scroll.</p>
+      <p><b>Principle.</b> “Avoid pure #000 and pure #FFF for large fields”</p>
+      <p class="risk"><b>Honest risk.</b> Text contrast depends on what happens to be behind the glass at that scroll position. The numbers below are the worst case over the two blobs; a photo or a darker blob later would break them without anyone changing a token. It is also the look taste-skill lists first among LLM defaults.</p>
+      <p><b>Text pairs this style introduces</b> (computed, WCAG 2.1):</p>
+      <table><tr><td><span class="sw" style="background:#15130F"></span>#15130F on <span class="sw" style="background:#EFF2FB"></span>#EFF2FB</td><td>card text through 62% white glass over the blue blob (worst case)</td><td class="r ok">16.58:1 pass (body ≥ 4.5)</td></tr><tr><td><span class="sw" style="background:#5E584F"></span>#5E584F on <span class="sw" style="background:#EFF2FB"></span>#EFF2FB</td><td>kind line through glass over the blue blob</td><td class="r ok">6.29:1 pass (body ≥ 4.5)</td></tr><tr><td><span class="sw" style="background:#19733F"></span>#19733F on <span class="sw" style="background:#FAF4EB"></span>#FAF4EB</td><td>reported status through glass over the amber blob</td><td class="r ok">5.39:1 pass (body ≥ 4.5)</td></tr><tr><td><span class="sw" style="background:#9A5200"></span>#9A5200 on <span class="sw" style="background:#EFF2FB"></span>#EFF2FB</td><td>partly known status through glass over the blue blob</td><td class="r ok">5.24:1 pass (body ≥ 4.5)</td></tr><tr><td><span class="sw" style="background:#15130F"></span>#15130F on <span class="sw" style="background:#D5DDF4"></span>#D5DDF4</td><td>heading directly on the blue blob</td><td class="r ok">13.67:1 pass (body ≥ 4.5)</td></tr><tr><td><span class="sw" style="background:#FFFFFF"></span>#FFFFFF on <span class="sw" style="background:#1740B6"></span>#1740B6</td><td>button label</td><td class="r ok">8.59:1 pass (body ≥ 4.5)</td></tr><tr><td><span class="sw" style="background:#FFFFFF"></span>#FFFFFF on <span class="sw" style="background:#D5DDF4"></span>#D5DDF4</td><td>card's 1px white edge against the blue blob</td><td class="r fail">1.36:1 FAIL (ui ≥ 3)</td></tr></table>
+    </div>
+  </div>
+  <div class="col mem">
+    <h2>Memphis</h2>
+    <div class="phone">
+<div class="screen area">
+  <header class="top">
+    <span class="wordmark">studyspots</span>
+    <span class="country">Singapore</span>
+  </header>
+  <section class="hero">
+    <h1>Bugis / City Hall</h1>
+    <p class="lede"><b class="num">7</b> places to sit and study near the two stations. Sockets, Wi-Fi and noise as students report them.</p>
+  </section>
+  <div class="filters" role="group" aria-label="Filters">
+    <span class="chip on">All</span><span class="chip">Has sockets</span><span class="chip">Quiet</span><span class="chip">Open now</span>
+  </div>
+  <ul class="list">
+    
+    <li class="card">
+      <div class="card-head"><span class="name">National Library Building</span><span class="kind">Public library · 100 Victoria Street</span></div>
+      <div class="facts">
+        <span class="fact st-reported">Sockets reported: plenty</span>
+        <span class="fact st-plain">Quiet</span>
+        <span class="fact st-plain">Open till 21:00</span>
+      </div>
+    </li>
+    <li class="card">
+      <div class="card-head"><span class="name">library@esplanade</span><span class="kind">Public library · Esplanade Mall, level 3</span></div>
+      <div class="facts">
+        <span class="fact st-unknown">Sockets: not reported yet</span>
+        <span class="fact st-plain">Quiet</span>
+        <span class="fact st-plain">Open till 21:00</span>
+      </div>
+    </li>
+    <li class="card">
+      <div class="card-head"><span class="name">Bras Basah Complex</span><span class="kind">Mall seating · 231 Bain Street</span></div>
+      <div class="facts">
+        <span class="fact st-unknown">Sockets: not reported yet</span>
+        <span class="fact st-plain">Medium</span>
+        <span class="fact st-plain">Hours vary by shop</span>
+      </div>
+    </li>
+    <li class="card">
+      <div class="card-head"><span class="name">Funan</span><span class="kind">Mall seating · 107 North Bridge Road</span></div>
+      <div class="facts">
+        <span class="fact st-unknown">Sockets: not reported yet</span>
+        <span class="fact st-plain">Medium</span>
+        <span class="fact st-plain">Open till 22:00</span>
+      </div>
+    </li>
+    <li class="card">
+      <div class="card-head"><span class="name">Bugis Junction</span><span class="kind">Mall seating · 200 Victoria Street</span></div>
+      <div class="facts">
+        <span class="fact st-unknown">Sockets: not reported yet</span>
+        <span class="fact st-plain">Noisy</span>
+        <span class="fact st-plain">Open till 22:00</span>
+      </div>
+    </li>
+    <li class="card">
+      <div class="card-head"><span class="name">Raffles City</span><span class="kind">Mall seating · 252 North Bridge Road</span></div>
+      <div class="facts">
+        <span class="fact st-unknown">Sockets: not reported yet</span>
+        <span class="fact st-plain">Medium</span>
+        <span class="fact st-plain">Open till 22:00</span>
+      </div>
+    </li>
+    <li class="card">
+      <div class="card-head"><span class="name">National Design Centre</span><span class="kind">Atrium · 111 Middle Road</span></div>
+      <div class="facts">
+        <span class="fact st-unknown">Sockets: not reported yet</span>
+        <span class="fact st-plain">Quiet</span>
+        <span class="fact st-plain">Open till 21:00</span>
+      </div>
+    </li>
+  </ul>
+  <div class="bar"><button class="primary" type="button">Suggest a spot</button></div>
+  <footer class="foot"><span>Built by Eitri Brokkr</span></footer>
+</div></div>
+    <div class="phone">
+<div class="screen spot">
+  <header class="top">
+    <span class="back">Back to Bugis / City Hall</span>
+  </header>
+  <section class="hero">
+    <h1>National Library Building</h1>
+    <p class="kind">Public library · 100 Victoria Street</p>
+  </section>
+  <dl class="factlist">
+    <div class="row"><dt>Sockets</dt><dd><span class="val">Plenty</span><span class="status st-reported"><b class="num">1</b> report</span></dd></div>
+    <div class="row"><dt>Wi-Fi</dt><dd><span class="val">Yes</span><span class="status st-reported"><b class="num">1</b> report</span></dd></div>
+    <div class="row"><dt>Noise</dt><dd><span class="val">Quiet</span><span class="status st-reported"><b class="num">1</b> report</span></dd></div>
+    <div class="row"><dt>Hours</dt><dd><span class="val">10:00 to 21:00 daily</span><span class="status st-source">nlb.gov.sg</span></dd></div>
+    <div class="row"><dt>Food</dt><dd><span class="val">Unknown</span><span class="status st-unknown">Not reported yet</span></dd></div>
+  </dl>
+  <section class="suggest">
+    <h2>Know something about this spot?</h2>
+    <p class="empty">No suggestions yet. Add the first.</p>
+    <label class="field"><span class="label">What should the next person know?</span>
+      <span class="input">e.g. which level has sockets, when it gets noisy</span></label>
+    <button class="primary" type="button">Send suggestion</button>
+    <p class="note">No account needed. It appears here once sent.</p>
+  </section>
+  <footer class="foot"><span>Built by Eitri Brokkr</span></footer>
+</div></div>
+    <div class="cap">
+      <p><b>Thesis.</b> Flat colour blocks, squiggles and confetti dots. Each kind of place gets a fill, so a student can tell a library from a mall before reading a word.</p>
+      <p><b>Bets on</b> students share things that look like a sticker sheet; a screenshot of this page would travel on Telegram.</p>
+      <p><b>Costs</b> three extra fills plus two patterns, every one of which competes with the status colours for meaning.</p>
+      <p><b>Principle.</b> “Structure: one dominant (here: near-black/charcoal), one accent (warm gold/amber), a small neutral ramp. That's it.”</p>
+      <p class="risk"><b>Honest risk.</b> Pattern noise competes with the facts, and the status colours (green reported, amber partly known) lose their meaning next to three decorative fills. Muted grey and blue both fail on the pink fill, so every word on a fill has to be ink; the style forces one colour of type.</p>
+      <p><b>Text pairs this style introduces</b> (computed, WCAG 2.1):</p>
+      <table><tr><td><span class="sw" style="background:#15130F"></span>#15130F on <span class="sw" style="background:#F7C948"></span>#F7C948</td><td>library card text on yellow</td><td class="r ok">11.84:1 pass (body ≥ 4.5)</td></tr><tr><td><span class="sw" style="background:#15130F"></span>#15130F on <span class="sw" style="background:#F28DB2"></span>#F28DB2</td><td>mall card text on pink</td><td class="r ok">8.15:1 pass (body ≥ 4.5)</td></tr><tr><td><span class="sw" style="background:#15130F"></span>#15130F on <span class="sw" style="background:#5BC8C2"></span>#5BC8C2</td><td>atrium card text on teal</td><td class="r ok">9.26:1 pass (body ≥ 4.5)</td></tr><tr><td><span class="sw" style="background:#5E584F"></span>#5E584F on <span class="sw" style="background:#F28DB2"></span>#F28DB2</td><td>muted grey on pink (measured, failed, so kind lines on fills are set in ink)</td><td class="r fail">3.09:1 FAIL (body ≥ 4.5)</td></tr><tr><td><span class="sw" style="background:#1740B6"></span>#1740B6 on <span class="sw" style="background:#F28DB2"></span>#F28DB2</td><td>blue text on pink (measured, failed, so blue is confined to the button)</td><td class="r fail">3.77:1 FAIL (body ≥ 4.5)</td></tr><tr><td><span class="sw" style="background:#FFFFFF"></span>#FFFFFF on <span class="sw" style="background:#1740B6"></span>#1740B6</td><td>button label</td><td class="r ok">8.59:1 pass (body ≥ 4.5)</td></tr><tr><td><span class="sw" style="background:#1740B6"></span>#1740B6 on <span class="sw" style="background:#F6F1EA"></span>#F6F1EA</td><td>button against paper</td><td class="r ok">7.64:1 pass (ui ≥ 3)</td></tr></table>
+    </div>
+  </div></div>
+  <div class="shared"><p><b>Locked pairs shared by all four</b> (computed once):</p><table><tr><td><span class="sw" style="background:#15130F"></span>#15130F on <span class="sw" style="background:#F6F1EA"></span>#F6F1EA</td><td>ink on paper (all type, all numbers)</td><td class="r ok">16.51:1 pass (body ≥ 4.5)</td></tr><tr><td><span class="sw" style="background:#5E584F"></span>#5E584F on <span class="sw" style="background:#F6F1EA"></span>#F6F1EA</td><td>muted on paper (kind lines, notes)</td><td class="r ok">6.26:1 pass (body ≥ 4.5)</td></tr><tr><td><span class="sw" style="background:#1740B6"></span>#1740B6 on <span class="sw" style="background:#F6F1EA"></span>#F6F1EA</td><td>blue on paper (links, actions)</td><td class="r ok">7.64:1 pass (body ≥ 4.5)</td></tr><tr><td><span class="sw" style="background:#19733F"></span>#19733F on <span class="sw" style="background:#F6F1EA"></span>#F6F1EA</td><td>reported status on paper</td><td class="r ok">5.24:1 pass (body ≥ 4.5)</td></tr><tr><td><span class="sw" style="background:#9A5200"></span>#9A5200 on <span class="sw" style="background:#F6F1EA"></span>#F6F1EA</td><td>partly known status on paper</td><td class="r ok">5.22:1 pass (body ≥ 4.5)</td></tr><tr><td><span class="sw" style="background:#5E584F"></span>#5E584F on <span class="sw" style="background:#F6F1EA"></span>#F6F1EA</td><td>not reported status on paper</td><td class="r ok">6.26:1 pass (body ≥ 4.5)</td></tr><tr><td><span class="sw" style="background:#A6221A"></span>#A6221A on <span class="sw" style="background:#F6F1EA"></span>#F6F1EA</td><td>closed / wrong status on paper</td><td class="r ok">6.52:1 pass (body ≥ 4.5)</td></tr><tr><td><span class="sw" style="background:#FFFFFF"></span>#FFFFFF on <span class="sw" style="background:#1740B6"></span>#1740B6</td><td>white on blue (button label)</td><td class="r ok">8.59:1 pass (body ≥ 4.5)</td></tr></table>
+  <p>Facts on the screens: seed names are real places; the hours shown are being verified against each operator's page before they enter the data file; socket counts are never shown as numbers, only as a reported/not-reported status.</p></div>
+</div></body></html>
