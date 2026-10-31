@@ -1,6 +1,7 @@
-/* studyspots — design tokens. Locked 2026-10-30. Gate: `npm run check` (scripts/check-tokens.mjs).
+/* studyspots — design tokens. Locked 2026-10-30, direction ruled 2026-10-31. Gate: `npm run check`.
    Every --color-* token below has a stated use in design-tokens.manifest.json; nothing exists without one.
-   The STYLE LAYER at the bottom is the only block Joshua's direction pick changes. */
+   Direction (Joshua, 2026-10-31): "i personally like the memphis you showed because of the colours.
+   i don't like the morphisms. i'm bored of the rounded pills" — Memphis palette, square corners. */
 :root {
   color-scheme: light;
 
@@ -8,12 +9,19 @@
   --color-paper:   #F6F1EA; /* the ground of every page */
   --color-ink:     #15130F; /* all type and every number */
   --color-blue:    #1740B6; /* actions only: buttons, links. Never decoration, never a status */
-  --color-white:   #FFFFFF; /* the card ground in the Neobrutalist baseline; form fields */
-  --color-muted:   #5E584F; /* secondary text: kind lines, notes, footer */
-  --color-ok:      #19733F; /* status: reported by a person */
-  --color-warn:    #9A5200; /* status: partly known, hours vary, closes soon */
+  --color-white:   #FFFFFF; /* panels, chips, form fields; the fill for kinds without a colour */
+  --color-muted:   #5E584F; /* secondary text on paper or white ONLY */
+  --color-ok:      #19733F; /* status: reported */
+  --color-warn:    #9A5200; /* status: partly known */
   --color-unknown: #5E584F; /* status: not reported yet (deliberately the same value as muted) */
-  --color-bad:     #A6221A; /* status: closed, wrong, removed; form errors */
+  --color-bad:     #A6221A; /* status: closed, wrong, no; form errors */
+
+  /* Memphis fills — one per kind of place. INK TEXT ONLY on these (computed 2026-10-30):
+     muted on yellow 4.49, on pink 3.09, on teal 3.51; blue on pink 3.77, on teal 4.29 — all fail.
+     Status colours sit on a white chip, never on a fill. */
+  --color-yellow:  #F7C948; /* libraries; the active filter */
+  --color-pink:    #F28DB2; /* malls and shopping complexes */
+  --color-teal:    #5BC8C2; /* cafés */
 
   /* type — one face, a real scale (ratio ~1.25) */
   --font-sans: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -34,20 +42,28 @@
   --space-6: 24px;
   --space-8: 32px;
   --space-12: 48px;
-  --measure: 36rem; /* max line length for prose */
+  --measure: 36rem;
 
   /* motion */
   --ease: cubic-bezier(.2,.7,.2,1);
   --dur: 140ms;
 
-  /* STYLE LAYER — Neobrutalist baseline (working assumption until the pick lands) */
+  /* STYLE LAYER — Memphis colours, square corners */
   --radius: 0;
-  --radius-pill: 0;
+  --radius-chip: 0;
   --border-w: 3px;
   --border-w-thin: 2px;
   --card-bg: var(--color-white);
-  --shadow-hard: 5px 5px 0 var(--color-ink);
-  --shadow-hard-sm: 4px 4px 0 var(--color-ink);
-  --label-case: uppercase;
-  --label-tracking: 0.06em;
+  --shadow-hard: 4px 4px 0 var(--color-ink);
+  --shadow-hard-sm: 3px 3px 0 var(--color-ink);
+  --shadow-hover: 6px 6px 0 var(--color-ink);
+  --shadow-press: 1px 1px 0 var(--color-ink);
+  --label-case: none;
+  --label-tracking: 0;
+  --fill-library: var(--color-yellow);
+  --fill-mall: var(--color-pink);
+  --fill-cafe: var(--color-teal);
+  --fill-other: var(--color-white);
+  --dots: radial-gradient(var(--color-ink) 1.2px, transparent 1.3px);
+  --dots-size: 14px 14px;
 }

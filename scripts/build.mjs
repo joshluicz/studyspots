@@ -58,6 +58,9 @@ const factValue = (key, f) => {
   if (key === 'food') return cap(v);
   return cap(v);
 };
+// Memphis: one fill per kind of place (tokens.css). Every word on a fill is ink.
+const fillFor = (kind) => (/librar/i.test(kind) ? 'library' : /mall|shopping/i.test(kind) ? 'mall' : /caf/i.test(kind) ? 'cafe' : 'other');
+const shapes = () => `<svg class="shapes" viewBox="0 0 112 40" aria-hidden="true" focusable="false"><circle class="s-teal" cx="18" cy="20" r="15"/><polygon class="s-yellow" points="44,35 60,6 76,35"/><path class="s-pink" d="M84 26 q6 -16 12 0 t12 0"/><path class="s-line" d="M84 26 q6 -16 12 0 t12 0"/></svg>`;
 const reportsLabel = (f) => `<b class="num">${f.reports}</b> ${f.reports === 1 ? 'report' : 'reports'}`;
 
 const hoursChip = (h) => {
@@ -74,13 +77,14 @@ const cardTags = (s) => {
   if (s.facts.sockets.status === 'reported') t.push('sockets');
   if (/librar/i.test(s.kind)) t.push('library');
   if (/caf/i.test(s.kind)) t.push('cafe');
+  if (/mall|shopping/i.test(s.kind)) t.push('mall');
   if (s.hours.status === 'reported' && /24 hours/i.test(s.hours.text)) t.push('late');
   return t.join(' ');
 };
 
 const card = (area, s) => `
 <li data-tags="${esc(cardTags(s))}">
-  <a class="card" href="/${area.slug}/${s.slug}/">
+  <a class="card fill-${fillFor(s.kind)}" href="/${area.slug}/${s.slug}/">
     <span class="name">${esc(s.name)}</span>
     <span class="kind">${esc(s.kind)} · ${esc(street(s.address))}</span>
     <span class="facts">
@@ -121,6 +125,7 @@ const home = page({
   pathname: '/',
   body: `
 <section class="hero">
+  ${shapes()}
   <h1>Where to sit and study near the MRT</h1>
   <p class="lede">One area so far, ${esc(area.name)}: <b class="num">${n}</b> places with sockets, Wi-Fi, noise and hours as people report them.</p>
 </section>
@@ -141,14 +146,16 @@ const areaPage = page({
   pathname: `/${area.slug}/`,
   body: `
 <section class="hero">
+  ${shapes()}
   <h1>${esc(area.name)}</h1>
   <p class="lede"><b class="num">${n}</b> places to sit and study within a walk of the two stations. Sockets, Wi-Fi and noise as people report them.</p>
 </section>
 <div class="filters" role="group" aria-label="Show only" hidden>
   <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
   <button class="chip" type="button" data-filter="sockets" aria-pressed="false">Sockets reported</button>
-  <button class="chip" type="button" data-filter="library" aria-pressed="false">Libraries</button>
-  <button class="chip" type="button" data-filter="cafe" aria-pressed="false">Cafés</button>
+  <button class="chip" type="button" data-filter="library" aria-pressed="false"><span class="sw fill-library" aria-hidden="true"></span>Libraries</button>
+  <button class="chip" type="button" data-filter="mall" aria-pressed="false"><span class="sw fill-mall" aria-hidden="true"></span>Malls</button>
+  <button class="chip" type="button" data-filter="cafe" aria-pressed="false"><span class="sw fill-cafe" aria-hidden="true"></span>Cafés</button>
   <button class="chip" type="button" data-filter="late" aria-pressed="false">Open 24 hours</button>
 </div>
 <ul class="list">
@@ -185,7 +192,7 @@ const spotPage = (s) => page({
   pathname: `/${area.slug}/${s.slug}/`,
   body: `
 <p class="back"><a href="/${area.slug}/">Back to ${esc(area.name)}</a></p>
-<section class="hero">
+<section class="hero has-fill fill-${fillFor(s.kind)}">
   <h1>${esc(s.name)}</h1>
   <p class="kind">${esc(s.kind)}<span class="sep">·</span>${esc(s.address.text)}${s.address.verified ? '' : ' (address not yet verified)'}</p>
   ${s.stations?.length ? `<p class="kind">Near ${esc(s.stations.join(', '))} MRT, per the operator's page.</p>` : ''}
@@ -211,7 +218,6 @@ ${suggestBlock({
   <ul class="sources">
     ${s.sources.map((src) => `<li><a href="${esc(src.url)}" rel="noopener">${esc(host(src.url))}</a>, <span class="checked">checked ${esc(src.checked)}</span>: <q>${esc(src.says)}</q></li>`).join('')}
     ${s.unverified ? `<li>${esc(s.unverified)}</li>` : ''}
-    ${Object.values(s.facts).some((f) => f.status === 'reported' && /github\.com/.test(f.source)) ? `<li>Reports marked "an earlier StudySpots contributor" come from the <a href="${REPO}/blob/913e740/data/spots.json" rel="noopener">first version of this site</a>, March 2026.</li>` : ''}
   </ul>
 </section>`,
 });

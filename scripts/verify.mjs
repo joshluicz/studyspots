@@ -64,6 +64,27 @@ const walk = async (name, url) => {
   check(m.footer, `${name}: footer credit "Built by Eitri Brokkr" links to eitribrokkr.com`);
   check(m.font, `${name}: Public Sans loaded`);
   check(m.title.length > 10 && m.title.length <= 70, `${name}: title length ${m.title.length}`);
+  // Computed contrast for every visible text node against its nearest opaque background (WCAG 2.1 1.4.3).
+  const low = await pg.evaluate(() => {
+    const parse = (c) => { const m = c.match(/rgba?\(([^)]+)\)/); if (!m) return null; const p = m[1].split(/[\s,/]+/).filter(Boolean).map(Number); return { r: p[0], g: p[1], b: p[2], a: p.length > 3 ? p[3] : 1 }; };
+    const lum = ({ r, g, b }) => { const f = (v) => { v /= 255; return v <= 0.04045 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; }; return 0.2126 * f(r) + 0.7152 * f(g) + 0.0722 * f(b); };
+    const ratio = (a, b) => { const x = lum(a), y = lum(b); return (Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05); };
+    const bgOf = (el) => { for (let n = el; n && n.nodeType === 1; n = n.parentElement) { const c = parse(getComputedStyle(n).backgroundColor); if (c && c.a >= 0.99) return c; } return { r: 255, g: 255, b: 255, a: 1 }; };
+    const out = []; const seen = new Set();
+    const w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    while (w.nextNode()) {
+      const t = w.currentNode; const el = t.parentElement;
+      if (!t.textContent.trim() || seen.has(el) || el.closest('[hidden], .hp, script, style')) continue;
+      seen.add(el);
+      const cs = getComputedStyle(el); if (cs.visibility === 'hidden' || cs.display === 'none') continue;
+      const fg = parse(cs.color); const bg = bgOf(el); const r = ratio(fg, bg);
+      const size = parseFloat(cs.fontSize); const large = size >= 24 || (Number(cs.fontWeight) >= 700 && size >= 18.66);
+      const need = large ? 3 : 4.5;
+      if (r < need) out.push(`${r.toFixed(2)} < ${need}: "${t.textContent.trim().slice(0, 40)}" (${cs.color} on rgb(${bg.r}, ${bg.g}, ${bg.b}))`);
+    }
+    return out;
+  });
+  check(low.length === 0, `${name}: every visible text node clears WCAG contrast${low.length ? ' — ' + low.slice(0, 3).join(' | ') : ''}`);
   await pg.screenshot({ path: path.join(OUT, `${name}.png`), fullPage: true });
   return m;
 };
