@@ -4,7 +4,10 @@
     {
       "slug": "bugis-city-hall",
       "name": "Bugis / City Hall",
-      "stations": ["Bugis", "City Hall"],
+      "stations": [
+        "Bugis",
+        "City Hall"
+      ],
       "intro": "Libraries, mall seating and cafés within a walk of the two stations. Sockets, Wi-Fi and noise as people report them."
     }
   ],
@@ -14,14 +17,29 @@
       "area": "bugis-city-hall",
       "name": "National Library Building",
       "kind": "Public library",
-      "address": { "text": "100 Victoria Street", "verified": false },
+      "address": {
+        "text": "100 Victoria Street",
+        "verified": false
+      },
       "stations": [],
-      "hours": { "status": "unknown", "note": "The operator's page could not be read on 2026-10-30 (nlb.gov.sg returned a bot challenge). Check the library's own page before you go.", "link": "https://www.nlb.gov.sg" },
+      "hours": {
+        "status": "unknown",
+        "note": "The operator's page could not be read on 2026-10-30 (nlb.gov.sg returned a bot challenge). Check the library's own page before you go.",
+        "link": "https://www.nlb.gov.sg"
+      },
       "facts": {
-        "sockets": { "status": "reported", "value": "plenty", "reports": 1, "by": "an earlier StudySpots contributor, March 2026", "source": "https://github.com/joshluicz/studyspots/blob/913e740/data/spots.json" },
-        "wifi":    { "status": "reported", "value": "yes", "reports": 1, "by": "an earlier StudySpots contributor, March 2026", "source": "https://github.com/joshluicz/studyspots/blob/913e740/data/spots.json" },
-        "noise":   { "status": "reported", "value": "quiet", "reports": 1, "by": "an earlier StudySpots contributor, March 2026", "source": "https://github.com/joshluicz/studyspots/blob/913e740/data/spots.json" },
-        "food":    { "status": "unknown" }
+        "sockets": {
+          "status": "unknown"
+        },
+        "wifi": {
+          "status": "unknown"
+        },
+        "noise": {
+          "status": "unknown"
+        },
+        "food": {
+          "status": "unknown"
+        }
       },
       "notes": [],
       "sources": [],
@@ -32,18 +50,41 @@
       "area": "bugis-city-hall",
       "name": "library@esplanade",
       "kind": "Public library",
-      "address": { "text": "Esplanade Mall, 8 Raffles Avenue, Singapore 039802", "verified": true, "source": "https://www.esplanade.com/visit/visitor-guide/getting-here-and-around" },
-      "stations": ["City Hall", "Esplanade"],
-      "hours": { "status": "unknown", "note": "The operator's page could not be read on 2026-10-30 (nlb.gov.sg returned a bot challenge). Check the library's own page before you go.", "link": "https://www.nlb.gov.sg" },
+      "address": {
+        "text": "Esplanade Mall, 8 Raffles Avenue, Singapore 039802",
+        "verified": true,
+        "source": "https://www.esplanade.com/visit/visitor-guide/getting-here-and-around"
+      },
+      "stations": [
+        "City Hall",
+        "Esplanade"
+      ],
+      "hours": {
+        "status": "unknown",
+        "note": "The operator's page could not be read on 2026-10-30 (nlb.gov.sg returned a bot challenge). Check the library's own page before you go.",
+        "link": "https://www.nlb.gov.sg"
+      },
       "facts": {
-        "sockets": { "status": "unknown" },
-        "wifi":    { "status": "unknown" },
-        "noise":   { "status": "unknown" },
-        "food":    { "status": "unknown" }
+        "sockets": {
+          "status": "unknown"
+        },
+        "wifi": {
+          "status": "unknown"
+        },
+        "noise": {
+          "status": "unknown"
+        },
+        "food": {
+          "status": "unknown"
+        }
       },
       "notes": [],
       "sources": [
-        { "url": "https://www.esplanade.com/visit/visitor-guide/getting-here-and-around", "checked": "2026-10-30", "says": "From City Hall MRT; From Esplanade MRT. Taxi stand: C24 Esplanade Mall, 8 Raffles Avenue, 039802." }
+        {
+          "url": "https://www.esplanade.com/visit/visitor-guide/getting-here-and-around",
+          "checked": "2026-10-30",
+          "says": "From City Hall MRT; From Esplanade MRT. Taxi stand: C24 Esplanade Mall, 8 Raffles Avenue, 039802."
+        }
       ],
       "unverified": "The library's own page on nlb.gov.sg was blocked on 2026-10-30; the mall address and stations come from esplanade.com."
     },
@@ -52,21 +93,52 @@
       "area": "bugis-city-hall",
       "name": "Bras Basah Complex",
       "kind": "Shopping complex",
-      "address": { "text": "231 Bain Street, Singapore 180231", "verified": true, "source": "https://www.brasbasahcomplex.com/contact/" },
-      "stations": ["City Hall", "Bugis", "Bras Basah"],
-      "hours": { "status": "reported", "text": "10.00 AM to 7.00 PM", "source": "https://www.brasbasahcomplex.com/contact/" },
+      "address": {
+        "text": "231 Bain Street, Singapore 180231",
+        "verified": true,
+        "source": "https://www.brasbasahcomplex.com/contact/"
+      },
+      "stations": [
+        "City Hall",
+        "Bugis",
+        "Bras Basah"
+      ],
+      "hours": {
+        "status": "reported",
+        "text": "10.00 AM to 7.00 PM",
+        "source": "https://www.brasbasahcomplex.com/contact/"
+      },
       "facts": {
-        "sockets": { "status": "unknown" },
-        "wifi":    { "status": "unknown" },
-        "noise":   { "status": "unknown" },
-        "food":    { "status": "unknown" }
+        "sockets": {
+          "status": "unknown"
+        },
+        "wifi": {
+          "status": "unknown"
+        },
+        "noise": {
+          "status": "unknown"
+        },
+        "food": {
+          "status": "unknown"
+        }
       },
       "notes": [
-        { "text": "communal retail space", "source": "https://www.brasbasahcomplex.com/about/" }
+        {
+          "text": "communal retail space",
+          "source": "https://www.brasbasahcomplex.com/about/"
+        }
       ],
       "sources": [
-        { "url": "https://www.brasbasahcomplex.com/contact/", "checked": "2026-10-30", "says": "231 Bain Street Singapore 180231. 10.00 AM – 7.00 PM" },
-        { "url": "https://www.brasbasahcomplex.com/about/", "checked": "2026-10-30", "says": "Within walking distance: City Hall MRT station, Bugis MRT station, Bras Basah MRT Station along Circle Line." }
+        {
+          "url": "https://www.brasbasahcomplex.com/contact/",
+          "checked": "2026-10-30",
+          "says": "231 Bain Street Singapore 180231. 10.00 AM – 7.00 PM"
+        },
+        {
+          "url": "https://www.brasbasahcomplex.com/about/",
+          "checked": "2026-10-30",
+          "says": "Within walking distance: City Hall MRT station, Bugis MRT station, Bras Basah MRT Station along Circle Line."
+        }
       ]
     },
     {
@@ -74,20 +146,50 @@
       "area": "bugis-city-hall",
       "name": "Bugis Junction",
       "kind": "Mall seating",
-      "address": { "text": "200 Victoria Street", "verified": true, "source": "https://www.capitaland.com/sg/malls/bugisjunction/en/concierge.html" },
-      "stations": ["Bugis"],
-      "hours": { "status": "reported", "text": "10am to 10pm daily", "detail": "Each store may have different operating hours.", "source": "https://www.capitaland.com/sg/malls/bugisjunction/en/concierge.html" },
+      "address": {
+        "text": "200 Victoria Street",
+        "verified": true,
+        "source": "https://www.capitaland.com/sg/malls/bugisjunction/en/concierge.html"
+      },
+      "stations": [
+        "Bugis"
+      ],
+      "hours": {
+        "status": "reported",
+        "text": "10am to 10pm daily",
+        "detail": "Each store may have different operating hours.",
+        "source": "https://www.capitaland.com/sg/malls/bugisjunction/en/concierge.html"
+      },
       "facts": {
-        "sockets": { "status": "unknown" },
-        "wifi":    { "status": "reported", "value": "yes", "reports": 1, "by": "the operator, CapitaLand", "source": "https://www.capitaland.com/sg/malls/bugisjunction/en/concierge.html" },
-        "noise":   { "status": "unknown" },
-        "food":    { "status": "unknown" }
+        "sockets": {
+          "status": "unknown"
+        },
+        "wifi": {
+          "status": "reported",
+          "value": "yes",
+          "reports": 1,
+          "by": "the operator, CapitaLand",
+          "source": "https://www.capitaland.com/sg/malls/bugisjunction/en/concierge.html"
+        },
+        "noise": {
+          "status": "unknown"
+        },
+        "food": {
+          "status": "unknown"
+        }
       },
       "notes": [
-        { "text": "direct connectivity to the Bugis MRT Station from the basement level", "source": "https://www.capitaland.com/sg/malls/bugisjunction/en.html" }
+        {
+          "text": "direct connectivity to the Bugis MRT Station from the basement level",
+          "source": "https://www.capitaland.com/sg/malls/bugisjunction/en.html"
+        }
       ],
       "sources": [
-        { "url": "https://www.capitaland.com/sg/malls/bugisjunction/en/concierge.html", "checked": "2026-10-30", "says": "Bugis Junction is open from 10am to 10pm daily. Connect to CAPITALAND FREE WIFI to enjoy free wireless internet surfing. Bugis, East-West Line (EW12), Downtown Line (DT14)." }
+        {
+          "url": "https://www.capitaland.com/sg/malls/bugisjunction/en/concierge.html",
+          "checked": "2026-10-30",
+          "says": "Bugis Junction is open from 10am to 10pm daily. Connect to CAPITALAND FREE WIFI to enjoy free wireless internet surfing. Bugis, East-West Line (EW12), Downtown Line (DT14)."
+        }
       ]
     },
     {
@@ -95,18 +197,45 @@
       "area": "bugis-city-hall",
       "name": "Bugis+",
       "kind": "Mall seating",
-      "address": { "text": "201 Victoria Street", "verified": true, "source": "https://www.capitaland.com/sg/malls/bugisplus/en/concierge.html" },
-      "stations": ["Bugis"],
-      "hours": { "status": "reported", "text": "10am to 10pm daily", "detail": "Each store may have different operating hours.", "source": "https://www.capitaland.com/sg/malls/bugisplus/en/concierge.html" },
+      "address": {
+        "text": "201 Victoria Street",
+        "verified": true,
+        "source": "https://www.capitaland.com/sg/malls/bugisplus/en/concierge.html"
+      },
+      "stations": [
+        "Bugis"
+      ],
+      "hours": {
+        "status": "reported",
+        "text": "10am to 10pm daily",
+        "detail": "Each store may have different operating hours.",
+        "source": "https://www.capitaland.com/sg/malls/bugisplus/en/concierge.html"
+      },
       "facts": {
-        "sockets": { "status": "unknown" },
-        "wifi":    { "status": "reported", "value": "yes", "reports": 1, "by": "the operator, CapitaLand", "source": "https://www.capitaland.com/sg/malls/bugisplus/en/concierge.html" },
-        "noise":   { "status": "unknown" },
-        "food":    { "status": "unknown" }
+        "sockets": {
+          "status": "unknown"
+        },
+        "wifi": {
+          "status": "reported",
+          "value": "yes",
+          "reports": 1,
+          "by": "the operator, CapitaLand",
+          "source": "https://www.capitaland.com/sg/malls/bugisplus/en/concierge.html"
+        },
+        "noise": {
+          "status": "unknown"
+        },
+        "food": {
+          "status": "unknown"
+        }
       },
       "notes": [],
       "sources": [
-        { "url": "https://www.capitaland.com/sg/malls/bugisplus/en/concierge.html", "checked": "2026-10-30", "says": "Bugis+ is open from 10am to 10pm daily. Connect to CAPITALAND FREE WIFI to enjoy free wireless internet surfing. EW12 Bugis Station." }
+        {
+          "url": "https://www.capitaland.com/sg/malls/bugisplus/en/concierge.html",
+          "checked": "2026-10-30",
+          "says": "Bugis+ is open from 10am to 10pm daily. Connect to CAPITALAND FREE WIFI to enjoy free wireless internet surfing. EW12 Bugis Station."
+        }
       ]
     },
     {
@@ -114,21 +243,58 @@
       "area": "bugis-city-hall",
       "name": "Funan",
       "kind": "Mall seating",
-      "address": { "text": "107 North Bridge Road, Singapore 179105", "verified": true, "source": "https://www.capitaland.com/sg/malls/funan/en/concierge.html" },
-      "stations": ["City Hall"],
-      "hours": { "status": "reported", "text": "10am to 10pm", "detail": "Each store may have different operating hours.", "source": "https://www.capitaland.com/sg/malls/funan/en/concierge.html" },
+      "address": {
+        "text": "107 North Bridge Road, Singapore 179105",
+        "verified": true,
+        "source": "https://www.capitaland.com/sg/malls/funan/en/concierge.html"
+      },
+      "stations": [
+        "City Hall"
+      ],
+      "hours": {
+        "status": "reported",
+        "text": "10am to 10pm",
+        "detail": "Each store may have different operating hours.",
+        "source": "https://www.capitaland.com/sg/malls/funan/en/concierge.html"
+      },
       "facts": {
-        "sockets": { "status": "reported", "value": "at the seating areas on the Level 1 Grand Stairs and at the Tree of Life on levels 2, 3 and 4", "reports": 1, "by": "the operator, CapitaLand", "source": "https://www.capitaland.com/sg/malls/funan/en/concierge.html" },
-        "wifi":    { "status": "reported", "value": "no", "reports": 1, "by": "the operator, CapitaLand (shopper Wi-Fi discontinued 1 May 2026)", "source": "https://www.capitaland.com/sg/malls/funan/en/concierge.html" },
-        "noise":   { "status": "unknown" },
-        "food":    { "status": "unknown" }
+        "sockets": {
+          "status": "reported",
+          "value": "at the seating areas on the Level 1 Grand Stairs and at the Tree of Life on levels 2, 3 and 4",
+          "reports": 1,
+          "by": "the operator, CapitaLand",
+          "source": "https://www.capitaland.com/sg/malls/funan/en/concierge.html"
+        },
+        "wifi": {
+          "status": "reported",
+          "value": "no",
+          "reports": 1,
+          "by": "the operator, CapitaLand (shopper Wi-Fi discontinued 1 May 2026)",
+          "source": "https://www.capitaland.com/sg/malls/funan/en/concierge.html"
+        },
+        "noise": {
+          "status": "unknown"
+        },
+        "food": {
+          "status": "unknown"
+        }
       },
       "notes": [
-        { "text": "There are charging points located at seating areas on Level 1 Grand Stairs and at the Tree of Life on Level 2, Level 3 and Level 4.", "source": "https://www.capitaland.com/sg/malls/funan/en/concierge.html" },
-        { "text": "a direct underpass linking to City Hall MRT interchange station", "source": "https://www.capitaland.com/sg/malls/funan/en/concierge.html" }
+        {
+          "text": "There are charging points located at seating areas on Level 1 Grand Stairs and at the Tree of Life on Level 2, Level 3 and Level 4.",
+          "source": "https://www.capitaland.com/sg/malls/funan/en/concierge.html"
+        },
+        {
+          "text": "a direct underpass linking to City Hall MRT interchange station",
+          "source": "https://www.capitaland.com/sg/malls/funan/en/concierge.html"
+        }
       ],
       "sources": [
-        { "url": "https://www.capitaland.com/sg/malls/funan/en/concierge.html", "checked": "2026-10-30", "says": "Funan is opened from 10am to 10pm. Complimentary shopper Wi-Fi at Funan has discontinued with effect from 1 May 2026. There are charging points located at seating areas on Level 1 Grand Stairs and at the Tree of Life on Level 2, Level 3 and Level 4. City Hall MRT Station - East West Line (EW13) or North South Line (NS25)." }
+        {
+          "url": "https://www.capitaland.com/sg/malls/funan/en/concierge.html",
+          "checked": "2026-10-30",
+          "says": "Funan is opened from 10am to 10pm. Complimentary shopper Wi-Fi at Funan has discontinued with effect from 1 May 2026. There are charging points located at seating areas on Level 1 Grand Stairs and at the Tree of Life on Level 2, Level 3 and Level 4. City Hall MRT Station - East West Line (EW13) or North South Line (NS25)."
+        }
       ]
     },
     {
@@ -136,18 +302,46 @@
       "area": "bugis-city-hall",
       "name": "Raffles City",
       "kind": "Mall seating",
-      "address": { "text": "252 North Bridge Road", "verified": true, "source": "https://www.capitaland.com/sg/malls/rafflescity/en/concierge.html" },
-      "stations": ["City Hall", "Esplanade"],
-      "hours": { "status": "reported", "text": "10am to 10pm daily", "detail": "Each store may have different operating hours.", "source": "https://www.capitaland.com/sg/malls/rafflescity/en/concierge.html" },
+      "address": {
+        "text": "252 North Bridge Road",
+        "verified": true,
+        "source": "https://www.capitaland.com/sg/malls/rafflescity/en/concierge.html"
+      },
+      "stations": [
+        "City Hall",
+        "Esplanade"
+      ],
+      "hours": {
+        "status": "reported",
+        "text": "10am to 10pm daily",
+        "detail": "Each store may have different operating hours.",
+        "source": "https://www.capitaland.com/sg/malls/rafflescity/en/concierge.html"
+      },
       "facts": {
-        "sockets": { "status": "unknown" },
-        "wifi":    { "status": "reported", "value": "yes", "reports": 1, "by": "the operator, CapitaLand", "source": "https://www.capitaland.com/sg/malls/rafflescity/en/concierge.html" },
-        "noise":   { "status": "unknown" },
-        "food":    { "status": "unknown" }
+        "sockets": {
+          "status": "unknown"
+        },
+        "wifi": {
+          "status": "reported",
+          "value": "yes",
+          "reports": 1,
+          "by": "the operator, CapitaLand",
+          "source": "https://www.capitaland.com/sg/malls/rafflescity/en/concierge.html"
+        },
+        "noise": {
+          "status": "unknown"
+        },
+        "food": {
+          "status": "unknown"
+        }
       },
       "notes": [],
       "sources": [
-        { "url": "https://www.capitaland.com/sg/malls/rafflescity/en/concierge.html", "checked": "2026-10-30", "says": "Raffles City is open from 10am to 10pm daily. Connect to #CAPITALAND FREE WIFI to enjoy free wireless internet surfing. City Hall MRT Station (EW13/NS25); Esplanade MRT Station (CC3, Exit G)." }
+        {
+          "url": "https://www.capitaland.com/sg/malls/rafflescity/en/concierge.html",
+          "checked": "2026-10-30",
+          "says": "Raffles City is open from 10am to 10pm daily. Connect to #CAPITALAND FREE WIFI to enjoy free wireless internet surfing. City Hall MRT Station (EW13/NS25); Esplanade MRT Station (CC3, Exit G)."
+        }
       ]
     },
     {
@@ -155,20 +349,45 @@
       "area": "bugis-city-hall",
       "name": "Capitol Singapore",
       "kind": "Mall seating",
-      "address": { "text": "13 Stamford Road, Singapore 178905", "verified": true, "source": "https://capitolsingapore.com/contact/" },
-      "stations": ["City Hall"],
-      "hours": { "status": "unknown", "note": "Mall hours are not stated on capitolsingapore.com (home, About, Contact and Arcade pages read 2026-10-30).", "link": "https://capitolsingapore.com/" },
+      "address": {
+        "text": "13 Stamford Road, Singapore 178905",
+        "verified": true,
+        "source": "https://capitolsingapore.com/contact/"
+      },
+      "stations": [
+        "City Hall"
+      ],
+      "hours": {
+        "status": "unknown",
+        "note": "Mall hours are not stated on capitolsingapore.com (home, About, Contact and Arcade pages read 2026-10-30).",
+        "link": "https://capitolsingapore.com/"
+      },
       "facts": {
-        "sockets": { "status": "unknown" },
-        "wifi":    { "status": "unknown" },
-        "noise":   { "status": "unknown" },
-        "food":    { "status": "unknown" }
+        "sockets": {
+          "status": "unknown"
+        },
+        "wifi": {
+          "status": "unknown"
+        },
+        "noise": {
+          "status": "unknown"
+        },
+        "food": {
+          "status": "unknown"
+        }
       },
       "notes": [
-        { "text": "Nearest MRT Station: City Hall MRT, Exit D. Estimated walk time: 1 Min", "source": "https://capitolsingapore.com/contact/" }
+        {
+          "text": "Nearest MRT Station: City Hall MRT, Exit D. Estimated walk time: 1 Min",
+          "source": "https://capitolsingapore.com/contact/"
+        }
       ],
       "sources": [
-        { "url": "https://capitolsingapore.com/contact/", "checked": "2026-10-30", "says": "13 Stamford Road, Singapore 178905. Nearest MRT Station: City Hall MRT … Exit D - Estimated walk time: 1 Min" }
+        {
+          "url": "https://capitolsingapore.com/contact/",
+          "checked": "2026-10-30",
+          "says": "13 Stamford Road, Singapore 178905. Nearest MRT Station: City Hall MRT … Exit D - Estimated walk time: 1 Min"
+        }
       ]
     },
     {
@@ -176,19 +395,47 @@
       "area": "bugis-city-hall",
       "name": "Esplanade Mall",
       "kind": "Mall seating",
-      "address": { "text": "8 Raffles Avenue, Singapore 039802", "verified": true, "source": "https://www.esplanade.com/visit/visitor-guide/getting-here-and-around" },
-      "stations": ["City Hall", "Esplanade"],
-      "hours": { "status": "partial", "text": "Esplanade, the arts centre, is open 8 am to 11:30 pm daily", "detail": "The Mall's own shop hours are not stated on esplanade.com; the centre's hours are the building's.", "source": "https://www.esplanade.com/visit/visitor-guide" },
+      "address": {
+        "text": "8 Raffles Avenue, Singapore 039802",
+        "verified": true,
+        "source": "https://www.esplanade.com/visit/visitor-guide/getting-here-and-around"
+      },
+      "stations": [
+        "City Hall",
+        "Esplanade"
+      ],
+      "hours": {
+        "status": "partial",
+        "text": "Esplanade, the arts centre, is open 8 am to 11:30 pm daily",
+        "detail": "The Mall's own shop hours are not stated on esplanade.com; the centre's hours are the building's.",
+        "source": "https://www.esplanade.com/visit/visitor-guide"
+      },
       "facts": {
-        "sockets": { "status": "unknown" },
-        "wifi":    { "status": "unknown" },
-        "noise":   { "status": "unknown" },
-        "food":    { "status": "unknown" }
+        "sockets": {
+          "status": "unknown"
+        },
+        "wifi": {
+          "status": "unknown"
+        },
+        "noise": {
+          "status": "unknown"
+        },
+        "food": {
+          "status": "unknown"
+        }
       },
       "notes": [],
       "sources": [
-        { "url": "https://www.esplanade.com/visit/visitor-guide", "checked": "2026-10-30", "says": "8 am – 11:30 pm daily (or 30mins after the last performance of the day has ended, whichever is later). 1 Esplanade Drive, Singapore 038981." },
-        { "url": "https://www.esplanade.com/visit/visitor-guide/getting-here-and-around", "checked": "2026-10-30", "says": "From City Hall MRT; From Esplanade MRT. C24 Esplanade Mall, 8 Raffles Avenue, 039802." }
+        {
+          "url": "https://www.esplanade.com/visit/visitor-guide",
+          "checked": "2026-10-30",
+          "says": "8 am – 11:30 pm daily (or 30mins after the last performance of the day has ended, whichever is later). 1 Esplanade Drive, Singapore 038981."
+        },
+        {
+          "url": "https://www.esplanade.com/visit/visitor-guide/getting-here-and-around",
+          "checked": "2026-10-30",
+          "says": "From City Hall MRT; From Esplanade MRT. C24 Esplanade Mall, 8 Raffles Avenue, 039802."
+        }
       ]
     },
     {
@@ -196,18 +443,42 @@
       "area": "bugis-city-hall",
       "name": "Marina Square",
       "kind": "Mall seating",
-      "address": { "text": "6 Raffles Boulevard, Singapore 039594", "verified": true, "source": "https://www.marinasquare.com.sg/about" },
-      "stations": ["City Hall", "Esplanade", "Promenade"],
-      "hours": { "status": "reported", "text": "10am to 10pm daily", "source": "https://www.marinasquare.com.sg/about" },
+      "address": {
+        "text": "6 Raffles Boulevard, Singapore 039594",
+        "verified": true,
+        "source": "https://www.marinasquare.com.sg/about"
+      },
+      "stations": [
+        "City Hall",
+        "Esplanade",
+        "Promenade"
+      ],
+      "hours": {
+        "status": "reported",
+        "text": "10am to 10pm daily",
+        "source": "https://www.marinasquare.com.sg/about"
+      },
       "facts": {
-        "sockets": { "status": "unknown" },
-        "wifi":    { "status": "unknown" },
-        "noise":   { "status": "unknown" },
-        "food":    { "status": "unknown" }
+        "sockets": {
+          "status": "unknown"
+        },
+        "wifi": {
+          "status": "unknown"
+        },
+        "noise": {
+          "status": "unknown"
+        },
+        "food": {
+          "status": "unknown"
+        }
       },
       "notes": [],
       "sources": [
-        { "url": "https://www.marinasquare.com.sg/about", "checked": "2026-10-30", "says": "6 Raffles Boulevard Singapore 039594. Operating Hours: 10am - 10pm (Daily). Accessible by the City Hall, Esplanade and Promenade MRT stations." }
+        {
+          "url": "https://www.marinasquare.com.sg/about",
+          "checked": "2026-10-30",
+          "says": "6 Raffles Boulevard Singapore 039594. Operating Hours: 10am - 10pm (Daily). Accessible by the City Hall, Esplanade and Promenade MRT stations."
+        }
       ]
     },
     {
@@ -215,21 +486,49 @@
       "area": "bugis-city-hall",
       "name": "National Design Centre",
       "kind": "Atrium",
-      "address": { "text": "111 Middle Road, Singapore 188969", "verified": true, "source": "https://designsingapore.org/contact-us/" },
+      "address": {
+        "text": "111 Middle Road, Singapore 188969",
+        "verified": true,
+        "source": "https://designsingapore.org/contact-us/"
+      },
       "stations": [],
-      "hours": { "status": "partial", "text": "9am to 6.30pm", "detail": "These hours sit under the DesignSingapore Council office block on the contact page; whether they are public access hours is not stated.", "source": "https://designsingapore.org/contact-us/" },
+      "hours": {
+        "status": "partial",
+        "text": "9am to 6.30pm",
+        "detail": "These hours sit under the DesignSingapore Council office block on the contact page; whether they are public access hours is not stated.",
+        "source": "https://designsingapore.org/contact-us/"
+      },
       "facts": {
-        "sockets": { "status": "unknown" },
-        "wifi":    { "status": "unknown" },
-        "noise":   { "status": "unknown" },
-        "food":    { "status": "unknown" }
+        "sockets": {
+          "status": "unknown"
+        },
+        "wifi": {
+          "status": "unknown"
+        },
+        "noise": {
+          "status": "unknown"
+        },
+        "food": {
+          "status": "unknown"
+        }
       },
       "notes": [
-        { "text": "the public meet here to exchange ideas, use the amenities and attend design-focused exhibitions and programmes", "source": "https://designsingapore.org/national-design-centre/" }
+        {
+          "text": "the public meet here to exchange ideas, use the amenities and attend design-focused exhibitions and programmes",
+          "source": "https://designsingapore.org/national-design-centre/"
+        }
       ],
       "sources": [
-        { "url": "https://designsingapore.org/contact-us/", "checked": "2026-10-30", "says": "DesignSingapore Council Office / National Design Centre. 111 Middle Road, #04-01 Singapore 188969. Operating hours 9am to 6.30pm" },
-        { "url": "https://designsingapore.org/national-design-centre/", "checked": "2026-10-30", "says": "the nexus for design … the public meet here to exchange ideas, use the amenities and attend design-focused exhibitions and programmes. Now managed by University of the Arts Singapore." }
+        {
+          "url": "https://designsingapore.org/contact-us/",
+          "checked": "2026-10-30",
+          "says": "DesignSingapore Council Office / National Design Centre. 111 Middle Road, #04-01 Singapore 188969. Operating hours 9am to 6.30pm"
+        },
+        {
+          "url": "https://designsingapore.org/national-design-centre/",
+          "checked": "2026-10-30",
+          "says": "the nexus for design … the public meet here to exchange ideas, use the amenities and attend design-focused exhibitions and programmes. Now managed by University of the Arts Singapore."
+        }
       ]
     },
     {
@@ -237,18 +536,45 @@
       "area": "bugis-city-hall",
       "name": "The Coffee Bean & Tea Leaf, Bugis Junction",
       "kind": "Café",
-      "address": { "text": "200 Victoria Street, #03-10H, Bugis Junction, Singapore 188021", "verified": true, "source": "https://www.coffeebean.com.sg/amlocator" },
-      "stations": ["Bugis"],
-      "hours": { "status": "reported", "text": "9am to 10pm daily", "detail": "Operating hours for Public Holidays and Eve of Public Holidays may differ.", "source": "https://www.coffeebean.com.sg/amlocator" },
+      "address": {
+        "text": "200 Victoria Street, #03-10H, Bugis Junction, Singapore 188021",
+        "verified": true,
+        "source": "https://www.coffeebean.com.sg/amlocator"
+      },
+      "stations": [
+        "Bugis"
+      ],
+      "hours": {
+        "status": "reported",
+        "text": "9am to 10pm daily",
+        "detail": "Operating hours for Public Holidays and Eve of Public Holidays may differ.",
+        "source": "https://www.coffeebean.com.sg/amlocator"
+      },
       "facts": {
-        "sockets": { "status": "unknown" },
-        "wifi":    { "status": "unknown" },
-        "noise":   { "status": "unknown" },
-        "food":    { "status": "reported", "value": "it is a café", "reports": 1, "by": "the operator", "source": "https://www.coffeebean.com.sg/amlocator" }
+        "sockets": {
+          "status": "unknown"
+        },
+        "wifi": {
+          "status": "unknown"
+        },
+        "noise": {
+          "status": "unknown"
+        },
+        "food": {
+          "status": "reported",
+          "value": "it is a café",
+          "reports": 1,
+          "by": "the operator",
+          "source": "https://www.coffeebean.com.sg/amlocator"
+        }
       },
       "notes": [],
       "sources": [
-        { "url": "https://www.coffeebean.com.sg/amlocator", "checked": "2026-10-30", "says": "Bugis Junction. 200 Victoria Street, #03-10H, Bugis Junction Singapore 188021. Mon to Sun: 9am to 10pm." }
+        {
+          "url": "https://www.coffeebean.com.sg/amlocator",
+          "checked": "2026-10-30",
+          "says": "Bugis Junction. 200 Victoria Street, #03-10H, Bugis Junction Singapore 188021. Mon to Sun: 9am to 10pm."
+        }
       ]
     },
     {
@@ -256,18 +582,45 @@
       "area": "bugis-city-hall",
       "name": "The Coffee Bean & Tea Leaf, Raffles City",
       "kind": "Café",
-      "address": { "text": "252 North Bridge Road, #01-45/45A, Raffles City Shopping Centre, Singapore 179103", "verified": true, "source": "https://www.coffeebean.com.sg/amlocator" },
-      "stations": ["City Hall"],
-      "hours": { "status": "reported", "text": "24 hours, every day", "detail": "Operating hours for Public Holidays and Eve of Public Holidays may differ.", "source": "https://www.coffeebean.com.sg/amlocator" },
+      "address": {
+        "text": "252 North Bridge Road, #01-45/45A, Raffles City Shopping Centre, Singapore 179103",
+        "verified": true,
+        "source": "https://www.coffeebean.com.sg/amlocator"
+      },
+      "stations": [
+        "City Hall"
+      ],
+      "hours": {
+        "status": "reported",
+        "text": "24 hours, every day",
+        "detail": "Operating hours for Public Holidays and Eve of Public Holidays may differ.",
+        "source": "https://www.coffeebean.com.sg/amlocator"
+      },
       "facts": {
-        "sockets": { "status": "unknown" },
-        "wifi":    { "status": "unknown" },
-        "noise":   { "status": "unknown" },
-        "food":    { "status": "reported", "value": "it is a café", "reports": 1, "by": "the operator", "source": "https://www.coffeebean.com.sg/amlocator" }
+        "sockets": {
+          "status": "unknown"
+        },
+        "wifi": {
+          "status": "unknown"
+        },
+        "noise": {
+          "status": "unknown"
+        },
+        "food": {
+          "status": "reported",
+          "value": "it is a café",
+          "reports": 1,
+          "by": "the operator",
+          "source": "https://www.coffeebean.com.sg/amlocator"
+        }
       },
       "notes": [],
       "sources": [
-        { "url": "https://www.coffeebean.com.sg/amlocator", "checked": "2026-10-30", "says": "Raffles City. 252 North Bridge Road, Raffles City Shopping Centre #01-45/45A Singapore 179103. Mon-Sun: 24 Hours." }
+        {
+          "url": "https://www.coffeebean.com.sg/amlocator",
+          "checked": "2026-10-30",
+          "says": "Raffles City. 252 North Bridge Road, Raffles City Shopping Centre #01-45/45A Singapore 179103. Mon-Sun: 24 Hours."
+        }
       ]
     },
     {
@@ -275,18 +628,45 @@
       "area": "bugis-city-hall",
       "name": "The Coffee Bean & Tea Leaf, Bugis+",
       "kind": "Café",
-      "address": { "text": "201 Victoria Street, #01-06, Singapore 188067", "verified": true, "source": "https://www.coffeebean.com.sg/amlocator" },
-      "stations": ["Bugis"],
-      "hours": { "status": "reported", "text": "24 hours, every day", "detail": "Operating hours for Public Holidays and Eve of Public Holidays may differ.", "source": "https://www.coffeebean.com.sg/amlocator" },
+      "address": {
+        "text": "201 Victoria Street, #01-06, Singapore 188067",
+        "verified": true,
+        "source": "https://www.coffeebean.com.sg/amlocator"
+      },
+      "stations": [
+        "Bugis"
+      ],
+      "hours": {
+        "status": "reported",
+        "text": "24 hours, every day",
+        "detail": "Operating hours for Public Holidays and Eve of Public Holidays may differ.",
+        "source": "https://www.coffeebean.com.sg/amlocator"
+      },
       "facts": {
-        "sockets": { "status": "unknown" },
-        "wifi":    { "status": "unknown" },
-        "noise":   { "status": "unknown" },
-        "food":    { "status": "reported", "value": "it is a café", "reports": 1, "by": "the operator", "source": "https://www.coffeebean.com.sg/amlocator" }
+        "sockets": {
+          "status": "unknown"
+        },
+        "wifi": {
+          "status": "unknown"
+        },
+        "noise": {
+          "status": "unknown"
+        },
+        "food": {
+          "status": "reported",
+          "value": "it is a café",
+          "reports": 1,
+          "by": "the operator",
+          "source": "https://www.coffeebean.com.sg/amlocator"
+        }
       },
       "notes": [],
       "sources": [
-        { "url": "https://www.coffeebean.com.sg/amlocator", "checked": "2026-10-30", "says": "Bugis+. 201 Victoria Street #01-06 Singapore 188067. Open 24H daily." }
+        {
+          "url": "https://www.coffeebean.com.sg/amlocator",
+          "checked": "2026-10-30",
+          "says": "Bugis+. 201 Victoria Street #01-06 Singapore 188067. Open 24H daily."
+        }
       ]
     },
     {
@@ -294,18 +674,46 @@
       "area": "bugis-city-hall",
       "name": "The Coffee Bean & Tea Leaf, Esplanade Mall",
       "kind": "Café",
-      "address": { "text": "8 Raffles Avenue, #01-02/04, Esplanade Mall, Singapore 039802", "verified": true, "source": "https://www.coffeebean.com.sg/amlocator" },
-      "stations": ["City Hall", "Esplanade"],
-      "hours": { "status": "partial", "text": "8am to 10pm", "detail": "The locator's headline says Sun to Thu 8am to 10pm while its weekly table shows 8am to 10pm on all seven days; the page disagrees with itself.", "source": "https://www.coffeebean.com.sg/amlocator" },
+      "address": {
+        "text": "8 Raffles Avenue, #01-02/04, Esplanade Mall, Singapore 039802",
+        "verified": true,
+        "source": "https://www.coffeebean.com.sg/amlocator"
+      },
+      "stations": [
+        "City Hall",
+        "Esplanade"
+      ],
+      "hours": {
+        "status": "partial",
+        "text": "8am to 10pm",
+        "detail": "The locator's headline says Sun to Thu 8am to 10pm while its weekly table shows 8am to 10pm on all seven days; the page disagrees with itself.",
+        "source": "https://www.coffeebean.com.sg/amlocator"
+      },
       "facts": {
-        "sockets": { "status": "unknown" },
-        "wifi":    { "status": "unknown" },
-        "noise":   { "status": "unknown" },
-        "food":    { "status": "reported", "value": "it is a café", "reports": 1, "by": "the operator", "source": "https://www.coffeebean.com.sg/amlocator" }
+        "sockets": {
+          "status": "unknown"
+        },
+        "wifi": {
+          "status": "unknown"
+        },
+        "noise": {
+          "status": "unknown"
+        },
+        "food": {
+          "status": "reported",
+          "value": "it is a café",
+          "reports": 1,
+          "by": "the operator",
+          "source": "https://www.coffeebean.com.sg/amlocator"
+        }
       },
       "notes": [],
       "sources": [
-        { "url": "https://www.coffeebean.com.sg/amlocator", "checked": "2026-10-30", "says": "Esplanade Mall. 8 Raffles Avenue, #01-02/04 Esplanade Mall Singapore 039802. Sun to Thurs: 8am to 10pm; weekly table 08:00 - 22:00 all days." }
+        {
+          "url": "https://www.coffeebean.com.sg/amlocator",
+          "checked": "2026-10-30",
+          "says": "Esplanade Mall. 8 Raffles Avenue, #01-02/04 Esplanade Mall Singapore 039802. Sun to Thurs: 8am to 10pm; weekly table 08:00 - 22:00 all days."
+        }
       ]
     }
   ]
